@@ -1,0 +1,31 @@
+# Amazon Image Crawler - Python Dependencies
+
+# HTTP请求
+requests>=2.31.0
+urllib3>=2.0.0
+
+# HTML解析
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# 命令行参数解析(Python标准库,无需安装)
+# argparse
+
+# 数据库(Python标准库,无需安装)
+# sqlite3
+
+# 日志(Python标准库,无需安装)
+# logging
+
+# 可选:更好的进度显示
+tqdm>=4.66.0
+
+# 可选:图片处理(验证下载的图片)
+Pillow>=10.0.0
+
+# 浏览器渲染(抓取动态页面中的 hiRes 与 A+ 图片)
+playwright>=1.52.0
+
+# API服务
+fastapi>=0.116.0
+uvicorn>=0.35.0
