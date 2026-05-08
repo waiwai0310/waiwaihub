@@ -1,0 +1,5488 @@
+{
+    "file_settings": {
+        "complaint_file": "data/5ASIN投影仪UK-Reviews-2026042.xlsx",
+        "complaint_sheet": "总表",
+        "output_base_filename": "output/5ASIN投影仪UK-Reviews-2026042.xlsx",
+        "log_file": "output/error_log.txt"
+    },
+    "column_settings": {
+        "source_text_columns": [
+            "标题(翻译)",
+            "内容(翻译)",
+            "标题"
+        ],
+        "common_output_columns": [
+            "亮度",
+            "色彩",
+            "清晰度/分辨率",
+            "画面均匀度",
+            "对比度/黑位",
+            "运动表现/MEMC",
+            "彩虹眼/散斑",
+            "噪音",
+            "音质",
+            "对焦/校正",
+            "避障与入幕",
+            "系统与生态",
+            "投屏体验",
+            "语音控制",
+            "外观与便携",
+            "接口与扩展",
+            "散热与温控",
+            "做工质感",
+            "性价比",
+            "品控与寿命",
+            "售后体验",
+            "居家观影",
+            "卧室投屏",
+            "客厅影院",
+            "游戏娱乐",
+            "体育赛事",
+            "移动/户外",
+            "居家健身",
+            "儿童/网课",
+            "商务办公",
+            "教学培训",
+            "送礼用途",
+            "角色身份",
+            "技术水平"
+        ],
+        "custom_output_columns": [],
+        "category_sheet_columns": {
+            "header_column": "表头",
+            "keyword_column": "关键词",
+            "value_column": "标签值",
+            "match_type_column": "匹配类型"
+        },
+        "rating_columns": [
+            "用户星级",
+            "标准化星级"
+        ],
+        "date_normalize": {
+            "source_column": "评论时间",
+            "output_column": "日期.1",
+            "output_format": "%Y-%m-%d"
+        }
+    },
+    "rules": {
+        "prefix_pattern": "^(事件:|退货:|事故:|返回:|回国:|回报:|问题描述:|客户反馈:|投诉:|投诉内容:|具体问题:|详细描述:)*",
+        "bad_review_max_star": 3,
+        "negative_patterns": [
+            "(差评|投诉|不满意|失望|后悔|生气|愤怒|糟糕|太差|垃圾|崩溃|受不了)"
+        ],
+        "exact_rules": {
+            "亮度": {
+                "亮度满意": "亮度满意",
+                "开灯也清晰": "开灯也清晰",
+                "白天清晰": "白天清晰",
+                "亮度够": "亮度够",
+                "不拉窗帘也能看": "不拉窗帘也能看",
+                "够亮": "够亮",
+                "非常亮": "非常亮",
+                "亮度不错": "亮度不错",
+                "投白天也行": "投白天也行",
+                "不影响观看": "不影响观看",
+                "抗光性好": "抗光性好",
+                "亮度不足": "亮度不足",
+                "太亮了刺眼": "太亮了刺眼",
+                "亮到刺眼": "亮到刺眼",
+                "亮得刺眼": "亮得刺眼",
+                "白天看不清": "白天看不清",
+                "必须拉窗帘": "必须拉窗帘",
+                "太暗": "太暗",
+                "环境光不可用": "环境光不可用",
+                "太暗了": "太暗了",
+                "亮度拉胯": "亮度拉胯",
+                "白天完全不行": "白天完全不行",
+                "必须全黑环境": "必须全黑环境",
+                "一点都不亮": "一点都不亮",
+                "见光死": "见光死",
+                "暗房效果好": "亮度满意",
+                "有遮光窗帘白天可用": "亮度满意",
+                "白天效果不错": "亮度满意",
+                "晚上更好用": "亮度满意",
+                "350流明太暗": "亮度不足",
+                "画面太暗了": "亮度不足",
+                "仅限暗房": "亮度不足",
+                "除非房间完全黑暗": "亮度不足",
+                "有自然采光就不行": "亮度不足",
+                "稍微暗一点": "亮度不足",
+                "白天很难看清": "亮度不足",
+                "阳光透过百叶窗很难看清": "亮度不足",
+                "暗房效果更好": "亮度满意",
+                "在黑暗房间里很明亮": "亮度满意",
+                "亮度足够昼夜都能用": "亮度满意",
+                "白天不适合使用": "亮度不足",
+                "黄昏效果一般": "亮度不足",
+                "晚上效果更好": "亮度满意",
+                "白天只拉百叶窗也能看": "亮度满意",
+                "房间越暗效果越好": "亮度满意",
+                "亮度差一点": "亮度不足",
+                "光照暴露会模糊": "亮度不足",
+                "白天也能显示得不错": "亮度满意",
+                "昼夜皆佳": "亮度满意",
+                "黑暗房间表现好": "亮度满意",
+                "夜间使用最佳": "亮度满意",
+                "白天亮度不够": "亮度不足",
+                "亮度低": "亮度不足",
+                "白天阳光下难看清": "亮度不足",
+                "晴天需要深色窗帘": "亮度不足",
+                "透过门窗阳光会影响视线": "亮度不足",
+                "全光环境不适合": "亮度不足",
+                "只能夜间使用": "亮度不足",
+                "黑暗环境很棒": "亮度满意",
+                "白天也能显示不错": "亮度满意",
+                "房间非常暗效果好": "亮度满意",
+                "亮度远不如预期": "亮度不足",
+                "必须完全黑暗房间": "亮度不足",
+                "白天画面会变淡": "亮度不足",
+                "白天可见但一般": "亮度不足",
+                "低光环境表现好": "亮度满意",
+                "1800ANSI不符": "亮度不足",
+                "比500ANSI还暗": "亮度不足",
+                "brightness has gone down": "亮度不足",
+                "屏幕太亮边缘残留": "亮度不足",
+                "in dark rooms looks good": "亮度满意",
+                "not completely dark still fine": "亮度满意",
+                "ANSI流明不准确": "亮度不足",
+                "实际只有300到500ansi": "亮度不足",
+                "大屏后亮度下降": "亮度不足",
+                "screen gets softer and dimmer": "亮度不足",
+                "白天窗帘关了也不行": "亮度不足",
+                "moderately lit room still good": "亮度满意",
+                "not 2000 ansi lumens": "亮度不足",
+                "ansi nowhere near advertised": "亮度不足",
+                "dimmest projector ever used": "亮度不足",
+                "not bright enough in dim room": "亮度不足",
+                "pitch black room only": "亮度不足",
+                "wish much brighter": "亮度不足",
+                "bright and big screen": "亮度满意",
+                "brightness is great": "亮度满意",
+                "not 2000 lumens": "亮度不足",
+                "no way this is 2000 ansi": "亮度不足",
+                "2000 ansi are not real": "亮度不足",
+                "need totally dark room": "亮度不足",
+                "too dark and not bright enough": "亮度不足",
+                "underwhelmed with brightness": "亮度不足",
+                "great brightness": "亮度满意",
+                "very bright and colorful": "亮度满意",
+                "not much better than 60 dollar projector": "亮度不足",
+                "unusable during the day": "亮度不足",
+                "very dark room only": "亮度不足",
+                "225 ansi measured": "亮度不足",
+                "not 1200 ansi": "亮度不足",
+                "brightness is good value": "亮度满意",
+                "cannot watch during daytime": "亮度不足",
+                "full dark room required": "亮度不足",
+                "brightness setting missing": "亮度不足",
+                "good only after painting wall white": "亮度不足",
+                "brightness poor for daytime room": "亮度不足",
+                "visible even with lights on": "亮度满意",
+                "works in evening or dark room": "亮度不足",
+                "must be completely dark to watch": "亮度不足",
+                "good in basement lighting": "亮度满意",
+                "not bright enough for very large image": "亮度不足",
+                "needs dark room for larger projection": "亮度不足",
+                "dimmest projector i have ever used": "亮度不足",
+                "there is no brightness": "亮度不足",
+                "no setting to increase brightness": "亮度不足",
+                "projector brightness isn t anywhere close to what is stated": "亮度不足",
+                "can barely be seen during the day": "亮度不足",
+                "brightness up to 100 and still faded and dim": "亮度不足",
+                "not much better than 60 projector in terms of brightness": "亮度不足",
+                "即使开灯也能看清": "亮度满意",
+                "lights on still clear": "亮度满意"
+            },
+            "色彩": {
+                "色彩好": "色彩好",
+                "色彩准确": "色彩准确",
+                "颜色真实": "颜色真实",
+                "不偏色": "不偏色",
+                "对比自然": "对比自然",
+                "颜色很好看": "颜色很好看",
+                "很讨喜": "很讨喜",
+                "观感舒服": "观感舒服",
+                "色彩挺准": "色彩挺准",
+                "颜色正": "颜色正",
+                "色域广": "色域广",
+                "色彩差": "色彩差",
+                "偏色": "偏色",
+                "发白": "发白",
+                "发灰": "发灰",
+                "颜色暗淡": "颜色暗淡",
+                "色彩失真": "色彩失真",
+                "颜色怪": "颜色怪",
+                "不自然": "不自然",
+                "颜色太淡": "颜色太淡",
+                "颜色太浓": "颜色太浓",
+                "色彩鲜艳": "色彩鲜艳",
+                "色彩很艳": "色彩很艳",
+                "很艳": "很艳",
+                "一片灰": "一片灰",
+                "红脸": "红脸",
+                "泛绿": "泛绿",
+                "色彩准确度不好": "色彩差",
+                "色彩准确性不好": "色彩差",
+                "色彩准确度不佳": "色彩差",
+                "色彩准确度差": "色彩差",
+                "menu does not adjust color": "色彩差"
+            },
+            "清晰度/分辨率": {
+                "清晰": "清晰",
+                "高清": "高清",
+                "细腻": "细腻",
+                "真1080P": "真1080P",
+                "4K清晰": "4K清晰",
+                "细节不错": "细节不错",
+                "很清楚": "很清楚",
+                "文字清晰": "文字清晰",
+                "边缘锐利": "边缘锐利",
+                "肉眼可见清晰": "肉眼可见清晰",
+                "毛发可见": "毛发可见",
+                "模糊": "模糊",
+                "不清晰": "模糊",
+                "不够清晰": "模糊",
+                "颗粒感": "颗粒感",
+                "抖4K": "抖4K",
+                "不清楚": "模糊",
+                "发虚": "模糊",
+                "糊": "模糊",
+                "看不清": "模糊",
+                "边缘糊": "边缘糊",
+                "发虚严重": "发虚严重",
+                "像雾一样": "像雾一样",
+                "大果冻": "大果冻",
+                "网格感": "网格感",
+                "照片很棒": "清晰",
+                "画面清晰得非常明显": "清晰",
+                "图表清晰": "文字清晰",
+                "文字很锐利": "文字清晰",
+                "分辨率非常高": "清晰",
+                "真正的1080p清晰度": "清晰",
+                "画面锐利": "清晰",
+                "像素化": "模糊",
+                "屏幕上有线条": "模糊",
+                "画面非常模糊": "模糊",
+                "画面没有达到应有水平": "模糊",
+                "清晰度极佳": "清晰",
+                "照片很清晰": "清晰",
+                "画面暗且缺乏清晰度": "模糊",
+                "清晰度不足": "模糊",
+                "画质不错但不惊艳": "清晰",
+                "1080p应有清晰度不足": "模糊",
+                "颜色暗淡": "色彩差",
+                "crisp clear picture": "清晰",
+                "really sharp picture": "清晰",
+                "noticeable fringing": "模糊",
+                "images are blurry": "模糊",
+                "缺乏清晰和鲜艳": "模糊",
+                "画面质量超预期": "清晰",
+                "4k不是原生是upscaled": "模糊",
+                "text noticeably blurry": "模糊",
+                "colors washed out": "色彩差",
+                "blacks look gray": "黑色发灰",
+                "dark splotches": "模糊",
+                "fringing严重": "模糊",
+                "crystal clear": "清晰",
+                "dead pixels already": "模糊",
+                "screen burn-in in less than one month": "模糊",
+                "checkerboard keep popping up": "模糊",
+                "circles keep popping up": "模糊",
+                "videos come out blurry": "模糊",
+                "left and right color mismatch": "偏色",
+                "yellow on left blue on right": "偏色",
+                "not as sharp as promised": "模糊",
+                "dead pixels in 5 days": "模糊",
+                "white spots after 2 weeks": "模糊",
+                "brown splotches appeared": "模糊",
+                "dust spots all over image": "模糊",
+                "image blurry after weeks": "模糊",
+                "mala en imagen": "模糊",
+                "color discrepancy left right": "偏色",
+                "yellow left blue right": "偏色",
+                "quality lowered and glitches": "模糊",
+                "4k claim false only 1080p": "模糊",
+                "max 1080p": "模糊",
+                "colors subpar": "色彩差",
+                "struggles with purples": "色彩差",
+                "orange spots after 12 months": "模糊",
+                "black dots after 12 months": "模糊",
+                "dead spot out of box": "模糊",
+                "advertised 4k but only 1080p": "分辨率不符",
+                "8k claim not real": "分辨率不符",
+                "max resolution only 1080p": "分辨率不符",
+                "240p looks best but 1080 unusable": "分辨率不符",
+                "washed out colors and low detail": "模糊",
+                "advertised 4-8k but only 1080p": "分辨率不符",
+                "listed as 4k actually 1080p": "分辨率不符",
+                "claimed 4k but maxes at 1080p": "分辨率不符",
+                "not 4k maybe not even 2k": "分辨率不符",
+                "not 4k or 8k like advertised": "分辨率不符",
+                "supports 4k 8k input but native 1080p": "分辨率不符",
+                "like 8 pixels garbage": "分辨率不符",
+                "8k支持不完全正确": "分辨率不符",
+                "4k在pc上还算能用": "分辨率不符",
+                "不是4k或8k": "分辨率不符",
+                "画面没有达到应有的水平": "模糊",
+                "像素坏了": "坏点"
+            },
+            "画面均匀度": {
+                "四周清晰": "四周清晰",
+                "整体均匀": "整体均匀",
+                "边缘不糊": "边缘不糊",
+                "对焦均匀": "对焦均匀",
+                "四周发暗": "四周发暗",
+                "四角模糊": "四角模糊",
+                "中间清四周糊": "中间清四周糊",
+                "暗角严重": "暗角严重",
+                "跑焦": "跑焦",
+                "热失焦": "热失焦"
+            },
+            "对比度/黑位": {
+                "对比度高": "对比度高",
+                "黑色纯正": "黑色纯正",
+                "暗部细节清晰": "暗部细节清晰",
+                "层次感好": "层次感好",
+                "黑的下得去": "黑的下得去",
+                "画面有深度": "画面有深度",
+                "立体感强": "立体感强",
+                "黑色发灰": "黑色发灰",
+                "暗部细节看不清": "暗部细节看不清",
+                "对比低": "对比低",
+                "画面发灰": "画面发灰",
+                "灰蒙蒙": "灰蒙蒙",
+                "一层雾": "一层雾",
+                "没有层次": "没有层次",
+                "黑不下去": "黑不下去",
+                "像白天": "像白天",
+                "死黑一片": "死黑一片"
+            },
+            "运动表现/MEMC": {
+                "运动流畅": "运动流畅",
+                "看球不晕": "看球不晕",
+                "没有拖影": "没有拖影",
+                "动作顺滑": "动作顺滑",
+                "MEMC好用": "MEMC好用",
+                "拖影严重": "拖影严重",
+                "看球眼晕": "看球眼晕",
+                "掉帧": "掉帧",
+                "画面卡顿": "画面卡顿",
+                "残影": "残影",
+                "打斗看不清": "打斗看不清"
+            },
+            "彩虹眼/散斑": {
+                "彩虹眼": "彩虹眼",
+                "看到红绿蓝条纹": "看到红绿蓝条纹",
+                "DLP彩虹效应": "DLP彩虹效应",
+                "眼睛不舒服": "眼睛不舒服",
+                "闪彩": "闪彩",
+                "散斑严重": "散斑严重",
+                "画面有噪点": "画面有噪点",
+                "看久头晕": "看久头晕",
+                "刺眼": "刺眼"
+            },
+            "噪音": {
+                "静音": "静音",
+                "风扇声音小": "风扇声音小",
+                "安静": "安静",
+                "几乎听不到声音": "几乎听不到声音",
+                "很安静": "很安静",
+                "可以忽略": "可以忽略",
+                "温控好且安静": "温控好且安静",
+                "噪音大": "噪音大",
+                "声音很吵": "声音很吵",
+                "很吵": "很吵",
+                "风扇声吵": "风扇声吵",
+                "电流声": "电流声",
+                "嗡嗡响": "嗡嗡响",
+                "吵死了": "吵死了",
+                "风扇声很大": "风扇声很大",
+                "像吹风机": "像吹风机",
+                "一直嗡嗡": "一直嗡嗡",
+                "滋滋声": "滋滋声",
+                "高频噪音": "高频噪音",
+                "风扇低沉声音": "噪音大",
+                "低功耗模式声音有点大": "噪音大",
+                "噪声有点大": "噪音大",
+                "风扇噪音很大": "噪音大",
+                "风扇噪音非常难受": "噪音大",
+                "太吵了": "噪音大",
+                "风扇比内置扬声器更大": "噪音大",
+                "风扇噪音盖不过": "噪音大",
+                "风扇高频噪声明显": "噪音大",
+                "运行更安静": "静音",
+                "非常安静": "静音",
+                "quiet": "静音",
+                "风扇声音相对安静": "静音",
+                "内部风扇声音有点大": "噪音大",
+                "风扇声音可能很大": "噪音大",
+                "风扇没那么吵": "静音",
+                "风扇声音可被音量盖过": "噪音大",
+                "风扇不影响": "静音",
+                "风扇声音大但可接受": "噪音大",
+                "风扇声能忽略": "静音",
+                "风扇声盖不过电影": "噪音大",
+                "风扇发出爆裂音": "噪音大",
+                "风扇像坏扬声器": "噪音大",
+                "风扇突然爆响": "噪音大",
+                "低功耗后风扇几乎消失": "静音",
+                "像小空气净化器一样响": "噪音大",
+                "very quiet": "静音",
+                "fans are much more quiet": "静音",
+                "有点吵": "噪音大",
+                "fan is loud": "噪音大",
+                "fan is much more quiet": "静音",
+                "no fan noise": "静音",
+                "fan slightly loud": "噪音大",
+                "fan noticeable when idle": "噪音大",
+                "quiet movie nights": "静音",
+                "too noisy": "噪音大",
+                "loud fan": "噪音大",
+                "fan noise occasionally loud": "噪音大",
+                "no fan noise perfect": "静音",
+                "high pitched noise 24/7": "噪音大",
+                "fan much louder than previous": "噪音大",
+                "machine too loud while movie": "噪音大",
+                "runs quiet compared old model": "静音",
+                "high pitched fan whine": "噪音大",
+                "fan distracting whole time": "噪音大",
+                "noisy and warms quite a bit": "噪音大",
+                "fan measured around 65db": "噪音大",
+                "fan noticeable in quiet scenes": "噪音大",
+                "fan surprisingly quiet during playback": "静音"
+            },
+            "音质": {
+                "音质好": "音质好",
+                "音量大": "音量大",
+                "低音好": "低音好",
+                "自带音响够用": "自带音响够用",
+                "还能听": "还能听",
+                "够用了": "够用了",
+                "不外接音箱也行": "不外接音箱也行",
+                "立体声": "立体声",
+                "哈曼卡顿加持": "哈曼卡顿加持",
+                "音质差": "音质差",
+                "音量小": "音量小",
+                "破音": "破音",
+                "无低音": "无低音",
+                "拉胯": "拉胯",
+                "刺耳": "刺耳",
+                "听不下去": "听不下去",
+                "像手机外放": "像手机外放",
+                "声音单薄": "声音单薄",
+                "闷不透气": "闷不透气",
+                "音频一般": "音质差",
+                "扬声器声音很大": "音量大",
+                "内置扬声器不错": "自带音响够用",
+                "声音很棒": "音质好",
+                "连接蓝牙音箱": "自带音响够用",
+                "画面和声音都很棒": "音质好",
+                "声音很大": "音量大",
+                "音质非常好": "音质好",
+                "接上外接环绕声系统": "音质好",
+                "扬声器很棒": "音质好",
+                "音质对这个体积来说很不错": "音质好",
+                "声音非常糟糕": "音质差",
+                "连接外部声音源很难": "音质差",
+                "外接蓝牙音箱后更好": "音质好",
+                "音箱声音不够大": "音量小",
+                "扬声器单薄": "音质差",
+                "内置音频不够好": "音质差",
+                "音效需要提升": "音质差",
+                "音量很棒": "音质好",
+                "响亮可调节": "音量大",
+                "内置扬声器足够大": "音量大",
+                "音量不会太大": "音量小",
+                "内置扬声器足够好": "音质好",
+                "声音挺大": "音量大",
+                "接声霸更好": "音质好",
+                "不用接音箱也够用": "音质好",
+                "音质差需要音响条": "音质差",
+                "内置扬声器够用": "音质好",
+                "音量不错": "音量大",
+                "声音可以更大": "音量小",
+                "音质差但比LG好": "音质差",
+                "内置扬声器真的很差": "音质差",
+                "声音响亮清晰": "音质好",
+                "内置扬声器优秀": "音质好",
+                "speaker poor quality": "音质差",
+                "internal sound tinny and harsh": "音质差",
+                "sound quality good": "音质好",
+                "awesome sound": "音质好",
+                "external speaker makes sense": "音质好",
+                "音效需要升级": "音质差",
+                "volume not loud enough at max": "音量小",
+                "built in speaker is average": "音量小",
+                "sound clear and loud": "音质好",
+                "sound ok": "音质一般",
+                "sound is not bad": "音质一般"
+            },
+            "对焦/校正": {
+                "自动梯形校正准": "自动梯形校正准",
+                "自动对焦快": "自动对焦快",
+                "对焦准": "对焦准",
+                "校正快": "校正快",
+                "自动校正好": "自动校正好",
+                "不用调": "不用调",
+                "很省心": "很省心",
+                "无感对焦": "无感对焦",
+                "对焦慢": "对焦慢",
+                "反复跑焦": "反复跑焦",
+                "对焦不准": "对焦不准",
+                "梯形不准": "梯形不准",
+                "反复调焦": "反复调焦",
+                "一直调不好": "一直调不好",
+                "对不上": "对不上",
+                "很麻烦": "很麻烦",
+                "校正失败": "校正失败",
+                "经常要手调": "经常要手调",
+                "自动调整和对焦": "自动对焦快",
+                "自动对焦功能很好": "自动对焦快",
+                "能保持画面清晰": "对焦准",
+                "自动对焦和梯形校正好": "自动梯形校正准",
+                "自动对焦功能不正常": "对焦不准",
+                "侧投影不起作用": "梯形不准",
+                "自动Kestone": "自动梯形校正准",
+                "手动变焦": "对焦准",
+                "焦点并不统一": "对焦不准",
+                "部分失焦": "对焦不准",
+                "自动对焦不够清晰": "对焦不准",
+                "无法关闭自动对焦": "对焦不准",
+                "每次开机都自动对焦": "对焦慢",
+                "自动梯形和自动对焦很好": "自动梯形校正准",
+                "自动调平很准": "自动梯形校正准",
+                "自动梯形不太适合": "梯形不准",
+                "左下角无法调整": "梯形不准",
+                "角点调整不均匀": "梯形不准",
+                "自动设置屏幕失败": "梯形不准",
+                "自动对焦传奇": "自动对焦快",
+                "自动设置非常快": "自动梯形校正准",
+                "画面左下角无法调整": "梯形不准",
+                "图像倾斜难对齐": "梯形不准",
+                "自动调节很方便": "自动梯形校正准",
+                "自动对焦模板很棒": "自动对焦快",
+                "自动设置画质": "自动梯形校正准",
+                "每次调梯形又回到大屏": "梯形不准",
+                "缩放回弹": "梯形不准",
+                "自动Keystone不错": "自动梯形校正准",
+                "自动对焦不错": "自动对焦快",
+                "画面调整麻烦": "很麻烦",
+                "缺少亮度调节选项": "校正失败",
+                "auto keystone and focus are quick": "自动对焦快",
+                "stretch 4 corners": "自动梯形校正准",
+                "auto adjusted perfect rectangle": "自动梯形校正准",
+                "screen size not auto set": "梯形不准",
+                "original size stays bright": "梯形不准",
+                "focus does not respond to remote": "对焦不准",
+                "F+ and F- do nothing": "对焦不准",
+                "no manual focus ring": "对焦不准",
+                "auto focus doesn t work": "对焦不准",
+                "autofocus worse than off": "对焦不准",
+                "zoom very limited": "梯形不准",
+                "smallest projection 35 inches too big": "梯形不准",
+                "angled more than 30 degrees won t adjust": "梯形不准",
+                "auto keystone off every time": "梯形不准",
+                "manual focus needed every time": "对焦慢",
+                "keystone function does not work": "梯形不准",
+                "auto focus sucks": "对焦不准",
+                "manual leaves one edge blurry": "对焦不准",
+                "never aligns with wall properly": "梯形不准",
+                "focus tricky with remote only": "对焦慢",
+                "can't adjust tilt": "梯形不准",
+                "zoom feature poor": "梯形不准",
+                "close range projection fails": "梯形不准",
+                "zoom increments too large": "梯形不准",
+                "cannot fine tune zoom": "梯形不准",
+                "auto focus and keystone good but limited": "自动梯形校正准",
+                "manual works best disable auto": "对焦准",
+                "focus never fully sharp": "对焦不准",
+                "zoom reset every startup": "梯形不准",
+                "auto keystone goes crazy then gives up": "梯形不准",
+                "manual focus always needed": "对焦慢",
+                "ceiling projection error message": "梯形不准",
+                "keystone resets after reboot": "梯形不准",
+                "does not save keystone settings": "梯形不准",
+                "auto keystone fails every time": "梯形不准",
+                "four point focus not usable": "梯形不准",
+                "autofocus fails every single time": "对焦不准",
+                "manual correction every startup": "对焦慢",
+                "corners always blurry after adjustment": "对焦不准",
+                "restart changes focus and zoom configs": "梯形不准",
+                "auto focus does not work always": "对焦不准",
+                "no manual focus all through remote": "对焦慢",
+                "auto kerning fails half the time": "梯形不准",
+                "edge blur cannot get both sides sharp": "对焦不准",
+                "corners not recognized manual adjust only": "梯形不准",
+                "auto focus takes a minute to settle": "对焦慢",
+                "usually one angle still needs manual fix": "梯形不准",
+                "autofocus and obstacle avoidance work well": "自动功能好",
+                "cannot focus beyond 9 to 10 feet": "对焦不准",
+                "best focus around 7 to 8 feet": "自动功能好",
+                "autofocus and auto align within 3 minutes": "自动功能好",
+                "every move auto adjusts quickly": "自动功能好",
+                "manual focus option plus auto focus": "自动功能好",
+                "text too small in setup menu": "梯形不准",
+                "does not work at close range": "梯形不准",
+                "will not adjust properly when angled more than 30": "梯形不准",
+                "focus cannot be adjusted very limited": "对焦不准"
+            },
+            "避障与入幕": {
+                "智能避障准": "智能避障准",
+                "自动对齐幕布": "自动对齐幕布",
+                "入幕精准": "入幕精准",
+                "识别开关灵敏": "识别开关灵敏",
+                "避不开障碍物": "避不开障碍物",
+                "入幕失败": "入幕失败",
+                "幕布对不齐": "幕布对不齐",
+                "画面越界": "画面越界",
+                "识别太蠢": "识别太蠢"
+            },
+            "系统与生态": {
+                "流畅": "流畅",
+                "不卡": "不卡",
+                "开机快": "开机快",
+                "无广告": "无广告",
+                "UI好看": "UI好看",
+                "资源丰富": "资源丰富",
+                "内存大": "内存大",
+                "操作简单": "操作简单",
+                "系统卡顿": "系统卡顿",
+                "开机慢": "开机慢",
+                "死机": "死机",
+                "开机广告": "开机广告",
+                "广告多": "广告多",
+                "套娃收费": "套娃收费",
+                "不买会员没法看": "不买会员没法看",
+                "资源少": "资源少",
+                "不能装第三方App": "不能装第三方App",
+                "内存太小": "内存太小",
+                "内置Roku": "资源丰富",
+                "Roku平台太棒": "资源丰富",
+                "Roku TV 加载速度快": "开机快",
+                "流媒体服务好": "资源丰富",
+                "所有流媒体应用都能用": "资源丰富",
+                "apps和live频道": "资源丰富",
+                "我可以添加我所有的应用": "资源丰富",
+                "像一台Roku电视": "资源丰富",
+                "Roku用户一定会喜欢": "资源丰富",
+                "本地新闻": "资源丰富",
+                "激活简单": "操作简单",
+                "Roku软件笨重": "系统卡顿",
+                "菜单埋得太深": "系统卡顿",
+                "设置都在菜单里": "系统卡顿",
+                "登录Roku后几乎开箱即用": "操作简单",
+                "界面直观": "操作简单",
+                "界面易用": "操作简单",
+                "应用集成很好": "资源丰富",
+                "所有应用都能访问": "资源丰富",
+                "流媒体切换无缝": "流畅",
+                "Roku应用方便": "资源丰富",
+                "Roku账号登录简单": "操作简单",
+                "连接账号后自动订阅": "套娃收费",
+                "每月50美元订阅": "套娃收费",
+                "即插即用": "操作简单",
+                "如果没用过Roku不建议买": "操作简单",
+                "Roku账户依赖强": "操作简单",
+                "Roku密码登录": "操作简单",
+                "内置Roku服务": "资源丰富",
+                "流媒体播放很方便": "资源丰富",
+                "内置软件都无法使用": "资源少",
+                "提供说明太基础": "操作简单",
+                "家庭影院连接适配差": "系统卡顿",
+                "Roku账号登录很快": "操作简单",
+                "预装应用不可用": "资源少",
+                "登录Roku过程很糟糕": "系统卡顿",
+                "必须登录Roku账户": "操作简单",
+                "应用很多": "资源丰富",
+                "内置应用太慢": "系统卡顿",
+                "应用卡顿": "系统卡顿",
+                "不能镜像Google手机": "不兼容",
+                "整体设置不够直观": "系统卡顿",
+                "Roku账户门槛": "操作简单",
+                "登录Roku需要多次尝试": "系统卡顿",
+                "Roku登录支付流程糟糕": "系统卡顿",
+                "app store 选择不多": "资源少",
+                "不支持google play": "资源少",
+                "系统稍慢但稳定": "系统卡顿",
+                "this one just works": "流畅",
+                "menu intuitive and simple": "操作简单",
+                "user friendly interface": "操作简单",
+                "apps are slow and clunky": "系统卡顿",
+                "Roku登录反复失败": "系统卡顿",
+                "信用卡才登录成功": "系统卡顿",
+                "smart system is slow": "系统卡顿",
+                "interface lag": "系统卡顿",
+                "works out of the box": "操作简单",
+                "UI responsive": "流畅",
+                "apps function flawlessly": "资源丰富",
+                "built-in netflix laggy": "系统卡顿",
+                "apps freeze and buffer": "系统卡顿",
+                "switching between apps slower": "系统卡顿",
+                "smart system slow and unreliable": "系统卡顿",
+                "hulu shuts down after 5 minutes": "系统卡顿",
+                "app crash often": "系统卡顿",
+                "data harvesting policy": "套娃收费",
+                "cannot use without agreeing policy": "套娃收费",
+                "netflix isnt working": "资源少",
+                "youtube infinite buffering": "系统卡顿",
+                "hulu glitch install page": "系统卡顿",
+                "no normal apps store": "资源少",
+                "linux app store strange": "资源少",
+                "software incredibly laggy": "系统卡顿",
+                "remote 30 second delay": "系统卡顿",
+                "interface painfully slow": "系统卡顿",
+                "there is no mainstream apps": "资源少",
+                "no app store to get apps": "资源少",
+                "hulu doesn't load day 4": "系统卡顿",
+                "tried to buy review": "售后差",
+                "netflix isnt working need support": "资源少",
+                "hulu app exits to home": "系统卡顿",
+                "software a bit slow": "系统卡顿",
+                "works great when it works": "系统卡顿",
+                "blank screen inside app": "系统卡顿",
+                "screen blank only sound bar": "系统卡顿",
+                "tech support email only": "售后差",
+                "no chat or phone support": "售后差",
+                "peacock black screen only sound": "系统卡顿",
+                "app store error 404": "系统卡顿",
+                "youtube internet error but internet fine": "系统卡顿",
+                "netflix app lag and delay": "系统卡顿",
+                "no disney peacock hulu support": "资源少",
+                "hulu and disney cannot sign in": "资源少",
+                "app store very limited": "资源少",
+                "neterange app store limited": "资源少",
+                "youtube tv support question": "资源少",
+                "fire stick is slow": "系统卡顿",
+                "runs on linux not android": "资源少",
+                "cannot install sideload third party apps": "资源少",
+                "built in app store lacks players": "资源少",
+                "hulu and disney plus black screen": "系统卡顿",
+                "disney plus loading circle forever": "系统卡顿",
+                "chromecast os limited app ecosystem": "资源少",
+                "no apple tv vudu max xfinity espn paramount": "资源少",
+                "cannot remove netflix or disney shortcut": "资源少",
+                "need wifi to use bluetooth downloaded videos": "不兼容",
+                "youtube randomly exits to home menu": "系统卡顿",
+                "update claims to fix youtube lag": "系统卡顿",
+                "software issues in app system": "系统卡顿",
+                "cannot pause or skip in disney plus": "系统卡顿",
+                "built in apps work but remote selection painful": "系统卡顿",
+                "android but not android tv ui": "资源少",
+                "curated app list not full play store": "资源少",
+                "does not support hdr at all": "资源少",
+                "cannot have disney plus due to copyright issues": "资源少",
+                "this only plays in sd on my apps": "资源少",
+                "there is no 4k playing": "分辨率不符",
+                "algo lento el software": "系统卡顿",
+                "forces ads on the home screen": "系统卡顿"
+            },
+            "投屏体验": {
+                "投屏稳定": "投屏稳定",
+                "连接快": "连接快",
+                "延迟低": "延迟低",
+                "兼容好": "兼容好",
+                "秒连": "秒连",
+                "很方便": "很方便",
+                "稳定": "稳定",
+                "支持苹果投屏": "支持苹果投屏",
+                "连不上": "连不上",
+                "延迟高": "延迟高",
+                "断连": "断连",
+                "不兼容": "不兼容",
+                "投屏失败": "投屏失败",
+                "经常掉": "经常掉",
+                "画质压缩": "画质压缩",
+                "只有声音没画面": "只有声音没画面",
+                "手机热点保持良好连接": "连接快",
+                "离网看电影连接稳定": "投屏稳定",
+                "连接视频很简单": "连接快",
+                "连接起来非常轻松": "连接快",
+                "安装和使用都很简单": "连接快",
+                "蓝牙音箱也很容易设置": "连接快",
+                "AirPlay播放会停止": "断连",
+                "AirPlay非常方便": "投屏稳定",
+                "屏幕镜像更易用": "投屏稳定",
+                "手机流媒体播放顺畅": "投屏稳定",
+                "蓝牙配对完美没有延迟": "延迟低",
+                "5 GHz WiFi网络更稳定": "连接快",
+                "手机热点没有问题": "连接快",
+                "蓝牙连接很简单": "连接快",
+                "连接BT音箱花了点时间": "连接快",
+                "AirPlay很顺畅": "投屏稳定",
+                "有音频但没有视频": "只有声音没画面",
+                "没有延迟": "延迟低",
+                "连接环绕声简单": "连接快",
+                "iOS无缝集成": "投屏稳定",
+                "iPhone镜像很方便": "投屏稳定",
+                "蓝牙视频连接困难": "延迟高",
+                "audio-delay": "延迟高",
+                "音画不同步": "延迟高",
+                "cannot cast": "投屏失败",
+                "no lag wireless screen share": "延迟低",
+                "cannot pair iphone": "不兼容",
+                "ios seamless": "投屏稳定",
+                "bluetooth reconnect sometimes": "断连",
+                "pair again easy": "连接快",
+                "cannot cast using google phone": "投屏失败",
+                "started disconnecting from internet": "断连",
+                "one month后断网": "断连",
+                "cannot play from apple devices": "不兼容",
+                "iphone投屏失败": "投屏失败",
+                "wireless screen share无延迟": "延迟低",
+                "HDCP compliant": "投屏稳定",
+                "bluetooth quit working after three months": "断连",
+                "lose bluetooth connection from time to time": "断连",
+                "disconnects from wifi every 5-10 minutes": "断连",
+                "freeze after 20 minutes while streaming": "断连",
+                "airplay from phone keeps crashing": "投屏失败",
+                "mirror software laggy": "延迟高",
+                "whale mirror hard to navigate": "延迟高",
+                "pause with sound only": "只有声音没画面",
+                "android crashes every couple minutes": "断连",
+                "apple works android not": "不兼容",
+                "dont work airplay": "投屏失败",
+                "native airplay not available": "投屏失败",
+                "mirror software garbage": "延迟高",
+                "sound delay on other app": "延迟高",
+                "wifi disconnect every few minutes": "断连",
+                "glitching nonstop after 20 mins": "断连",
+                "cannot connect wifi agree page": "断连",
+                "iphone doesnt recognize it": "不兼容",
+                "android device crashes": "不兼容",
+                "input lag for gaming": "延迟高",
+                "display lag makes games disorienting": "延迟高",
+                "no gaming mode": "延迟高",
+                "wireless screen share no lag": "延迟低",
+                "bluetooth speaker works solid": "投屏稳定",
+                "cannot connect to wifi consistently": "断连",
+                "wont connect to wifi or phone": "断连",
+                "airpods need re-pair each time": "断连",
+                "bluetooth connection fails repeatedly": "断连",
+                "screen share disconnects on its own": "断连",
+                "bluetooth audio lag 5 seconds": "延迟高",
+                "bluetooth not working at all": "断连",
+                "remote and projector not responding each other": "不兼容",
+                "forced to cast entire screen only": "延迟高",
+                "cannot cast video only": "不兼容",
+                "screen mirror blurry in full focus": "画质压缩",
+                "bluetooth speaker causes video delay": "音画不同步",
+                "audio delayed when using bluetooth speaker": "音画不同步",
+                "sound out of sync over bluetooth": "音画不同步",
+                "cannot screen mirror at all": "投屏失败",
+                "screen casting never works from phone": "投屏失败",
+                "bluetooth speaker no delay": "延迟低",
+                "bluetooth connection smooth and stable": "投屏稳定",
+                "bluetooth speaker causes quality drop": "延迟高",
+                "不能镜像任何手机": "投屏失败",
+                "不能镜像手机": "投屏失败",
+                "would not play from apple products": "不兼容",
+                "nothing worked when needed": "投屏失败",
+                "lose connection from time to time via bluetooth": "断连",
+                "picture freezes up a lot": "断连",
+                "no se podia conectar el telefono": "不兼容",
+                "can t be used sideways": "不兼容",
+                "连接蓝牙扬声器会延迟视频播放": "音画不同步",
+                "bluetooth speaker delays video": "音画不同步"
+            },
+            "语音控制": {
+                "语音识别准": "语音识别准",
+                "好用": "好用",
+                "反应快": "反应快",
+                "操控方便": "操控方便",
+                "远场语音好用": "远场语音好用",
+                "识别率低": "识别率低",
+                "不好用": "不好用",
+                "反应慢": "反应慢",
+                "经常误触": "经常误触",
+                "半夜自己说话": "半夜自己说话",
+                "像智障": "像智障"
+            },
+            "外观与便携": {
+                "小巧": "小巧",
+                "轻便": "轻便",
+                "便携": "便携",
+                "随便放": "随便放",
+                "不占地方": "不占地方",
+                "颜值高": "颜值高",
+                "设计感强": "设计感强",
+                "像艺术品": "像艺术品",
+                "带提手方便": "带提手方便",
+                "太重": "太重",
+                "太大": "太大",
+                "塞不进包": "塞不进包",
+                "不方便携带": "不方便携带",
+                "笨重": "笨重",
+                "外观丑": "外观丑",
+                "像砖头": "像砖头",
+                "小型投影仪": "小巧",
+                "超级易用投影仪": "小巧",
+                "便携式投影仪": "便携",
+                "轻量": "轻便",
+                "轻量级": "轻便",
+                "小型强力投影仪": "小巧",
+                "旅行方便": "便携",
+                "露台使用方便": "便携",
+                "紧凑型": "小巧",
+                "小公寓节省空间": "不占地方",
+                "经常搬家很适合": "便携",
+                "紧凑且易移动": "便携",
+                "great size and quality": "小巧",
+                "compact and lightweight": "轻便",
+                "lightweight and small": "轻便",
+                "compact projector": "小巧",
+                "stylish and modern": "设计感强",
+                "easy to store safely": "便携",
+                "campervan": "便携",
+                "compact and travel friendly": "便携",
+                "portable mini projector": "便携",
+                "looks cheap but build quality is solid": "做工扎实",
+                "cheap look but well built": "做工扎实",
+                "small lightweight and quiet projector": "小巧",
+                "fits in my backpack": "便携",
+                "portable for truck travel": "便携",
+                "design changed slightly": "外观一般"
+            },
+            "接口与扩展": {
+                "接口丰富": "接口丰富",
+                "支持HDMI2.1": "支持HDMI2.1",
+                "带网口": "带网口",
+                "支持eARC": "支持eARC",
+                "接主机方便": "接主机方便",
+                "USB口不够": "USB口不够",
+                "HDMI版本旧": "HDMI版本旧",
+                "无网口": "无网口",
+                "接口少": "接口少",
+                "不兼容": "不兼容",
+                "接口位置反人类": "接口位置反人类",
+                "音频口底噪大": "音频口底噪大",
+                "接口非常有限": "接口少",
+                "只有HDMI Arc和RCA": "接口少",
+                "缺少光纤接口": "接口少",
+                "接口选项少": "接口少",
+                "支持蓝牙音箱": "接口丰富",
+                "HDMI ARC": "支持eARC",
+                "3.5毫米音频输出坏了": "音频口底噪大",
+                "3.5毫米耳机插孔": "音频口底噪大",
+                "支持连接环绕声设备": "支持eARC",
+                "连接接收器音箱": "接口丰富",
+                "连接环绕声设备": "支持eARC",
+                "连接音响条": "支持eARC",
+                "蓝牙连接质量非常差": "不兼容",
+                "遥控器是红外线": "接口少",
+                "需要对准投影仪": "接口少",
+                "没有蓝牙": "不兼容",
+                "电源线总是滑出来": "做工差",
+                "电源连接不可靠": "做工差",
+                "触控功能": "接口丰富",
+                "只有一个HDMI接口": "接口少",
+                "无法连接家庭影院": "不兼容",
+                "只能做投影无法用内置应用": "不兼容",
+                "只有一个HDMI": "接口少",
+                "hook up to Sonos speaker": "接口丰富",
+                "连接音箱无需额外线缆": "接口丰富",
+                "via cable to laptop": "接口少",
+                "fat32 only": "接口少",
+                "64gb key max": "接口少",
+                "older usb protocol": "接口少",
+                "disney plus not working": "不兼容",
+                "Disney+ 无法工作": "不兼容",
+                "works with fire tv stick": "接口丰富",
+                "remote wont work": "不兼容",
+                "remote has to be very close": "不兼容",
+                "IR sensor近距才能用": "不兼容",
+                "usb-c to hdmi cable": "接口丰富",
+                "外接apple tv": "接口丰富",
+                "hdmi to surround system": "接口丰富",
+                "remote stopped working in weeks": "不兼容",
+                "remote won t work fresh batteries": "不兼容",
+                "bluetooth not available menu missing": "不兼容",
+                "no bluetooth output in q5": "不兼容",
+                "hdmi no connectivity to laptop": "不兼容",
+                "usb-c to hdmi needed": "接口丰富",
+                "ps5 will not recognize 4k": "不兼容",
+                "supports only 1080p max": "不兼容",
+                "one hdmi outlet doesn't work": "不兼容",
+                "single hdmi failed": "不兼容",
+                "cannot connect laptop with hdmi": "不兼容",
+                "remote has to be 2ft away": "不兼容",
+                "ir remote terrible": "不兼容",
+                "press button 5 times": "不兼容",
+                "no bluetooth output": "不兼容",
+                "bluetooth speaker lags": "不兼容",
+                "cannot be used sideways": "不兼容",
+                "remote stopped responding after two days": "不兼容",
+                "sensor line up difficult": "不兼容",
+                "remote almost unusable": "不兼容",
+                "usb-c to hdmi cable works": "接口丰富",
+                "fire tv stick works better": "接口丰富",
+                "aux out works great": "接口丰富",
+                "arrived without power cord": "不兼容",
+                "power plug falls out easily": "不兼容",
+                "no enter button on remote": "不兼容",
+                "remote does not work with fresh batteries": "不兼容",
+                "power cord fits loosely": "不兼容",
+                "plug falls out from projector": "不兼容",
+                "usb only reads up to 128gb": "不兼容",
+                "2tb ssd not recognized": "不兼容",
+                "player ignores many file formats": "不兼容",
+                "mkv subtitle not supported": "不兼容",
+                "fast forward only 20 seconds each press": "不兼容",
+                "hdmi turned screen fully blue": "不兼容",
+                "hdmi no signal message keeps showing": "不兼容",
+                "ps3 not compatible over hdmi": "不兼容",
+                "laptop cannot connect via hdmi": "不兼容",
+                "no 3.5mm audio jack": "不兼容",
+                "power cable too short": "不兼容",
+                "ps3 cannot be used": "不兼容",
+                "hdmi no signal": "不兼容",
+                "hdmi blue screen only": "不兼容",
+                "no audio over hdmi from laptop": "不兼容",
+                "hdmi connected but no computer sound": "不兼容",
+                "3.5mm headphone jack included": "兼容好",
+                "power cord is short need extension": "不兼容",
+                "hdmi and usb ports only": "不兼容",
+                "3.5mm jack works": "兼容好",
+                "cable arrived faulty": "不兼容",
+                "move cable and it turns off": "不兼容",
+                "power cord fit loosely and on off": "不兼容",
+                "can t be used cordlessly": "不兼容",
+                "ps3无法使用": "不兼容",
+                "hdmi无信号": "不兼容",
+                "ps3 not compatible": "不兼容"
+            },
+            "散热与温控": {
+                "散热好": "散热好",
+                "不怎么发热": "不怎么发热",
+                "温控不错": "温控不错",
+                "开一天也不烫": "开一天也不烫",
+                "机身烫": "机身烫",
+                "出风口烫": "出风口烫",
+                "自动关机": "自动关机",
+                "发热严重": "发热严重",
+                "像暖风机": "像暖风机",
+                "热得离谱": "热得离谱",
+                "一会就热": "一会就热",
+                "烫手": "烫手",
+                "随机关闭": "自动关机",
+                "突然熄火": "自动关机",
+                "可能过热": "发热严重",
+                "看电影时突然熄火": "自动关机",
+                "过热很快": "发热严重",
+                "运行后房间会变暖": "发热严重",
+                "风扇关机后继续转": "散热好",
+                "电影中途关机": "自动关机",
+                "过热提示": "发热严重",
+                "看30分钟就过热": "发热严重",
+                "过热后黑屏": "自动关机",
+                "电影中途咔嗒关机": "自动关机",
+                "runs cooler": "散热好",
+                "getting hot during work": "发热严重",
+                "plastic smell": "发热严重",
+                "gets hot really fast": "发热严重",
+                "room a million degrees": "发热严重",
+                "easy to overheat": "发热严重",
+                "turns on by itself": "自动关机",
+                "stays on 24/7": "散热好",
+                "runs cooler than others": "散热好",
+                "gets hot and very noisy": "发热严重",
+                "calienta bastante": "发热严重",
+                "bulb burning out in 5 months": "发热严重",
+                "shuts down then restarts": "自动关机",
+                "periodically turns on by itself": "自动关机",
+                "warms quite a bit": "发热严重",
+                "lifetime lamp not as promised": "发热严重",
+                "burned out in less than a month": "发热严重",
+                "projector gets very hot": "发热大",
+                "runs even when turned off": "发热大",
+                "must unplug to stop running": "发热大",
+                "fan is loud and distracting": "风扇噪音",
+                "running so hot under one year": "发热大",
+                "heat and fan noise both high": "风扇噪音",
+                "gets hot but acceptable": "发热大"
+            },
+            "做工质感": {
+                "做工好": "做工好",
+                "质感好": "质感好",
+                "无瑕疵": "无瑕疵",
+                "镜头干净": "镜头干净",
+                "金属质感": "金属质感",
+                "用料扎实": "用料扎实",
+                "塑料感强": "塑料感强",
+                "缝隙大": "缝隙大",
+                "镜头进灰": "镜头进灰",
+                "廉价感": "廉价感",
+                "做工差": "做工差",
+                "塑料味重": "塑料味重",
+                "做工糙": "做工糙",
+                "缝隙明显": "缝隙明显",
+                "遥控器难用": "遥控器难用",
+                "密封防尘": "做工好",
+                "灰尘不会进来": "镜头干净",
+                "无尘": "镜头干净",
+                "支架无法卡入": "做工差",
+                "支架容易折回去": "做工差",
+                "设计糟糕": "做工差",
+                "做工感觉廉价": "廉价感",
+                "翻转支架很差": "做工差",
+                "底部只有一个支撑腿": "做工差",
+                "支撑腿不平衡": "做工差",
+                "需要用纸巾盒垫高": "做工差",
+                "需要投影仪架": "做工差",
+                "支架设计不稳": "做工差",
+                "sturdy construction": "做工好",
+                "plasticky build": "廉价感",
+                "poor design": "做工差",
+                "high build quality": "做工好",
+                "dust behind lens at first use": "镜头进灰",
+                "fingerprint inside lens": "镜头进灰",
+                "glued shut cannot clean": "做工差",
+                "used product sold as new": "做工差",
+                "scratched lens from box": "做工差",
+                "open box product": "做工差",
+                "returned item sold as new": "做工差",
+                "lens scratch on arrival": "做工差",
+                "missing cleaning tool": "做工差",
+                "hard to clean internal lens": "镜头进灰",
+                "dust inside lens": "镜头进灰",
+                "plastic build": "廉价感",
+                "not sealed optics easy dust": "镜头进灰"
+            },
+            "性价比": {
+                "性价比高": "性价比高",
+                "值": "值",
+                "划算": "划算",
+                "超值": "超值",
+                "很香": "很香",
+                "平替首选": "平替首选",
+                "物美价廉": "物美价廉",
+                "不值": "不值",
+                "降价快": "降价快",
+                "太贵": "太贵",
+                "智商税": "智商税",
+                "后悔买了": "后悔买了",
+                "溢价高": "溢价高",
+                "割韭菜": "割韭菜",
+                "以这个价位来说是最好的": "性价比高",
+                "性价比很高": "性价比高",
+                "价格差别很大": "性价比高",
+                "不高的价格": "性价比高",
+                "值得一买": "性价比高",
+                "价格过高": "不值",
+                "不值这个要价": "不值",
+                "远远不够让人满意": "不值",
+                "价格难以匹敌": "性价比高",
+                "买得不错": "性价比高",
+                "值得买": "性价比高",
+                "值得投资": "性价比高",
+                "价格和质量平衡": "性价比高",
+                "物超所值": "性价比高",
+                "10/10推荐": "性价比高",
+                "以这个价位还算不错": "性价比高",
+                "今年最好的购买": "性价比高",
+                "物有所值": "性价比高",
+                "买得很棒": "性价比高",
+                "价格合理": "性价比高",
+                "性价比极佳": "性价比高",
+                "必买": "性价比高",
+                "worth no more than £40": "不值",
+                "价格实惠": "性价比高",
+                "still worth keeping": "性价比高",
+                "outstanding value for money": "性价比高",
+                "great for the price": "性价比高",
+                "overpriced for the money": "不值",
+                "worth your money": "性价比高",
+                "costed 60 pounds better": "不值",
+                "high-end features affordable": "性价比高",
+                "worth every penny": "性价比高",
+                "good for the price only": "性价比高",
+                "overpriced and misleading": "不值",
+                "entry-level with limitations": "不值",
+                "worth no more than 40 pounds": "不值",
+                "for less than 120 i d buy again": "性价比高",
+                "great value for budget intro": "性价比高",
+                "good for the price but flaws": "性价比高",
+                "not worth full price": "不值",
+                "cheap but poor quality": "不值",
+                "for 130 not bad": "性价比高",
+                "anything higher overpriced": "不值",
+                "good value for money": "性价比高",
+                "great value for the price": "值",
+                "excellent for under 100 pounds": "值",
+                "worth every penny at this price": "值",
+                "not the best but for the price acceptable": "值",
+                "for this price it is okay": "值",
+                "for the price it is decent": "值",
+                "excellent projector on a budget": "值",
+                "great entry option for the price": "值",
+                "at 78 dollars this is solid": "值",
+                "for 100 dollars no complaints": "值",
+                "great at 109.99": "值",
+                "for this price very good": "值",
+                "for the price cannot complain": "值",
+                "非常好": "值",
+                "很好": "值",
+                "很棒": "值",
+                "不错": "值",
+                "满意": "值",
+                "值得推荐": "值",
+                "推荐购买": "值",
+                "太好了": "值",
+                "完美": "值",
+                "5 stars": "值",
+                "five stars": "值",
+                "10/10": "值",
+                "highly recommended": "值",
+                "great projector": "值",
+                "quality is great": "值",
+                "im impressed": "值",
+                "easy to set up and good quality": "值",
+                "works with all types of operating system": "值",
+                "五星好评": "值",
+                "画质极佳": "值",
+                "产品非常出色": "值",
+                "超出预期": "值",
+                "great image and sound": "值",
+                "awesome and valuable product": "值",
+                "top notch display quality": "值",
+                "good quality for the price": "值",
+                "very good quality for the price": "值",
+                "worth buying": "值",
+                "the best i have had": "值",
+                "very easy to use": "值",
+                "setup was very easy": "值",
+                "simple to use": "值",
+                "点赞": "值",
+                "产品一流": "值",
+                "令人惊叹的产品": "值",
+                "质量惊人": "值",
+                "守护者": "值",
+                "太喜欢了 这个价位 最好的": "值",
+                "非常实用": "值",
+                "百分之百推荐": "值",
+                "太棒了 太棒了": "值",
+                "good projector": "值",
+                "is ok": "值"
+            },
+            "品控与寿命": {
+                "质量好": "质量好",
+                "很耐用": "很耐用",
+                "用了几年没坏": "用了几年没坏",
+                "品控不错": "品控不错",
+                "稳定性好": "稳定性好",
+                "死机": "死机",
+                "亮点": "亮点",
+                "坏点": "坏点",
+                "无法开机": "无法开机",
+                "故障多": "故障多",
+                "经常坏": "经常坏",
+                "烧WiFi模块": "烧WiFi模块",
+                "黑屏": "黑屏",
+                "镜头烧毁": "镜头烧毁",
+                "光机进灰": "光机进灰",
+                "只用了两个月就有线条": "故障多",
+                "掉了两次还正常": "质量好",
+                "用了两个月很稳定": "质量好",
+                "用了两个月屏幕有线条": "故障多",
+                "掉了两次效果很好": "质量好",
+                "用了4个月没问题": "质量好",
+                "用了两周中途关机": "故障多",
+                "光源开始失效": "故障多",
+                "屏幕有黑线": "故障多",
+                "投影仪移动时会关闭": "故障多",
+                "用了两周画面变形": "故障多",
+                "屏幕会变黑": "故障多",
+                "不到两个月坏了": "故障多",
+                "光源寿命短": "故障多",
+                "几个月后对焦失效": "故障多",
+                "dark spot in middle": "故障多",
+                "scratches looked opened": "故障多",
+                "two days dark spots": "故障多",
+                "focus failed after months": "故障多",
+                "turns on by itself at night": "故障多",
+                "light source fails": "故障多",
+                "stopped working less than a year": "故障多",
+                "pos doesn t last a month": "故障多",
+                "black spots from dust after month": "故障多",
+                "projector turns on then shuts off": "故障多",
+                "remote failed after days": "故障多",
+                "broke after one use": "故障多",
+                "doesn't last a month": "故障多",
+                "window keystone broke early": "故障多",
+                "blown pixels": "故障多",
+                "white spots within a week": "故障多",
+                "replacement dead spot out of box": "故障多",
+                "stopped working under one year": "故障多",
+                "orange spots started at 12 months": "故障多",
+                "black dots at 12 months": "故障多",
+                "white spots appear after hours": "暗斑",
+                "dust started accumulating inside lens": "进灰",
+                "dust in corners of lens": "进灰",
+                "screen goes blank after power on": "黑屏",
+                "turned on then blank screen": "黑屏",
+                "led signal not appearing unable to start": "不开机",
+                "white spots all over dark scenes": "暗斑",
+                "burn marks from heat": "烧屏",
+                "only used twice and white pixels appeared": "暗斑",
+                "arrived used with scratches on top": "翻新机",
+                "lens was smudged on arrival": "翻新机",
+                "item was not new and packaging missing": "翻新机",
+                "dead pixels appeared within one month": "坏点",
+                "center screen has a big mark": "暗斑",
+                "屏幕上已经有线条了": "坏点",
+                "屏幕有线条": "坏点",
+                "有线条": "坏点",
+                "dust has accumulated inside it": "进灰",
+                "fingerprint inside the lens": "进灰",
+                "remote stopped working": "遥控器故障",
+                "used less than one month and several pixels died": "坏点",
+                "dust started accumulating on the lens": "进灰"
+            },
+            "售后体验": {
+                "售后好": "售后好",
+                "退款快": "退款快",
+                "客服好": "客服好",
+                "服务贴心": "服务贴心",
+                "保修痛快": "保修痛快",
+                "换货快": "换货快",
+                "售后差": "售后差",
+                "维修慢": "维修慢",
+                "推诿责任": "推诿责任",
+                "不退款": "不退款",
+                "没人管": "没人管",
+                "踢皮球": "踢皮球",
+                "联系不上": "联系不上",
+                "运费要自己出": "运费要自己出",
+                "维修费天价": "维修费天价",
+                "不得不退货": "售后差",
+                "寄回去后还是没退款": "不退款",
+                "客服沟通慢": "售后差",
+                "回复间隔24小时": "维修慢",
+                "申请更换被取消": "售后差",
+                "还在等退款": "不退款",
+                "卖家很快寄了替换品": "换货快",
+                "客户服务很棒": "售后好",
+                "必须购买保修": "售后差",
+                "卖家邮件指导使用": "售后好",
+                "退货后没留下": "售后差",
+                "附带保修": "售后好",
+                "更换后还是同样问题": "售后差",
+                "客服提供24美元信用": "售后差",
+                "支持回复很快": "售后好",
+                "customer service good and friendly": "售后好",
+                "sent replacement higher version": "换货快",
+                "50% refund voucher": "退款快",
+                "refund pursued": "售后差",
+                "sending back for refund": "不退款",
+                "customer service friendly": "售后好",
+                "company refuses to engage": "售后差",
+                "sending this junk back for refund": "不退款",
+                "replacement approved quickly": "换货快",
+                "customer support not responded": "售后差",
+                "return shipping required": "售后差",
+                "customer service reached out quickly": "售后好",
+                "need someone to reach out": "售后差",
+                "return required pay shipping": "售后差",
+                "support slow options": "售后差",
+                "replacement sent quickly": "换货快",
+                "magcubic never replied support email": "售后差",
+                "support ignored until return window closed": "售后差",
+                "refund handled by amazon only": "售后差",
+                "returned first unit replacement solved it": "售后好",
+                "replacement unit works great now": "售后好",
+                "issue fixed after replacement": "售后好",
+                "problem resolved after update": "售后好",
+                "customer service never replied": "售后差",
+                "support did not respond": "售后差",
+                "没有任何支持": "售后差",
+                "客服说灯泡无法更换": "售后差",
+                "不支持更换灯泡": "售后差",
+                "misleading reviews for another projector": "售后差",
+                "why can t we give minus stars": "售后差",
+                "why cant we give minus stars": "售后差",
+                "going to be a return": "售后差",
+                "we need to talk": "售后差",
+                "收到故障机替换后现在非常满意": "售后好",
+                "replacement resolved and now satisfied": "售后好",
+                "客服不回复支持很差": "售后差",
+                "customer service no response": "售后差"
+            },
+            "居家观影": {
+                "看电视": "看电视",
+                "追剧": "追剧",
+                "看综艺": "看综艺",
+                "看电影": "看电影",
+                "家庭影院": "家庭影院",
+                "movie": "看电影",
+                "movies": "看电影",
+                "movie night": "看电影",
+                "streaming": "追剧",
+                "netflix": "追剧",
+                "prime video": "追剧",
+                "disney+": "追剧"
+            },
+            "卧室投屏": {
+                "卧室": "卧室",
+                "关灯使用": "关灯使用",
+                "躺床看": "躺床看",
+                "夜间观影": "夜间观影",
+                "打到天花板": "打到天花板",
+                "bedroom": "卧室",
+                "watch in bed": "躺床看",
+                "ceiling": "打到天花板",
+                "night viewing": "夜间观影",
+                "卧室投影仪": "卧室",
+                "放在卧室里": "卧室",
+                "这是卧室投影仪": "卧室",
+                "装在天花板上": "打到天花板",
+                "卧室里买一个": "卧室",
+                "非常适合卧室": "卧室",
+                "卧室灯具安装": "卧室",
+                "从天花板上安装在卧室": "打到天花板",
+                "卧室电视换成了这个": "卧室",
+                "床上看电影": "卧室",
+                "天花板贴投": "打到天花板",
+                "卧床使用": "卧室",
+                "卧室墙上投": "卧室",
+                "卧室里使用": "卧室",
+                "孩子房间": "卧室",
+                "卧室里用": "卧室",
+                "孩子房间使用": "卧室",
+                "卧室墙投": "卧室",
+                "watching movies in bed": "卧室",
+                "projecting onto the ceiling": "打到天花板",
+                "bedroom replacement tv": "卧室",
+                "projecting in bed nightly": "卧室",
+                "wife watch dramas in bed": "卧室",
+                "not recommended in bedroom due noise": "卧室",
+                "project to ceiling in bed": "卧室",
+                "perfect for bedroom use": "卧室投屏",
+                "use in my bedroom every night": "卧室投屏",
+                "bought this for bedroom": "卧室投屏",
+                "perfect for bedroom movie": "卧室投屏",
+                "watch on ceiling while in bed": "卧室投屏",
+                "cozy movie vibe every night": "卧室投屏"
+            },
+            "客厅影院": {
+                "客厅": "客厅",
+                "对抗光": "对抗光",
+                "大屏观影": "大屏观影",
+                "代替电视": "代替电视",
+                "living room": "客厅",
+                "tv replacement": "代替电视",
+                "ambient light": "对抗光",
+                "daytime viewing": "对抗光"
+            },
+            "游戏娱乐": {
+                "Switch": "Switch",
+                "PS5": "PS5",
+                "Xbox": "Xbox",
+                "游戏": "游戏",
+                "主机游戏": "主机游戏",
+                "黑神话": "黑神话",
+                "gaming": "游戏",
+                "console": "主机游戏",
+                "playstation": "PS5",
+                "xbox series": "Xbox",
+                "nintendo": "Switch",
+                "input lag": "主机游戏",
+                "hdmi 2.1": "主机游戏",
+                "ps5 gaming no lag": "主机游戏",
+                "input lag severe": "主机游戏",
+                "racing platform shooter all laggy": "主机游戏"
+            },
+            "体育赛事": {
+                "看球": "看球",
+                "世界杯": "世界杯",
+                "奥运会": "奥运会",
+                "电竞比赛": "电竞比赛",
+                "体育": "体育",
+                "sports": "体育",
+                "sport": "体育",
+                "match": "看球",
+                "matches": "看球",
+                "football": "看球",
+                "soccer": "看球",
+                "nba": "看球",
+                "premier league": "看球",
+                "champions league": "看球",
+                "f1": "体育",
+                "ufc": "体育",
+                "tennis": "体育",
+                "看比赛": "看球",
+                "球赛": "看球",
+                "赛事直播": "看球",
+                "体育直播": "体育",
+                "直播看球": "看球",
+                "欧洲杯": "看球",
+                "美洲杯": "看球",
+                "超级碗": "看球",
+                "足球观赛派对": "看球",
+                "车库看体育": "体育",
+                "非常适合足球": "看球",
+                "超级碗院子派对": "看球",
+                "体育观赛": "体育",
+                "体育赛事画质惊艳": "体育"
+            },
+            "移动/户外": {
+                "露营": "露营",
+                "旅行": "旅行",
+                "户外": "户外",
+                "便携": "便携",
+                "外出": "外出",
+                "车中泊": "车中泊",
+                "outdoor": "户外",
+                "camping": "露营",
+                "travel": "旅行",
+                "trip": "旅行",
+                "road trip": "旅行",
+                "rv": "车中泊",
+                "vanlife": "车中泊",
+                "portable": "便携",
+                "户外有顶凉亭": "户外",
+                "离网看电影": "户外",
+                "非常适合露营": "露营",
+                "夏春夜晚户外": "户外",
+                "放在我的房车里": "外出",
+                "房车里也很容易携带": "外出",
+                "户外泡热水浴缸": "户外",
+                "户外听音": "户外",
+                "户外电影之夜": "户外",
+                "露营或户外活动": "露营",
+                "房车": "外出",
+                "车库": "户外",
+                "后院": "户外",
+                "热水浴缸": "户外",
+                "露台": "户外",
+                "公园": "户外",
+                "营房": "户外",
+                "性别揭晓": "户外",
+                "带着它旅行": "旅行",
+                "足球观赛": "户外",
+                "超级碗院子派对": "户外",
+                "院子派对": "户外",
+                "军队搬家": "外出",
+                "便携式存储": "外出",
+                "房车前部安装": "外出",
+                "后院电影之夜": "户外",
+                "车间使用": "户外",
+                "院子和泳池篝火电影": "户外",
+                "后院电影": "户外",
+                "墙面和床单都能投": "户外",
+                "campervan use": "外出",
+                "movie nights outside": "户外",
+                "take on trips": "旅行",
+                "holidays use": "旅行",
+                "caravan": "外出",
+                "campervan": "外出",
+                "workshop no wifi": "户外",
+                "pool party movie": "户外",
+                "front porch movies": "户外",
+                "outdoor movie nights": "户外",
+                "golf simulator upside down": "户外",
+                "super bowl hosted with projector": "户外",
+                "pool party summer nights": "户外",
+                "super bowl party": "户外",
+                "outdoor not recommend due shut down": "户外",
+                "wall and ceiling both": "户外",
+                "120 outdoor screen at night": "户外",
+                "outdoor model not recommended": "户外",
+                "caravan screen solution": "外出",
+                "outdoor movie night": "露营",
+                "great for outdoor movie nights": "露营",
+                "travel with it": "露营",
+                "easy backyard movie night": "露营",
+                "great for backyard with kids": "露营",
+                "portable for camping and rv": "露营",
+                "backyard movie fun": "露营",
+                "garage movie night": "露营",
+                "halloween party projection": "露营",
+                "outdoor with hayride background": "露营",
+                "camping and rv use": "露营"
+            },
+            "居家健身": {
+                "健身": "健身",
+                "跟练": "跟练",
+                "瑜伽": "瑜伽",
+                "刘畊宏": "刘畊宏",
+                "跳操": "跳操",
+                "fitness": "健身",
+                "workout": "健身",
+                "home workout": "健身",
+                "exercise": "健身",
+                "training": "跟练",
+                "pilates": "瑜伽",
+                "cardio": "跳操",
+                "zumba": "跳操",
+                "dance workout": "跳操",
+                "follow along": "跟练",
+                "keep fit": "健身",
+                "减脂": "健身",
+                "燃脂": "跳操",
+                "居家训练": "健身",
+                "健身跟练": "跟练",
+                "运动课程": "跟练"
+            },
+            "儿童/网课": {
+                "儿童": "儿童",
+                "网课": "网课",
+                "护眼": "护眼",
+                "学习": "学习",
+                "孩子使用": "孩子使用",
+                "防射眼": "防射眼",
+                "kids": "儿童",
+                "children": "儿童",
+                "online class": "网课",
+                "eye care": "护眼",
+                "homework": "学习",
+                "孩子们的房间": "儿童",
+                "孩子看电影入睡": "儿童",
+                "十几岁女儿": "儿童",
+                "孩子们很喜欢": "儿童",
+                "给孩子房间用": "儿童",
+                "卧床不起的儿子": "儿童",
+                "助听器": "儿童",
+                "孩子房间": "儿童",
+                "幼儿": "儿童",
+                "小宝贝": "儿童",
+                "幼儿把电视弄坏": "儿童",
+                "给孙子做学习视频": "网课",
+                "grandchildren movie nights": "儿童",
+                "kids cinema moment": "儿童",
+                "workshop slideshow educational": "网课"
+            },
+            "商务办公": {
+                "PPT演示": "PPT演示",
+                "办公": "办公",
+                "会议": "会议",
+                "图表": "图表",
+                "开会": "开会",
+                "presentation": "PPT演示",
+                "ppt": "PPT演示",
+                "office": "办公",
+                "meeting": "会议",
+                "chart": "图表",
+                "hdmi": "办公",
+                "vga": "办公",
+                "图表清晰度高": "图表",
+                "PPT演示清晰": "PPT演示",
+                "设置需要信用卡": "办公",
+                "幻灯片演示": "PPT演示",
+                "工作会议演示": "PPT演示",
+                "工作会议": "会议",
+                "幻灯片": "PPT演示",
+                "办公与娱乐": "办公",
+                "slideshows at workshop": "PPT演示",
+                "presentations for work": "办公",
+                "workshop slideshow remote area no wifi": "PPT演示"
+            },
+            "教学培训": {
+                "教学": "教学",
+                "培训": "培训",
+                "教室": "教室",
+                "长时间运行": "长时间运行",
+                "teaching": "教学",
+                "training": "培训",
+                "classroom": "教室",
+                "long session": "长时间运行",
+                "长时间运行稳定": "长时间运行"
+            },
+            "送礼用途": {
+                "送礼": "送礼",
+                "礼物": "礼物",
+                "礼品": "礼品",
+                "送人": "送人",
+                "乔迁": "乔迁",
+                "结婚礼物": "结婚礼物",
+                "gift": "礼物",
+                "gift for": "送礼",
+                "housewarming": "乔迁",
+                "wedding gift": "结婚礼物",
+                "birthday gift": "礼物",
+                "最好的生日礼物": "礼物",
+                "给你买一三个": "送礼",
+                "我丈夫送的礼物": "礼物",
+                "生日礼物": "礼物",
+                "圣诞礼物": "礼物",
+                "男士礼物": "礼物",
+                "送给女儿": "送人",
+                "丈夫送的礼物": "礼物",
+                "礼物非常合适": "礼物",
+                "买给家人": "送人",
+                "情人节礼物": "礼物",
+                "买给女儿": "送人",
+                "买给丈夫": "送人",
+                "christmas present": "礼物",
+                "received as a gift": "礼物",
+                "buying another as a present": "礼物",
+                "gift for parents": "送人"
+            },
+            "角色身份": {
+                "独居": "独居",
+                "单身": "独居",
+                "一个人住": "独居",
+                "情侣": "情侣/夫妻",
+                "夫妻": "情侣/夫妻",
+                "二人世界": "情侣/夫妻",
+                "学生": "学生",
+                "学生党": "学生",
+                "宝妈": "宝妈奶爸",
+                "奶爸": "宝妈奶爸",
+                "带娃": "宝妈奶爸",
+                "老人": "长辈/老人",
+                "长辈": "长辈/老人",
+                "给父母买": "长辈/老人",
+                "买给爸妈": "长辈/老人",
+                "爸妈用": "长辈/老人",
+                "企业": "企业/公司采购",
+                "公司": "企业/公司采购",
+                "采购": "企业/公司采购",
+                "批量采购": "企业/公司采购",
+                "商用": "企业/公司采购",
+                "会议室": "企业/公司采购",
+                "办公室": "企业/公司采购",
+                "培训": "企业/公司采购",
+                "给孩子用": "家庭育儿",
+                "孩子看": "家庭育儿",
+                "小孩用": "家庭育儿",
+                "适合孩子": "家庭育儿",
+                "租房": "租房场景",
+                "出租屋": "租房场景",
+                "宿舍": "宿舍场景",
+                "寝室": "宿舍场景",
+                "自住房": "自住房场景",
+                "周末宅家": "居家场景",
+                "校园": "校园场景",
+                "操作简单": "易用性需求",
+                "字大": "易读需求",
+                "预算有限": "预算敏感",
+                "平价": "预算敏感",
+                "傻瓜式": "易用性需求",
+                "开机即用": "易用性需求",
+                "下班放松": "放松解压",
+                "放松": "放松解压",
+                "氛围营造": "氛围营造",
+                "氛围感": "氛围营造",
+                "固定安装": "固定安装",
+                "搬家方便": "可移动使用",
+                "临时使用": "临时使用",
+                "长期使用": "长期使用"
+            },
+            "技术水平": {
+                "不懂参数": "小白",
+                "看着晕": "小白",
+                "不会操作": "小白",
+                "零基础": "小白",
+                "搞不清楚": "小白",
+                "看不懂说明": "小白",
+                "说明书看不懂": "小白",
+                "不知道怎么调": "小白",
+                "弄不明白": "小白",
+                "操作好难": "小白",
+                "太复杂不会用": "小白",
+                "色域": "发烧友",
+                "芯片尺寸": "发烧友",
+                "DMD": "发烧友",
+                "dmd": "发烧友",
+                "专业测评": "发烧友",
+                "数码爱好者": "发烧友",
+                "极客": "发烧友",
+                "参数党": "发烧友",
+                "画质调校": "发烧友",
+                "流明度校准": "发烧友",
+                "色彩管理": "发烧友",
+                "Rec.709": "发烧友",
+                "DCI-P3": "发烧友",
+                "gamma": "发烧友",
+                "ANSI流明": "发烧友"
+            },
+            "连接稳定性": {
+                "wifi keeps cutting in and out": "断连",
+                "cannot list any wifi networks": "断连",
+                "must factory reset to reconnect internet": "断连",
+                "screen casting freezes every time": "断连",
+                "projector freezes while casting pc": "断连",
+                "wireless freezes on high quality video": "断连",
+                "wifi range is weak needs extender": "断连",
+                "cannot keep connection stable": "断连",
+                "最近开始断线": "断连",
+                "保持电源模式但是没有画面": "断连",
+                "won t connect to wifi or phone": "断连",
+                "had to reset the internet connection over and over": "断连"
+            }
+        },
+        "fuzzy_rules": {
+            "外观标签": [
+                [
+                    "(compact projector|small footprint|pocket projector|portable projector|mini projector|小巧|轻便|便携|不占地方)",
+                    "尺寸小"
+                ],
+                [
+                    "(bulky projector|heavy projector|too big for shelf|笨重|太大|占地方)",
+                    "尺寸大"
+                ],
+                [
+                    "(sleek design|modern look|minimalist|premium build|颜值高|设计感|外观精致)",
+                    "外观好看"
+                ],
+                [
+                    "(cheap plastic|plasticky|looks cheap|塑料感|外观廉价|像玩具)",
+                    "外观不好看"
+                ],
+                [
+                    "(white cabinet|matte finish|镜头|lens looks clean)",
+                    "颜色好看"
+                ],
+                [
+                    "(looks good|look good|looking good|love the design|nice design|great design|good design|sleek|minimalist|mid-century|mid century|nice clean|clean look|as pictured|as shown|as described)",
+                    "外观好看"
+                ],
+                [
+                    "(喜欢设计|好看设计|设计好看)",
+                    "外观好看"
+                ],
+                [
+                    "(颜色太棒|颜色很棒|颜色真好|颜色真是|完美颜色|颜色真是太)",
+                    "颜色好看"
+                ],
+                [
+                    "(外观也不错|与图一致|和图一样|和描述一致|正如所示|正如描述)",
+                    "外观好看"
+                ],
+                [
+                    "(颜色和风格|颜色与风格|配色太)",
+                    "颜色好看"
+                ],
+                [
+                    "(too bulky|takes lots of space|takes too much room)",
+                    "尺寸大"
+                ],
+                [
+                    "(for small room|small room|compact space)",
+                    "尺寸小"
+                ],
+                [
+                    "(尺码不对|尺寸不合适|大小不合适|size not fit|size is wrong)",
+                    "尺寸错误"
+                ],
+                [
+                    "(色彩好看|配色高级|配色不错|颜色耐看)",
+                    "颜色好看"
+                ],
+                [
+                    "(颜色偏深|颜色偏浅|颜色太暗|颜色太亮|颜色发灰|颜色发黄)",
+                    "颜色不好看"
+                ],
+                [
+                    "(颜值不错|外观不错|看起来不错|颜值在线|看起来很好)",
+                    "外观好看"
+                ],
+                [
+                    "(颜值一般|外观一般|样子一般|看起来一般)",
+                    "外观不好看"
+                ],
+                [
+                    "(color mismatch|wrong color|颜色有偏差)",
+                    "颜色不好看"
+                ],
+                [
+                    "(size wrong|wrong size|size mismatch)",
+                    "尺寸错误"
+                ],
+                [
+                    "(size too large|too large|偏大|大号)",
+                    "尺寸大"
+                ],
+                [
+                    "(size too small|too small|偏小|小号)",
+                    "尺寸小"
+                ],
+                [
+                    "(外观不好看|丑|难看|颜值低|不好看|不太好看|难看过|看着丑)",
+                    "外观不好看"
+                ],
+                [
+                    "(外观好看|颜值高|(?<![不没太难略])好看|漂亮|美观)",
+                    "外观好看"
+                ],
+                [
+                    "(尺寸小(?!\\s*(?:screws?|bolts?|nuts?|washers?|holes?|hardware|孔|螺))|尺寸很小|尺寸过小|比预期小|尺寸比预期小|太小|偏小|小了)",
+                    "尺寸小"
+                ],
+                [
+                    "(尺寸大|太大|偏大|大了|(?<![不没])占地|(?<![不没])占空间|(?<![不没])占地方)",
+                    "尺寸大"
+                ],
+                [
+                    "(尺寸合适|大小合适|刚好)",
+                    "尺寸合适"
+                ],
+                [
+                    "(尺寸错误|尺寸不符|尺寸不对|规格不符)",
+                    "尺寸错误"
+                ],
+                [
+                    "(矮|低矮)",
+                    "矮"
+                ],
+                [
+                    "(颜色好看|颜色漂亮|配色好)",
+                    "颜色好看"
+                ],
+                [
+                    "(颜色不好看|色差|颜色不符|颜色不对|颜色差)",
+                    "颜色不好看"
+                ],
+                [
+                    "(扶手)",
+                    "扶手"
+                ]
+            ],
+            "质量标签": [
+                [
+                    "(dead pixel|stuck pixel|bright spot|坏点|亮点|光斑)",
+                    "有缺陷"
+                ],
+                [
+                    "(dust inside the lens|dust in lens|光机进灰|镜头进灰)",
+                    "有缺陷"
+                ],
+                [
+                    "(overheat|shuts down from heat|过热|热保护关机|烫手)",
+                    "较差"
+                ],
+                [
+                    "(wifi module died|burned out|无法开机|黑屏|不开机|bricked)",
+                    "有缺陷"
+                ],
+                [
+                    "(excellent picture|great image quality|sharp image|画质好|画面清晰|很清楚)",
+                    "高质量"
+                ],
+                [
+                    "(poor image quality|blurry image|soft focus|画质差|发虚|糊)",
+                    "较差"
+                ],
+                [
+                    "(有\\s*缺陷|(?<!无)缺陷|(?<!无)瑕疵|破损|开裂|断裂|损坏|起皮|掉皮|脱线|开线|破洞|穿孔|露棉|生锈|变形|\\bdefective\\b|\\bflaw(?:s|ed)?\\b|\\bcrack(?:s|ed)?\\b|\\bbroken\\b|\\btorn\\b|\\brip(?:s|ped)?\\b|scratch(?:ed|es)?|stitch(?:es)?\\s+(?:came\\s+)?(?:apart|loose|out)|coming\\s+apart)",
+                    "有缺陷"
+                ],
+                [
+                    "(较差|质量差|做工差|质量很差|很差|非常差|太差|特别差|做工粗糙|工艺差|粗糙|劣质|次品|质量不行|质量不好|质感差|用料差|单薄|不结实|不靠谱|不行|poorly made|poor quality|made cheaply|low quality|bad quality|terrible quality|awful quality|shoddy|flimsy|cheaply made|cheap construction|not well made)",
+                    "较差"
+                ],
+                [
+                    "(?<![不没])(?:一般|还行|普通|凑合)",
+                    "一般"
+                ],
+                [
+                    "(质量ok|质量不错|质量很好|高质量|做工好|结实耐用|good quality|great quality|excellent quality|high quality|well made|solid build|well built)",
+                    "高质量"
+                ]
+            ],
+            "用户体验标签": [
+                [
+                    "(easy to set up|set up was easy|quick setup|simple setup|straightforward setup|plug\\s+and\\s+play|out of the box|setup took minutes)",
+                    "使用便捷"
+                ],
+                [
+                    "(user friendly|intuitive interface|easy to use|simple to operate|操作方便|上手简单|很容易上手|傻瓜式)",
+                    "使用便捷"
+                ],
+                [
+                    "(quiet fan|low noise|barely hear the fan|几乎听不到风扇|风扇很安静|fan is quiet|runs quietly|silent operation)",
+                    "运行安静"
+                ],
+                [
+                    "(loud fan|fan noise|fan is loud|noisy fan|buzzing|whining|humming noise|风扇吵|噪音大|嗡嗡响|像吹风机|high pitched)",
+                    "噪音明显"
+                ],
+                [
+                    "(auto focus works well|autofocus works|fast auto focus|quick focus|自动对焦|对焦很快|对焦准|无感对焦)",
+                    "对焦便捷"
+                ],
+                [
+                    "(focus keeps drifting|constantly refocusing|auto focus fails|跑焦|反复对焦|对焦不准|keystone keeps)",
+                    "对焦不稳"
+                ],
+                [
+                    "(remote is great|good remote|responsive remote|遥控器好用|遥控灵敏)",
+                    "遥控顺手"
+                ],
+                [
+                    "(remote is terrible|tiny remote|bad remote|遥控器难用|遥控不好使|cramped remote)",
+                    "遥控难用"
+                ],
+                [
+                    "(smooth ui|no lag|snappy interface|系统流畅|操作顺滑|不卡)",
+                    "系统流畅"
+                ],
+                [
+                    "(laggy ui|slow interface|stutter|系统卡|卡顿|freezes)",
+                    "系统卡顿"
+                ],
+                [
+                    "(casting works well|screen mirroring stable|投屏稳定|连接快|延迟低)",
+                    "投屏省心"
+                ],
+                [
+                    "(won'?t connect|disconnects often|cast fails|投屏失败|断连|连不上)",
+                    "投屏折腾"
+                ]
+            ],
+            "价格标签": [
+                [
+                    "(for the price not bad|for the price, not bad|for this price not bad|for the price it's decent)",
+                    "价格合理"
+                ],
+                [
+                    "(价格.*(really good|real good|not bad|pretty good|very good|decent)|这个价位.*(really good|not bad|pretty good|very good|decent))",
+                    "价格合理"
+                ],
+                [
+                    "(for the price|at this price|at the price|for what i paid|given the price|the price i paid).{0,48}(?:not worth|terrible|awful|bad|garbage|junk|disappointing|horrible|waste\\s+of\\s+money|rip-?off|ripped off|worst|poor quality|very poor|doesn'?t match|false advertising|misleading)",
+                    "价格高"
+                ],
+                [
+                    "(for the price|for the cost|at this price|at the price|given the price|the price i paid|what i paid|paid for it|price point)",
+                    "价格合理"
+                ],
+                [
+                    "(以这个价格|对这个价格|就这个价格|就价格而言|价格来说|一分钱一分货|价格和质量|价格、质量|价格\\s*[-－—/]\\s*质量)",
+                    "价格合理"
+                ],
+                [
+                    "(价格不错|价格很好|价格还行|价格真的可以|价格真的好|价格非常|价格、组装|价格.*都很好|价格真的很好)",
+                    "价格合理"
+                ],
+                [
+                    "(cheap and good|very affordable|super affordable|low price)",
+                    "价格低"
+                ],
+                [
+                    "(fair price|reasonable price|decent price|good price)",
+                    "价格合理"
+                ],
+                [
+                    "(price is high|too pricey|a bit expensive|expensive for what it is)",
+                    "价格高"
+                ],
+                [
+                    "(价格很香|真香价|价格美丽|非常划算|超划算|很值|便宜很多)",
+                    "价格低"
+                ],
+                [
+                    "(不贵|没觉得贵|不算贵)",
+                    "价格合理"
+                ],
+                [
+                    "(价格还行|价格正常|价位正常|价格适中|可以接受的价格|能接受的价格)",
+                    "价格合理"
+                ],
+                [
+                    "(价格有点高|价格偏高|略贵|稍贵|小贵|贵了一点|不便宜|不太划算|不划算)",
+                    "价格高"
+                ],
+                [
+                    "(值这个价|值回票价|性价比不错|good value|great value)",
+                    "价格合理"
+                ],
+                [
+                    "(价格偏高|价格略贵|有点贵|不值这个价|不太值)",
+                    "价格高"
+                ],
+                [
+                    "(价格高|太贵|(?<![不没])贵|不值)",
+                    "价格高"
+                ],
+                [
+                    "(价格合理|性价比|值这个价)",
+                    "价格合理"
+                ],
+                [
+                    "(价格低|(?<![不没])便宜|(?<![不没])划算)",
+                    "价格低"
+                ],
+                [
+                    "(贵了|偏贵|有点贵|性价比低|不值这个价|不划算)",
+                    "价格高"
+                ],
+                [
+                    "(价格合适|价位合适|值这个价格|性价比高|物有所值)",
+                    "价格合理"
+                ],
+                [
+                    "(很便宜|超值|实惠|价格亲民)",
+                    "价格低"
+                ],
+                [
+                    "(overpriced|too expensive|not worth)",
+                    "价格高"
+                ],
+                [
+                    "(great value|worth the price|good deal)",
+                    "价格合理"
+                ]
+            ],
+            "安装标签": [
+                [
+                    "(组装困难|螺丝难装|螺丝不好装|螺丝不好拧|拧螺丝难|装螺丝难|上螺丝难|螺丝很难|螺丝特别难|螺丝.*费劲|螺丝.*麻烦|难拧螺丝|拧不紧|螺丝孔对不上|螺丝对不上|螺丝拧不紧|螺丝滑丝|螺丝死活|螺丝怎么都|对不上螺丝|孔位.*螺丝|螺丝.*对不上)",
+                    "安装困难"
+                ],
+                [
+                    "(螺丝不齐|螺丝不够|螺丝缺失|缺螺丝|少螺丝|没螺丝|没有螺丝|螺丝问题|missing screws?|missing bolts?|(?:\\bscrews?\\b|螺丝).{0,60}(?:hard|difficult|tough|tricky|won'?t|can'?t|strip|stripped|break|drill|get\\s+in|go\\s+in|insert)|(?:hard|difficult|tough|tricky).{0,60}(?:\\bscrews?\\b|螺丝)|(?:\\bbolts?\\b|螺丝).{0,60}(?:hard|difficult|tough|tricky|won'?t|strip|misalign|don'?t line|get\\s+in|go\\s+in)|(?:hard|difficult).{0,35}\\b(?:drill|tighten)\\b|\\b(?:drill|tighten)\\b.{0,35}(?:hard|difficult))",
+                    "安装困难"
+                ],
+                [
+                    "(很难装|不好装|装不上|装不起来|难装|安装费劲|费劲.*装|折腾.*(装|安装)|花了.*小时.*装|装了很久)",
+                    "安装困难"
+                ],
+                [
+                    "(安装复杂|安装困难|难安装|组装麻烦)",
+                    "安装困难"
+                ],
+                [
+                    "(不会安装|安装说明不清|说明书看不懂|步骤复杂|孔位不对|对不上)",
+                    "安装困难"
+                ],
+                [
+                    "(hard to assemble|difficult to assemble|difficult setup|missing instructions?|\\bno\\s+instructions?\\b|\\bno\\s+illustrations?\\b|\\bwithout\\s+instructions?\\b|\\bwithout\\s+(?:any\\s+)?illustrations?\\b|\\bno\\s+manual\\b|\\bwithout\\s+manual\\b|missing manual|instructions?\\s+(?:were\\s+)?(?:missing|not included|unclear)|need\\s+to\\s+include\\s+(?:instructions|manual|diagram)|should\\s+include\\s+(?:instructions|manual|diagram)|must\\s+include\\s+(?:instructions|manual)|instructions?\\s+unclear|unclear\\s+instructions|can'?t\\s+find\\s+instructions?|couldn'?t\\s+find\\s+instructions?|took\\s+(?:me\\s+)?(?:a\\s+while|awhile).{0,50}?(?:figure|frustrat|install|assembl)|frustrat[a-z]*.{0,60}?(?:figure|install|assembl|setup)|figure.{0,35}out|hard\\s+to\\s+figure|difficult\\s+to\\s+figure|screw.*hard|hard.*screw)",
+                    "安装困难"
+                ],
+                [
+                    "(安装一般|安装还行)",
+                    "安装一般"
+                ],
+                [
+                    "(安装一般|能装上但麻烦|还算能装)",
+                    "安装一般"
+                ],
+                [
+                    "(组装好简单|组装非常简单|组装很容易|拼装很容易|安装很容易)",
+                    "安装简单"
+                ],
+                [
+                    "(easy assembly|easy to assemble|assemble easily)",
+                    "安装简单"
+                ],
+                [
+                    "(组装简单|组装很简单|组装容易|拼装简单|拼装容易|安装简单|好安装|易安装|安装方便)",
+                    "安装简单"
+                ],
+                [
+                    "(安装简单|好安装|易安装|安装方便)",
+                    "安装简单"
+                ],
+                [
+                    "(十分钟装好|很快装好|安装顺利|安装省心|一人就装好|一人轻松装好|一人也能装好|一人搞定安装)",
+                    "安装简单"
+                ],
+                [
+                    "(easy assembly|assembled quickly)",
+                    "安装简单"
+                ]
+            ],
+            "物流标签": [
+                [
+                    "(包装好|包装良好|包装不错|包装完好|包装严实|包装结实|包装很结实|包装也很|包装还可以|well packed|good packaging|well packaged|package was good|nicely packed)",
+                    "包装好"
+                ],
+                [
+                    "(物流快|发货快|到货快|收货快|快速配送|配送很快|很快送到|送达很快|物流给力|物流好|快递快|运输快|配送快|shipping was fast|fast shipping|quick delivery|arrived quickly|shipped quickly)",
+                    "物流快"
+                ],
+                [
+                    "(配送损坏|运输破损|快递破损|箱体破损|外箱破损|包装破损|箱子破损|纸箱破损|箱.*破损|有点破损|轻微破损|货到破损|到手就坏|运输中损坏|压坏|摔坏|挤压变形|包装受损|包装坏了|package damaged|damaged package|arrived damaged|box damaged|package torn|package crushed|damaged in transit|broken in shipping)",
+                    "配送损坏"
+                ],
+                [
+                    "(包装差|包装太差|包装很差|包装很烂|包装简陋|包装敷衍|包装单薄|纸板脆弱|纸板非常脆弱|纸箱太软|箱子太软|没有保护|几乎没有保护|箱子里除了|包装非常脆弱|外箱太薄|包装烂|poor packaging|bad packaging|terrible packaging|flimsy box|thin cardboard)",
+                    "包装差"
+                ],
+                [
+                    "(物流慢|配送慢|发货慢|到货慢|延迟|迟到|快递慢|运输慢|派送慢|物流信息不更新|卡在路上|延期送达|未发货|不发货|发不出|迟迟不发|不配送|没有送到|没收到货|收不到货|丢包|包裹丢失|快递员态度差|配送员态度差|派件态度差|不送上门|放驿站|物流差|物流问题|物流不行|物流很差|配送差|运输差|shipping delay|shipping slow|delivery delay|shipped late|not shipped|never arrived|lost package|delayed delivery|logistics issue|shipping issue|bad shipping)",
+                    "物流慢"
+                ]
+            ],
+            "使用场景标签": [
+                [
+                    "(living room|family room|客厅|大屏)",
+                    "客厅"
+                ],
+                [
+                    "(bedroom|ceiling mount|天花板|卧室|躺床)",
+                    "卧室"
+                ],
+                [
+                    "(outdoor|camping|露营|户外|便携外出)",
+                    "阳台"
+                ],
+                [
+                    "(office|meeting|会议|PPT|演示|办公)",
+                    "办公室"
+                ],
+                [
+                    "(gaming|ps5|xbox|switch|游戏|主机)",
+                    "游戏室"
+                ],
+                [
+                    "(movie night|cinema|家庭影院|看电影)",
+                    "客厅"
+                ],
+                [
+                    "(客厅)",
+                    "客厅"
+                ],
+                [
+                    "(卧室)",
+                    "卧室"
+                ],
+                [
+                    "(办公室|办公)",
+                    "办公室"
+                ],
+                [
+                    "(阳台)",
+                    "阳台"
+                ],
+                [
+                    "(玄关)",
+                    "客厅"
+                ],
+                [
+                    "(出租屋|租房)",
+                    "小公寓/小户型"
+                ],
+                [
+                    "(宿舍)",
+                    "宿舍"
+                ],
+                [
+                    "(出租屋|租房|小户型|公寓|studio)",
+                    "小公寓/小户型"
+                ],
+                [
+                    "(客房|次卧|主卧|卧房)",
+                    "卧室"
+                ],
+                [
+                    "(书房|工作室|办公区)",
+                    "办公室"
+                ],
+                [
+                    "(阳台房|露台)",
+                    "阳台"
+                ],
+                [
+                    "(客餐厅|客厅里)",
+                    "客厅"
+                ],
+                [
+                    "(小公寓|小户型|单间公寓|小房间|小空间)",
+                    "小公寓/小户型"
+                ],
+                [
+                    "(卧室|房间)",
+                    "卧室"
+                ],
+                [
+                    "(宿舍|学校)",
+                    "宿舍"
+                ],
+                [
+                    "(办公室)",
+                    "办公室"
+                ]
+            ],
+            "用户类型": [
+                [
+                    "(student|dorm|宿舍)",
+                    "学生"
+                ],
+                [
+                    "(family|kids|家庭|带娃)",
+                    "家庭"
+                ],
+                [
+                    "(gamer|gaming setup|玩家)",
+                    "成人"
+                ],
+                [
+                    "(elderly|parents|老人|爸妈)",
+                    "老人"
+                ],
+                [
+                    "(婴儿|婴幼儿|新生儿|襁褓|满月|百日|一岁内|1岁内|两岁内|2岁内|几个月大|刚出生的)",
+                    "幼儿"
+                ],
+                [
+                    "(?<![园校])幼儿(?![园学阶班课])",
+                    "幼儿"
+                ],
+                [
+                    "(小朋友|小孩子|儿童|学龄|熊孩子|(?<![婴幼])孩子)",
+                    "儿童"
+                ],
+                [
+                    "(学生|宿舍党)",
+                    "学生"
+                ],
+                [
+                    "(成人)",
+                    "成人"
+                ],
+                [
+                    "(情侣|小两口|两口子|夫妻俩|夫妻二人|两口子住|男朋友|女朋友|我老公|我老婆|丈夫|妻子|和老公|和老婆|跟老公|跟老婆|(?:和|与|跟)对象(?!线|盘)|\\b(?:perfect|great|good|ideal|nice)\\s+for\\s+couples?\\b|\\bfor\\s+couples?\\b|\\bas\\s+a\\s+couple\\b(?![\\s,]+of\\b)|\\bwith\\s+my\\s+(husband|wife|partner|boyfriend|girlfriend|spouse)\\b)",
+                    "情侣"
+                ],
+                [
+                    "((?<!不是)(?<!并非)(?<!没有)(?<!从没)单身|独居|一个人住|自个儿住|自己住(?:的)?(?:公寓|房)|单身狗|未婚独居|solo\\s*living|\\bliving\\s*alone\\b|\\bi'?m\\s+single\\b|\\bam\\s+single\\b|\\bwas\\s+single\\b|\\bsingle\\s+guy\\b|\\bsingle\\s+gal\\b|\\bsingle\\s+person\\b|\\bsingle\\s+male\\b|\\bsingle\\s+female\\b)",
+                    "单身"
+                ],
+                [
+                    "(家庭|一家|全家|三口之家|四口之家)",
+                    "家庭"
+                ],
+                [
+                    "(宠物家庭|养猫|养狗|宠物)",
+                    "宠物家庭"
+                ],
+                [
+                    "(老人|老年)",
+                    "老人"
+                ],
+                [
+                    "(小体型|身材小)",
+                    "小体型"
+                ],
+                [
+                    "(高个子|高个)",
+                    "高个子"
+                ],
+                [
+                    "(访客|客人)",
+                    "客人"
+                ],
+                [
+                    "(室友)",
+                    "室友"
+                ],
+                [
+                    "(租客|短租|租房党|北漂|打工人)",
+                    "租客"
+                ],
+                [
+                    "(宝妈|带娃|有娃家庭)",
+                    "家庭"
+                ],
+                [
+                    "(高个男|高个女生|一米八|1\\.8m)",
+                    "高个子"
+                ]
+            ],
+            "使用目的": [
+                [
+                    "(movies|streaming|netflix|追剧|看电影|观影)",
+                    "娱乐"
+                ],
+                [
+                    "(gaming|games|游戏)",
+                    "娱乐"
+                ],
+                [
+                    "(presentation|ppt|会议|办公)",
+                    "学习"
+                ],
+                [
+                    "(sports|football|球赛|世界杯)",
+                    "娱乐"
+                ],
+                [
+                    "(kids|children|网课|孩子)",
+                    "学习"
+                ],
+                [
+                    "(坐着|(?<![不没])坐)",
+                    "坐"
+                ],
+                [
+                    "(睡觉|(?<![不没])睡)",
+                    "睡"
+                ],
+                [
+                    "(午休|午睡)",
+                    "午休"
+                ],
+                [
+                    "(娱乐|看电视|追剧|打游戏)",
+                    "娱乐"
+                ],
+                [
+                    "(学习|看书)",
+                    "学习"
+                ],
+                [
+                    "(会客|接待)",
+                    "会客"
+                ],
+                [
+                    "(收纳|临时|备用)",
+                    "临时使用"
+                ],
+                [
+                    "(临时睡|偶尔睡|客人留宿|来客睡)",
+                    "睡"
+                ],
+                [
+                    "(追剧|观影|看电影)",
+                    "娱乐"
+                ],
+                [
+                    "(日常坐|休息坐|发呆)",
+                    "坐"
+                ]
+            ],
+            "未满足需求": [
+                [
+                    "(?:wish|would love|hoping|need).{0,40}(?:brighter|more brightness|higher lumens|more lumens|ansi lumens|not as bright|dimmer than)",
+                    "颜色不符"
+                ],
+                [
+                    "(?:希望|想要|要是).{0,16}(?:更亮|亮度更高|白天能看|流明更高)",
+                    "颜色不符"
+                ],
+                [
+                    "\\b(?:missing|no|without)\\b.{0,20}\\b(?:battery|built[- ]?in battery|carry case|remote)\\b|没有内置电池|缺电池|想要收纳包",
+                    "收纳"
+                ],
+                [
+                    "(?:希望|想要|要是|最好能|建议|如果能|最好再|急需|最好有|怎么没有|为啥没有|为何没有|要是能(?:加|配|带)).{0,18}(?:usb|充电口|usb口|充电接口|type[- ]?c)(?!.{0,10}(?:坏|故障|不亮|不通|不工作|断了|失灵))",
+                    "USB"
+                ],
+                [
+                    "(?:缺少|缺个|没有配置|没有配|不带|不配|若能(?:加|配)).{0,14}(?:usb|充电口|usb口|充电接口|type[- ]?c)(?!.{0,10}(?:坏|故障|不亮|不工作|断了))",
+                    "USB"
+                ],
+                [
+                    "\\b(?:wish|would\\s+love|hoping\\s+for|if\\s+only)\\b.{0,28}\\busb\\b(?!.{0,12}(?:broken|dead|not\\s+working))",
+                    "USB"
+                ],
+                [
+                    "\\bno\\s+usb\\s+(?:port|outlet|charger|charging)\\b|\\bwithout\\s+(?:a\\s+)?usb\\s+port\\b|\\bmissing\\s+usb\\b|\\bcould\\s+use\\s+(?:a\\s+)?usb\\b",
+                    "USB"
+                ],
+                [
+                    "(?:希望|想要|要是|最好|建议|如果能|缺少|没有|无).{0,12}杯架(?!.{0,6}(?:坏|裂|断|松))",
+                    "杯架"
+                ],
+                [
+                    "(?:希望|想要|缺少|不够|不足).{0,10}收纳|收纳(?:空间|位).{0,6}(?:不够|不足|太小|没有)",
+                    "收纳"
+                ],
+                [
+                    "(清洁|难清理)",
+                    "清洁"
+                ],
+                [
+                    "(太硬|偏硬)",
+                    "太硬"
+                ],
+                [
+                    "(颜色不符|色差|颜色不对)",
+                    "颜色不符"
+                ]
+            ],
+            "问题类型": [
+                [
+                    "(hdmi handshake|hdcp|arc issue|earc|黑屏闪|无信号)",
+                    "结构问题"
+                ],
+                [
+                    "(wifi keeps dropping|蓝牙连不上|烧wifi|无线网络)",
+                    "配件缺失"
+                ],
+                [
+                    "(lens scratch|镜头划|进灰|亮点|坏点)",
+                    "外观缺陷"
+                ],
+                [
+                    "(bulb died|lamp expired|光源寿命|光机故障)",
+                    "填充问题"
+                ],
+                [
+                    "(?:usb|充电口|usb口|充电接口|type[- ]?c|充电线).{0,12}(?:坏|故障|不亮|不通|不工作|断了|松动|脱落|接触不良|失灵|没反应|裂|歪)|(?:坏|故障|不亮|不通|不工作|断了|失灵|没反应).{0,12}(?:usb|充电口|usb口|type[- ]?c)|\\busb\\b.{0,12}(?:broken|dead|not\\s+working|doesn'?t\\s+work|defective|loose)",
+                    "配件缺失"
+                ],
+                [
+                    "(结构问题|框架|骨架|支架)",
+                    "结构问题"
+                ],
+                [
+                    "(配件缺失|缺件|漏件|少件)",
+                    "配件缺失"
+                ],
+                [
+                    "(外观缺陷|瑕疵|破洞|刮痕)",
+                    "外观缺陷"
+                ],
+                [
+                    "(框架松动|支架松动|异响|吱嘎|咯吱|摇晃|不稳|结构松散)",
+                    "结构问题"
+                ],
+                [
+                    "(少螺丝|缺螺丝|缺配件|配件不全|漏件|少件|少零件)",
+                    "配件缺失"
+                ],
+                [
+                    "(划痕|刮花|掉漆|线头|污渍|色差|破洞|开线)",
+                    "外观缺陷"
+                ]
+            ],
+            "情绪强度": [
+                [
+                    "(还行吧|一般般|凑合用|将就|马马虎虎)",
+                    "弱"
+                ],
+                [
+                    "(有点|比较|不太|一般不满|略微)",
+                    "中"
+                ],
+                [
+                    "(还好|尚可|勉强|可以接受)",
+                    "弱"
+                ],
+                [
+                    "(非常|极其|特别|气炸|愤怒|崩溃|无法接受|(?<![不没略有点])太)",
+                    "强"
+                ]
+            ],
+            "舒适度标签": [
+                [
+                    "(eye strain|tired eyes|headache after|dizzy|蓝光|刺眼|eye fatigue|rainbow effect|不舒服)",
+                    "不舒适"
+                ],
+                [
+                    "(comfortable to watch|easy on the eyes|观看舒适|不累眼|看着舒服)",
+                    "舒适"
+                ],
+                [
+                    "(?<![不没])(?:还行|一般|acceptable|okay for watching)",
+                    "一般"
+                ]
+            ],
+            "使用地点": [
+                [
+                    "(living room|客厅)",
+                    "客厅"
+                ],
+                [
+                    "(bedroom|卧室)",
+                    "卧室"
+                ],
+                [
+                    "(office|办公室|办公)",
+                    "办公室"
+                ],
+                [
+                    "(ceiling|吊装|天花板)",
+                    "卧室"
+                ],
+                [
+                    "(small apartment|studio|小户型|租房)",
+                    "小公寓/小户型"
+                ],
+                [
+                    "(office)",
+                    "办公室"
+                ],
+                [
+                    "(dorm|dormitory)",
+                    "宿舍"
+                ],
+                [
+                    "(living room|living-room|dining\\s+room|family\\s+room)",
+                    "客厅"
+                ],
+                [
+                    "(游戏室|电竞房|game room)",
+                    "游戏室"
+                ],
+                [
+                    "(bed\\s*room|bedroom|guest\\s+room|spare\\s+room|mud\\s+room|laundry\\s+room)",
+                    "卧室"
+                ],
+                [
+                    "(小公寓|单间公寓|公寓|studio apartment)",
+                    "小公寓/小户型"
+                ],
+                [
+                    "(小户型|小房间|小空间|空间小)",
+                    "小公寓/小户型"
+                ],
+                [
+                    "(卧室|房间|bedroom)",
+                    "卧室"
+                ],
+                [
+                    "(宿舍|学生宿舍|dorm)",
+                    "宿舍"
+                ],
+                [
+                    "(办公室|办公区|office)",
+                    "办公室"
+                ],
+                [
+                    "(学校|school|campus)",
+                    "学校"
+                ],
+                [
+                    "(儿子|孩子房间|儿童房)",
+                    "儿子"
+                ],
+                [
+                    "(办公室宿舍|办公宿舍)",
+                    "办公室宿舍"
+                ]
+            ],
+            "画质与视听": [
+                [
+                    "(very bright|bright enough|great brightness|good brightness|plenty bright|high lumens)",
+                    "画质类/亮度/正面"
+                ],
+                [
+                    "(too dim|not bright enough|can'?t use in daylight|dark room only|dim image|low lumens)",
+                    "画质类/亮度/负面"
+                ],
+                [
+                    "(vivid colors?|accurate colors?|great color|nice colours?|no colour cast)",
+                    "画质类/色彩/正面"
+                ],
+                [
+                    "(washed out|colour cast|color cast|tinted|green tint|red face|muted colors?)",
+                    "画质类/色彩/负面"
+                ],
+                [
+                    "(sharp image|crystal clear|crisp text|4k looks great|native 1080p)",
+                    "画质类/清晰度/分辨率/正面"
+                ],
+                [
+                    "(blurry|out of focus|soft image|pixelated|screen door|motion blur)",
+                    "画质类/清晰度/分辨率/负面"
+                ],
+                [
+                    "(uniform image|even focus|sharp corners)",
+                    "画质类/画面均匀度/正面"
+                ],
+                [
+                    "(dark corners|vignetting|corner blur|edge blur)",
+                    "画质类/画面均匀度/负面"
+                ],
+                [
+                    "(deep blacks?|good contrast|hdr looks)",
+                    "画质类/对比度/黑位/正面"
+                ],
+                [
+                    "(grey blacks?|washed grey|low contrast|flat image)",
+                    "画质类/对比度/黑位/负面"
+                ],
+                [
+                    "(smooth motion|no judder|good for sports|memc)",
+                    "画质类/运动表现/MEMC/正面"
+                ],
+                [
+                    "(judder|stutter|motion blur sports|ghosting)",
+                    "画质类/运动表现/MEMC/负面"
+                ],
+                [
+                    "(rainbow effect|dlp rainbow|speckle|laser speckle)",
+                    "画质类/彩虹眼/散斑/负面"
+                ],
+                [
+                    "(quiet fan|fan is quiet|low noise|silent projector)",
+                    "听觉类/噪音/正面"
+                ],
+                [
+                    "(loud fan|fan noise|buzzing|whining fan|humming)",
+                    "听觉类/噪音/负面"
+                ],
+                [
+                    "(good speakers?|decent audio|built-?in speakers? ok)",
+                    "听觉类/音质/正面"
+                ],
+                [
+                    "(weak audio|tinny sound|bad speakers?|low volume)",
+                    "听觉类/音质/负面"
+                ]
+            ],
+            "智能功能": [
+                [
+                    "(auto keystone works|fast autofocus|quick focus|keystone perfect)",
+                    "智能功能类/对焦/校正/正面"
+                ],
+                [
+                    "(focus drift|keystone off|hard to align|manual keystone)",
+                    "智能功能类/对焦/校正/负面"
+                ],
+                [
+                    "(obstacle avoidance works|screen fit works)",
+                    "智能功能类/避障与入幕/正面"
+                ],
+                [
+                    "(obstacle detection fails|screen alignment fails)",
+                    "智能功能类/避障与入幕/负面"
+                ],
+                [
+                    "(smooth ui|snappy os|no ads boot|fast boot)",
+                    "智能功能类/系统与生态/正面"
+                ],
+                [
+                    "(laggy ui|slow boot|ads everywhere|bloatware)",
+                    "智能功能类/系统与生态/负面"
+                ],
+                [
+                    "(airplay works|miracast stable|low latency casting)",
+                    "智能功能类/投屏体验/正面"
+                ],
+                [
+                    "(cast fails|disconnects|high latency airplay)",
+                    "智能功能类/投屏体验/负面"
+                ],
+                [
+                    "(voice control works|alexa ok|google assistant ok)",
+                    "智能功能类/语音控制/正面"
+                ],
+                [
+                    "(voice assistant bad|mic picks up noise)",
+                    "智能功能类/语音控制/负面"
+                ]
+            ],
+            "硬件设计": [
+                [
+                    "(compact|portable|pocket size|small footprint|lightweight)",
+                    "硬件设计类/外观与便携/正面"
+                ],
+                [
+                    "(heavy projector|too bulky|not portable)",
+                    "硬件设计类/外观与便携/负面"
+                ],
+                [
+                    "(lots of ports|hdmi 2\\\\.1|ethernet port|earc)",
+                    "硬件设计类/接口与扩展/正面"
+                ],
+                [
+                    "(no ethernet|old hdmi|not enough usb)",
+                    "硬件设计类/接口与扩展/负面"
+                ],
+                [
+                    "(stays cool|good thermals|doesn'?t overheat)",
+                    "硬件设计类/散热与温控/正面"
+                ],
+                [
+                    "(runs hot|overheats|shuts down hot|burning hot)",
+                    "硬件设计类/散热与温控/负面"
+                ],
+                [
+                    "(solid build|premium feel|clean lens)",
+                    "硬件设计类/做工质感/正面"
+                ],
+                [
+                    "(cheap plastic|gaps in chassis|dust in lens)",
+                    "硬件设计类/做工质感/负面"
+                ]
+            ],
+            "售后价格": [
+                [
+                    "(great value|worth the money|good deal|bang for buck)",
+                    "售后/价格类/性价比/正面"
+                ],
+                [
+                    "(overpriced|not worth|too expensive|price drop fast)",
+                    "售后/价格类/性价比/负面"
+                ],
+                [
+                    "(reliable unit|still works years|no issues so far)",
+                    "售后/价格类/品控与寿命/正面"
+                ],
+                [
+                    "(dead on arrival|won'?t turn on|wifi died|black screen)",
+                    "售后/价格类/品控与寿命/负面"
+                ],
+                [
+                    "(good customer service|fast refund|helpful support)",
+                    "售后/价格类/售后体验/正面"
+                ],
+                [
+                    "(bad support|slow repair|won'?t refund|ghosted by seller)",
+                    "售后/价格类/售后体验/负面"
+                ]
+            ],
+            "需求场景": [
+                [
+                    "(movie night|netflix|streaming shows|home cinema)",
+                    "居家观影"
+                ],
+                [
+                    "(bedroom ceiling|watch in bed|night viewing)",
+                    "卧室投屏"
+                ],
+                [
+                    "(living room tv replacement|ambient light|daytime viewing)",
+                    "客厅影院"
+                ],
+                [
+                    "(ps5|xbox series|switch dock|console gaming|input lag)",
+                    "游戏娱乐"
+                ],
+                [
+                    "(world cup|match day|sports mode)",
+                    "体育赛事"
+                ],
+                [
+                    "(camping|outdoor movie|portable battery|road trip)",
+                    "移动/户外"
+                ],
+                [
+                    "(workout|yoga follow along|keep fit)",
+                    "居家健身"
+                ],
+                [
+                    "(kids study|online class|eye care mode)",
+                    "儿童/网课"
+                ],
+                [
+                    "(powerpoint|boardroom|meeting room)",
+                    "商务办公"
+                ],
+                [
+                    "(classroom|training session|long session)",
+                    "教学培训"
+                ],
+                [
+                    "(gift for|housewarming|wedding gift)",
+                    "送礼用途"
+                ]
+            ],
+            "用户画像": [
+                [
+                    "(rental apartment|tenant|moving often)",
+                    "角色·租房党"
+                ],
+                [
+                    "(living alone|solo living|single apartment)",
+                    "角色·独居青年"
+                ],
+                [
+                    "(couple|two of us|husband wife)",
+                    "角色·情侣/夫妻"
+                ],
+                [
+                    "(home owner|fixed install|renovation)",
+                    "角色·房主"
+                ],
+                [
+                    "(student|dorm room|campus)",
+                    "角色·学生党"
+                ],
+                [
+                    "(new parent|baby|toddler)",
+                    "角色·宝妈奶爸"
+                ],
+                [
+                    "(for my parents|elderly user)",
+                    "角色·长辈/老人"
+                ],
+                [
+                    "(spec nerd|calibrated|dmd chip|ansi lumens geek)",
+                    "角色·数码极客"
+                ],
+                [
+                    "(bulk order|procurement|office purchase)",
+                    "角色·公司采购"
+                ],
+                [
+                    "(not tech savvy|plug and play user|zero setup)",
+                    "水平·小白"
+                ],
+                [
+                    "(calibration|color gamut|chip size enthusiast)",
+                    "水平·发烧友"
+                ]
+            ],
+            "亮度": [
+                [
+                    "(亮堂|亮瞎|亮爆|白天也能看|抗环境光|抗光|ambient light|daylight visible|bright enough)",
+                    "亮度满意"
+                ],
+                [
+                    "(太亮|亮得刺眼|亮到刺眼|刺眼|blinding|too bright)",
+                    "太亮了刺眼"
+                ],
+                [
+                    "(太昏|太暗看不见|见光就废|白天废了|必须关灯|must be dark|too dim|not bright enough)",
+                    "亮度不足"
+                ],
+                [
+                    "(dark\\s*room|暗房).{0,12}(good|ok|不错|可用)",
+                    "亮度满意"
+                ],
+                [
+                    "(350\\s*lumens?|流明).{0,10}(too\\s*dim|太暗)",
+                    "亮度不足"
+                ],
+                [
+                    "(dark\\s*room\\s*only|仅限暗房|完全黑暗|natural\\s*light.*(no\\s*good|不行))",
+                    "亮度不足"
+                ],
+                [
+                    "(sunlight|natural\\s*light|百叶窗).{0,12}(hard\\s*to\\s*see|看不清)",
+                    "亮度不足"
+                ],
+                [
+                    "(dark\\s*room|黑暗房间).{0,12}(bright|很亮)",
+                    "亮度满意"
+                ],
+                [
+                    "(daylight|白天|sunlight|百叶窗).{0,12}(hard\\s*to\\s*see|不适合|看不清)",
+                    "亮度不足"
+                ],
+                [
+                    "(night|晚上|dark\\s*room|暗房).{0,12}(better|更好|很好)",
+                    "亮度满意"
+                ],
+                [
+                    "(daylight|白天|阳光|有光).{0,12}(blur|模糊|看不清|不行)",
+                    "亮度不足"
+                ],
+                [
+                    "(night|黑暗|暗房).{0,12}(good|很好|最佳|清晰)",
+                    "亮度满意"
+                ],
+                [
+                    "(sun(light)?|阳光|门窗光).{0,12}(影响|看不清|模糊|hard\\s*to\\s*see)",
+                    "亮度不足"
+                ],
+                [
+                    "(dark\\s*environment|黑暗环境|夜间).{0,10}(great|很棒|很好)",
+                    "亮度满意"
+                ],
+                [
+                    "(must\\s*be\\s*dark|完全黑暗|全黑房间|白天.*变淡)",
+                    "亮度不足"
+                ],
+                [
+                    "(low\\s*light|低光环境).{0,10}(good|表现好)",
+                    "亮度满意"
+                ],
+                [
+                    "(1800\\s*ansi).{0,20}(not\\s*accurate|not\\s*match|不符|不如500)",
+                    "亮度不足"
+                ],
+                [
+                    "(brightness).{0,12}(gone\\s*down|decrease|下降|变暗)",
+                    "亮度不足"
+                ],
+                [
+                    "(300\\s*[–-]\\s*500\\s*ansi|ansi\\s*lumens\\s*not\\s*accurate|far\\s*below\\s*claimed)",
+                    "亮度不足"
+                ],
+                [
+                    "(screen\\s*size).{0,18}(drops|softer|dimmer|变软|变暗)",
+                    "亮度不足"
+                ],
+                [
+                    "(pitch\\s*black|completely\\s*dark\\s*room|全黑房间).{0,12}(needed|required|才行)",
+                    "亮度不足"
+                ],
+                [
+                    "(not\\s*2000\\s*ansi|ansi\\s*nowhere\\s*near|不是真实ansi|虚标ansi)",
+                    "亮度不足"
+                ],
+                [
+                    "(pitch\\s*black\\s*room\\s*only|全黑房间才行|白天无法看清)",
+                    "亮度不足"
+                ],
+                [
+                    "(2000\\s*(ansi|lumens?).{0,18}(not\\s*real|not\\s*accurate|lie)|no\\s*brightness\\s*setting)",
+                    "亮度不足"
+                ],
+                [
+                    "(totally\\s*dark\\s*room|pitch\\s*black|daytime\\s*unusable)",
+                    "亮度不足"
+                ],
+                [
+                    "(not\\s*1200\\s*ansi|only\\s*225\\s*ansi|ansi\\s*false|2000\\s*ansi\\s*not\\s*real)",
+                    "亮度不足"
+                ],
+                [
+                    "(daytime\\s*unusable|very\\s*dark\\s*room\\s*only|need\\s*blackout\\s*curtains)",
+                    "亮度不足"
+                ],
+                [
+                    "(daytime|day light|during the day).{0,20}(barely|cannot|not).{0,15}(see|visible)",
+                    "亮度不足"
+                ],
+                [
+                    "(visible).{0,20}(complete darkness|dark room)",
+                    "亮度不足"
+                ],
+                [
+                    "(even\\s*with\\s*lights\\s*on|ambient\\s*light).{0,15}(clear|visible|bright)",
+                    "亮度满意"
+                ],
+                [
+                    "(evening|dim\\s*room|dark\\s*room).{0,20}(okay|fine|good)",
+                    "亮度不足"
+                ],
+                [
+                    "(must|need).{0,10}(completely|pitch\\s*black).{0,10}(room|dark)",
+                    "亮度不足"
+                ],
+                [
+                    "(basement).{0,16}(bright|good|clear)",
+                    "亮度满意"
+                ],
+                [
+                    "(very\\s*large\\s*image|bigger\\s*image).{0,20}(not\\s*bright|too\\s*dark)",
+                    "亮度不足"
+                ],
+                [
+                    "(dimmest\\s*projector|no\\s*brightness|no\\s*setting\\s*to\\s*increase\\s*brightness)",
+                    "亮度不足"
+                ],
+                [
+                    "(can\\s*barely\\s*see\\s*video|dull\\s*and\\s*brightness\\s*is\\s*poor|underwhelmed\\s*with\\s*the\\s*brightness)",
+                    "亮度不足"
+                ],
+                [
+                    "(brightness\\s*up\\s*to\\s*100).{0,20}(not\\s*super\\s*bright|faded|dim)",
+                    "亮度不足"
+                ],
+                [
+                    "(no\\s*tienen\\s*buena\\s*imagen|easier\\s*to\\s*see)",
+                    "亮度不足"
+                ],
+                [
+                    "(brightness).{0,20}(isn\\'t\\s*anywhere\\s*close|can\\s*barely\\s*be\\s*seen|faded\\s*and\\s*dim)",
+                    "亮度不足"
+                ],
+                [
+                    "(not\\s*much\\s*better\\s*than\\s*\\$?60).{0,20}(brightness)",
+                    "亮度不足"
+                ],
+                [
+                    "(开灯|有灯|lights?\\s*on).{0,12}(也能看清|看得清|still\\s*clear|still\\s*visible)",
+                    "亮度满意"
+                ]
+            ],
+            "色彩": [
+                [
+                    "(颜色通透|色彩通透|颜色讨喜|色准|色彩还原|color accurate)",
+                    "色彩好"
+                ],
+                [
+                    "(色彩鲜艳|很艳|过艳|过饱和|vibrant color|vivid color)",
+                    "色彩鲜艳"
+                ],
+                [
+                    "(偏黄|偏蓝|偏绿|泛白|灰蒙|色偏|washed out|color cast)",
+                    "色彩差"
+                ],
+                [
+                    "(色彩|颜色).{0,8}(准确度|准确性).{0,6}(不好|不佳|较差|很差)",
+                    "色彩差"
+                ]
+            ],
+            "清晰度/分辨率": [
+                [
+                    "(画质清楚|字很清楚|锐度好|细节到位|sharp|crisp|native 1080p|4k clear)",
+                    "清晰"
+                ],
+                [
+                    "(发糊|不够清|虚焦|颗粒明显|blurry|soft focus|pixelated)",
+                    "模糊"
+                ],
+                [
+                    "(lack\\s*clarity|缺乏清晰度|不清晰|模糊)",
+                    "模糊"
+                ],
+                [
+                    "(1080p).{0,12}(not\\s*as\\s*expected|不足)",
+                    "模糊"
+                ],
+                [
+                    "(not\\s*native\\s*4k|upscaled|not\\s*true\\s*1080p|清晰度不足|blurry\\s*text)",
+                    "模糊"
+                ],
+                [
+                    "(washed\\s*out|colors\\s*flat|blacks\\s*are\\s*gray|黑位发灰)",
+                    "黑色发灰"
+                ],
+                [
+                    "(dead\\s*pixel|burn-?in|checkerboard|dark\\s*splotches|黑线|模糊)",
+                    "模糊"
+                ],
+                [
+                    "(left.*yellow.*right.*blue|色差|颜色差异)",
+                    "偏色"
+                ],
+                [
+                    "(dead\\s*pixels?|white\\s*spots?|brown\\s*splotches?|dust\\s*spots?|checkerboard|blurry\\s*after\\s*weeks)",
+                    "模糊"
+                ],
+                [
+                    "(left\\s*yellow\\s*right\\s*blue|color\\s*discrepancy)",
+                    "偏色"
+                ],
+                [
+                    "(not\\s*4k|only\\s*1080p|max\\s*1080p|4k\\s*input\\s*but\\s*1080p)",
+                    "模糊"
+                ],
+                [
+                    "(orange\\s*spots?|black\\s*dots?|dead\\s*spot|white\\s*spots?)",
+                    "模糊"
+                ],
+                [
+                    "(colors\\s*subpar|washed\\s*out|struggles\\s*with\\s*purples)",
+                    "色彩差"
+                ],
+                [
+                    "(4k|8k).{0,20}(not\\s*real|false|only\\s*1080|marketing)",
+                    "分辨率不符"
+                ],
+                [
+                    "(only\\s*1080p|max\\s*1080p|stuck\\s*at\\s*1080p)",
+                    "分辨率不符"
+                ],
+                [
+                    "(washed\\s*out\\s*colors?|faded\\s*colors?).{0,12}(image|picture)?",
+                    "模糊"
+                ],
+                [
+                    "(advertis|claim|listed\\s*as).{0,25}(4k|8k).{0,35}(only\\s*1080|1080p)",
+                    "分辨率不符"
+                ],
+                [
+                    "(not|isn\\'t).{0,8}(4k|8k).{0,20}(only|just|native).{0,8}(1080p|1080)",
+                    "分辨率不符"
+                ],
+                [
+                    "(supports?\\s*4k|supports?\\s*8k).{0,28}(native\\s*1080p|1080p\\s*native)",
+                    "分辨率不符"
+                ],
+                [
+                    "(8k).{0,10}(支持).{0,8}(不完全|不正确|不真实)",
+                    "分辨率不符"
+                ],
+                [
+                    "(4k|8k).{0,12}(不完全正确|不准确|不符|虚标)",
+                    "分辨率不符"
+                ],
+                [
+                    "(不是|并非).{0,6}(4k|8k)",
+                    "分辨率不符"
+                ],
+                [
+                    "(宣传|标称|写的是|宣称).{0,18}(4k|8k).{0,20}(实际|其实|但是|但).{0,12}(1080|1080p)",
+                    "分辨率不符"
+                ],
+                [
+                    "(宣传|标称|写的是|宣称).{0,18}(4k|8k)",
+                    "分辨率不符"
+                ],
+                [
+                    "(实际)?\\s*只有\\s*(1080|1080p)",
+                    "分辨率不符"
+                ],
+                [
+                    "(no\\s*4k|only\\s*plays\\s*in\\s*sd|screen\\s*went\\s*blank|it\\s*a\\s*dud)",
+                    "分辨率不符"
+                ],
+                [
+                    "(good\\s*resolution|image\\s*is\\s*great|picture\\s*clarity\\s*is\\s*good)",
+                    "清晰"
+                ]
+            ],
+            "画面均匀度": [
+                [
+                    "(四角都清楚|全屏清楚|均匀|corner to corner sharp|uniform focus)",
+                    "四周清晰"
+                ],
+                [
+                    "(四角发虚|边缘发糊|暗角|vignetting|edge blur|corner blur)",
+                    "四周发暗"
+                ]
+            ],
+            "对比度/黑位": [
+                [
+                    "(黑得下去|暗部有细节|层次分明|deep black|good contrast)",
+                    "对比度高"
+                ],
+                [
+                    "(黑位发灰|灰雾感|没层次|black is gray|low contrast)",
+                    "黑色发灰"
+                ],
+                [
+                    "(black\\s*levels?\\s*(are\\s*)?(gray|grey)|blacks?\\s*look\\s*gray|washed\\s*out\\s*blacks?)",
+                    "黑色发灰"
+                ],
+                [
+                    "(low\\s*contrast|poor\\s*contrast|lack\\s*contrast)",
+                    "对比低"
+                ],
+                [
+                    "(shadow\\s*detail\\s*(is\\s*)?(lost|missing|poor)|dark\\s*scenes?\\s*(too\\s*)?(flat|muddy))",
+                    "暗部细节看不清"
+                ],
+                [
+                    "(good\\s*black\\s*levels?|deep\\s*blacks?|strong\\s*contrast)",
+                    "对比度高"
+                ],
+                [
+                    "(黑位发灰|黑色发灰|灰雾感|暗部细节丢失|暗场没层次|层次感差)",
+                    "黑色发灰"
+                ]
+            ],
+            "运动表现/MEMC": [
+                [
+                    "(运动很顺|看球顺滑|不拖|motion smooth|memc works)",
+                    "运动流畅"
+                ],
+                [
+                    "(拖尾|拖影|卡帧|不跟手|judder|ghosting|stutter)",
+                    "拖影严重"
+                ],
+                [
+                    "(motion\\s*(is\\s*)?(smooth|fluid)|sports?\\s*(look\\s*)?smooth|fast\\s*action\\s*is\\s*smooth)",
+                    "运动流畅"
+                ],
+                [
+                    "(motion\\s*blur|blurry\\s*motion|ghosting|judder|stutter|frame\\s*drops?)",
+                    "拖影严重"
+                ],
+                [
+                    "(laggy\\s*during\\s*fast\\s*scenes?|choppy\\s*playback\\s*in\\s*action)",
+                    "拖影严重"
+                ],
+                [
+                    "(拖影明显|快速画面卡帧|动作场景卡顿|看球拖影)",
+                    "拖影严重"
+                ],
+                [
+                    "(运动很流畅|动作顺滑|看球顺滑|memc\\s*(works|good))",
+                    "运动流畅"
+                ]
+            ],
+            "彩虹眼/散斑": [
+                [
+                    "(彩虹效应|RGB条纹|看久头疼|speckle|rainbow effect|dlp rainbow)",
+                    "彩虹眼"
+                ],
+                [
+                    "(rainbow\\s*effect|dlp\\s*rainbow|rgb\\s*(flashes?|stripes?))",
+                    "彩虹眼"
+                ],
+                [
+                    "(speckle|sparkly\\s*noise|grainy\\s*laser\\s*speckle)",
+                    "散斑严重"
+                ],
+                [
+                    "(eye\\s*strain\\s*from\\s*rainbow|headache\\s*from\\s*rainbow|rainbow\\s*artifacts?)",
+                    "彩虹眼"
+                ],
+                [
+                    "(彩虹效应|红绿蓝闪条|看久头疼|散斑|颗粒闪烁)",
+                    "彩虹眼"
+                ]
+            ],
+            "噪音": [
+                [
+                    "(风扇安静|几乎无声|silent|quiet fan|low noise)",
+                    "静音"
+                ],
+                [
+                    "(噪声大|风扇吵|电流啸叫|buzzing|humming|loud fan)",
+                    "噪音大"
+                ],
+                [
+                    "(fan\\s*noise|风扇).{0,8}(low\\s*power|低功耗).{0,8}(loud|大)",
+                    "噪音大"
+                ],
+                [
+                    "(low\\s*humming|低沉.*声音)",
+                    "噪音大"
+                ],
+                [
+                    "(fan|风扇).{0,12}(loud|大|很响|噪音)",
+                    "噪音大"
+                ],
+                [
+                    "(turn\\s*up\\s*volume|音量调大).{0,10}(ignore|盖过|听不到)",
+                    "噪音大"
+                ],
+                [
+                    "(fan|风扇).{0,18}(crackl|爆裂|坏扬声器|很吵|噪音大)",
+                    "噪音大"
+                ],
+                [
+                    "(low\\s*power|低功耗).{0,12}(quiet|安静|几乎消失)",
+                    "静音"
+                ],
+                [
+                    "(very\\s*quiet|much\\s*more\\s*quiet|quiet\\s*fans)",
+                    "静音"
+                ],
+                [
+                    "(fan).{0,10}(loud|noisy|有点吵|很大)",
+                    "噪音大"
+                ],
+                [
+                    "(high\\s*pitch|too\\s*noisy|ventilador\\s*muy\\s*ruidoso|fan\\s*very\\s*loud)",
+                    "噪音大"
+                ],
+                [
+                    "(fan).{0,12}(65\\s*db|65db|loud\\s*in\\s*quiet\\s*scene)",
+                    "噪音大"
+                ],
+                [
+                    "(fan).{0,16}(surprisingly\\s*quiet|hardly\\s*noticeable)",
+                    "静音"
+                ]
+            ],
+            "音质": [
+                [
+                    "(声音够用|外放可以|低频不错|speaker is decent)",
+                    "音质好"
+                ],
+                [
+                    "(声音发闷|薄|刺耳|破音|tinny|weak speaker|distortion)",
+                    "音质差"
+                ],
+                [
+                    "(speaker).{0,10}(thin|单薄|not\\s*good|不够好)",
+                    "音质差"
+                ],
+                [
+                    "(loud|响亮|volume).{0,10}(great|很棒|足够大)",
+                    "音量大"
+                ],
+                [
+                    "(volume).{0,12}(not\\s*loud|too\\s*low|max\\s*still\\s*low)",
+                    "音量小"
+                ],
+                [
+                    "(sound).{0,12}(clear\\s*and\\s*loud|loud\\s*and\\s*clear)",
+                    "音质好"
+                ],
+                [
+                    "(sound\\s*ok|sound\\s*is\\s*not\\s*bad)",
+                    "音质一般"
+                ]
+            ],
+            "对焦/校正": [
+                [
+                    "(自动对焦快|自动梯形准|开机就正|autofocus fast|keystone accurate)",
+                    "自动梯形校正准"
+                ],
+                [
+                    "(反复对焦|总跑焦|梯形老歪|focus drift|keystone off)",
+                    "对焦慢"
+                ],
+                [
+                    "(focus).{0,12}(not\\s*uniform|不统一|失焦)|自动对焦.*(不清晰|无法关闭)",
+                    "对焦不准"
+                ],
+                [
+                    "(auto\\s*focus|自动对焦).{0,10}(great|很好|很准)|自动调平.*准",
+                    "自动对焦快"
+                ],
+                [
+                    "(left\\s*bottom|左下角).{0,10}(cannot|无法).{0,10}(adjust|调整)",
+                    "梯形不准"
+                ],
+                [
+                    "(auto\\s*keystone|自动梯形).{0,12}(not\\s*work|不起作用|不太适合)",
+                    "梯形不准"
+                ],
+                [
+                    "(keystone|梯形).{0,20}(reset|回到|回弹|不稳定)",
+                    "梯形不准"
+                ],
+                [
+                    "(brightness\\s*control|亮度调节).{0,12}(missing|没有|找不到)",
+                    "校正失败"
+                ],
+                [
+                    "(stretch\\s*the\\s*4\\s*corners|4\\s*corners|perfect\\s*rectangle|自动矩形)",
+                    "自动梯形校正准"
+                ],
+                [
+                    "(original\\s*size\\s*stays\\s*bright|屏幕周围太亮)",
+                    "梯形不准"
+                ],
+                [
+                    "(f\\+|f-).{0,12}(do\\s*nothing|没反应)|focus\\s*does\\s*not\\s*respond",
+                    "对焦不准"
+                ],
+                [
+                    "(auto\\s*focus).{0,18}(doesn\\'?t\\s*work|worse|fails|失效|不工作)",
+                    "对焦不准"
+                ],
+                [
+                    "(angled\\s*more\\s*than\\s*30|超过\\s*30\\s*度).{0,12}(not\\s*adjust|无法调整)",
+                    "梯形不准"
+                ],
+                [
+                    "(keystone).{0,16}(does\\s*not\\s*work|off\\s*every\\s*time|never\\s*aligns)",
+                    "梯形不准"
+                ],
+                [
+                    "(auto\\s*focus).{0,12}(sucks|fails|off|not\\s*work)",
+                    "对焦不准"
+                ],
+                [
+                    "(one\\s*edge\\s*blurry|close\\s*range\\s*does\\s*not\\s*work|zoom\\s*very\\s*limited)",
+                    "对焦不准"
+                ],
+                [
+                    "(zoom\\s*increments\\s*large|cannot\\s*fine\\s*tune|never\\s*fully\\s*sharp)",
+                    "梯形不准"
+                ],
+                [
+                    "(auto\\s*focus).{0,12}(off|fails|doesn\\'t\\s*work)",
+                    "对焦不准"
+                ],
+                [
+                    "(autofocus|auto focus).{0,20}(off|wrong|fail)",
+                    "对焦不准"
+                ],
+                [
+                    "zoom.{0,20}(every time|startup|turn it on)",
+                    "梯形不准"
+                ],
+                [
+                    "(auto\\s*focus|autofocus).{0,20}(fail|off|not\\s*work)",
+                    "对焦不准"
+                ],
+                [
+                    "(keystone).{0,24}(reset|resets|not\\s*save|forget)",
+                    "梯形不准"
+                ],
+                [
+                    "(four\\s*point).{0,20}(focus|keystone).{0,15}(issue|bad|useless)",
+                    "梯形不准"
+                ],
+                [
+                    "(zoom).{0,20}(reset|every\\s*time\\s*turn)",
+                    "梯形不准"
+                ],
+                [
+                    "(auto\\s*focus).{0,20}(issue|fails?|not\\s*able)",
+                    "对焦不准"
+                ],
+                [
+                    "(edge|corners?).{0,20}(blurry|blur)",
+                    "对焦不准"
+                ],
+                [
+                    "(auto\\s*keystone|auto\\s*kerning).{0,20}(fail|fails?)",
+                    "梯形不准"
+                ],
+                [
+                    "(cannot|can\\'t).{0,10}(focus).{0,20}(9\\s*feet|10\\s*feet|beyond)",
+                    "对焦不准"
+                ],
+                [
+                    "(best\\s*focus).{0,16}(7\\s*feet|8\\s*feet)",
+                    "自动功能好"
+                ],
+                [
+                    "(auto\\s*focus|auto\\s*keystone|auto\\s*align).{0,20}(quick|fast|great)",
+                    "自动功能好"
+                ],
+                [
+                    "(close\\s*range).{0,15}(does\\s*not\\s*work|won\\'t\\s*adjust)",
+                    "梯形不准"
+                ],
+                [
+                    "(angled\\s*more\\s*than\\s*30).{0,10}(not\\s*adjust|won\\'t\\s*adjust)",
+                    "梯形不准"
+                ]
+            ],
+            "避障与入幕": [
+                [
+                    "(避障灵敏|自动入幕准|screen fit good|obstacle avoidance works)",
+                    "智能避障准"
+                ],
+                [
+                    "(避障失败|入幕不准|越界|screen fit fail|obstacle miss)",
+                    "避不开障碍物"
+                ]
+            ],
+            "系统与生态": [
+                [
+                    "(系统顺滑|启动快|无广告|资源多|snappy ui|fast boot)",
+                    "流畅"
+                ],
+                [
+                    "(系统卡|开机慢|广告多|资源少|laggy ui|bloatware)",
+                    "系统卡顿"
+                ],
+                [
+                    "(roku(\\s*tv)?\\s*(platform|os)?|流媒体服务|streaming\\s+service|apps?\\s+and\\s+live\\s+channels?)",
+                    "资源丰富"
+                ],
+                [
+                    "(loads?\\s+fast|加载速度快|启动很快)",
+                    "开机快"
+                ],
+                [
+                    "(all\\s*my\\s*apps|所有的应用|roku\\s*tv\\s*experience|像一台roku电视)",
+                    "资源丰富"
+                ],
+                [
+                    "(roku\\s*software).{0,16}(heavy|笨重)|菜单.*埋.*深",
+                    "系统卡顿"
+                ],
+                [
+                    "(roku\\s*ui|界面).{0,12}(easy|直观|易用)",
+                    "操作简单"
+                ],
+                [
+                    "(all\\s*apps|所有应用|应用集成|streaming\\s*apps?)",
+                    "资源丰富"
+                ],
+                [
+                    "(auto\\s*subscrib|自动订阅|每月\\s*50|每月\\s*50美元|subscription).{0,12}(roku|流媒体)",
+                    "套娃收费"
+                ],
+                [
+                    "(roku\\s*account|roku账号).{0,10}(easy|简单|快速)",
+                    "操作简单"
+                ],
+                [
+                    "(roku\\s*password|roku账号|登录roku).{0,10}(easy|简单|快速)",
+                    "操作简单"
+                ],
+                [
+                    "(preloaded\\s*apps?|预装应用|安装的软件).{0,12}(cannot|无法|不能用)",
+                    "资源少"
+                ],
+                [
+                    "(roku\\s*login|roku账号登录).{0,10}(easy|快|简单)",
+                    "操作简单"
+                ],
+                [
+                    "(roku\\s*login|登录roku|roku\\s*account).{0,16}(bad|糟糕|困难|麻烦)",
+                    "系统卡顿"
+                ],
+                [
+                    "(built[- ]in\\s*apps?|内置应用).{0,16}(slow|clunky|慢|卡)",
+                    "系统卡顿"
+                ],
+                [
+                    "(in-built\\s*apps?|预装应用).{0,10}(cannot\\s*use|无法使用|不可用)",
+                    "资源少"
+                ],
+                [
+                    "(roku\\s*login|登录roku).{0,18}(bad|糟糕|20\\s*times|many\\s*tries)",
+                    "系统卡顿"
+                ],
+                [
+                    "(app\\s*store).{0,16}(not\\s*great|limited|choice\\s*few|不多)",
+                    "资源少"
+                ],
+                [
+                    "(intuitive|user\\s*friendly|simple\\s*to\\s*navigate)",
+                    "操作简单"
+                ],
+                [
+                    "(netflix).{0,20}(laggy|freeze|buffer|卡顿|冻结)",
+                    "系统卡顿"
+                ],
+                [
+                    "(smart\\s*system).{0,12}(slow|unreliable|慢|不稳定)",
+                    "系统卡顿"
+                ],
+                [
+                    "(netflix).{0,20}(not\\s*work|glitch|lag|slow|freeze)",
+                    "系统卡顿"
+                ],
+                [
+                    "(hulu).{0,20}(shut\\s*down|install\\s*page|doesn\\'t\\s*load)",
+                    "系统卡顿"
+                ],
+                [
+                    "(no\\s*(normal\\s*)?app\\s*store|mainstream\\s*apps\\s*missing|linux\\s*based\\s*store)",
+                    "资源少"
+                ],
+                [
+                    "(software\\s*laggy|interface\\s*slow|30\\s*second\\s*delay)",
+                    "系统卡顿"
+                ],
+                [
+                    "(netflix).{0,18}(not\\s*working|doesn\\'t\\s*work|glitch|delay)",
+                    "系统卡顿"
+                ],
+                [
+                    "(hulu).{0,18}(exit|home\\s*screen|install\\s*page|doesn\\'t\\s*load)",
+                    "系统卡顿"
+                ],
+                [
+                    "(blank\\s*screen).{0,12}(with\\s*sound|sound\\s*bar)",
+                    "系统卡顿"
+                ],
+                [
+                    "(tech\\s*support).{0,18}(email\\s*only|slow|no\\s*chat|no\\s*phone)",
+                    "售后差"
+                ],
+                [
+                    "peacock.{0,20}(black screen|only sound)",
+                    "系统卡顿"
+                ],
+                [
+                    "(youtube|hulu|apple tv).{0,25}(not load|error|buffer|freeze)",
+                    "系统卡顿"
+                ],
+                [
+                    "app\\s*store.{0,12}(404|error)",
+                    "资源少"
+                ],
+                [
+                    "(disney|hulu|max|paramount|peacock).{0,25}(not\\s*support|cannot|can\\'t|404|sign\\s*in)",
+                    "资源少"
+                ],
+                [
+                    "(app\\s*store|netrange).{0,20}(limited|404|few\\s*apps)",
+                    "资源少"
+                ],
+                [
+                    "(linux).{0,18}(not\\s*android|non-android)",
+                    "资源少"
+                ],
+                [
+                    "(sideload|third\\s*party\\s*apps?).{0,18}(cannot|can\\'t|unable)",
+                    "资源少"
+                ],
+                [
+                    "(hulu|disney\\+?|max).{0,22}(black\\s*screen|not\\s*load|loading\\s*circle|404)",
+                    "系统卡顿"
+                ],
+                [
+                    "(app\\s*store).{0,24}(few|limited|lack|missing)",
+                    "资源少"
+                ],
+                [
+                    "(youtube).{0,20}(exit|go\\s*back).{0,12}(home|menu)",
+                    "系统卡顿"
+                ],
+                [
+                    "(disney\\+?).{0,24}(loading\\s*circle|can\\'t\\s*pause|can\\'t\\s*skip)",
+                    "系统卡顿"
+                ],
+                [
+                    "(software|ui).{0,20}(issue|lag|bug)",
+                    "系统卡顿"
+                ],
+                [
+                    "(android).{0,20}(not\\s*android\\s*tv|isn\\'t\\s*android\\s*tv)",
+                    "资源少"
+                ],
+                [
+                    "(curated\\s*list|limited\\s*app\\s*list|not\\s*full\\s*play\\s*store)",
+                    "资源少"
+                ],
+                [
+                    "(doesn\\'t\\s*support|does\\s*not\\s*support).{0,10}(hdr|disney\\s*plus)",
+                    "资源少"
+                ],
+                [
+                    "(copyright\\s*issues?).{0,15}(disney|streaming)",
+                    "资源少"
+                ],
+                [
+                    "(only\\s*plays?\\s*in\\s*sd|no\\s*4k\\s*playing)",
+                    "分辨率不符"
+                ],
+                [
+                    "(interface\\s*is\\s*painfully\\s*slow|forces\\s*ads\\s*on\\s*home\\s*screen|software\\s*slow)",
+                    "系统卡顿"
+                ],
+                [
+                    "(can\\'t\\s*get\\s*disney|can\\'t\\s*get\\s*hulu|top\\s*american\\s*apps\\s*missing)",
+                    "资源少"
+                ],
+                [
+                    "(software\\s*is\\s*slow|algo\\s*lento\\s*el\\s*software|forces\\s*ads\\s*on\\s*home\\s*screen)",
+                    "系统卡顿"
+                ]
+            ],
+            "投屏体验": [
+                [
+                    "(投屏秒连|连接稳|延迟低|airplay stable|cast stable)",
+                    "投屏稳定"
+                ],
+                [
+                    "(投不上|老断|延迟高|cast fail|disconnect|high latency)",
+                    "连不上"
+                ],
+                [
+                    "(airplay).{0,12}(stop|停止|断开)",
+                    "断连"
+                ],
+                [
+                    "(airplay|screen\\s*mirror|屏幕镜像).{0,12}(easy|方便|顺畅)",
+                    "投屏稳定"
+                ],
+                [
+                    "(5\\s*ghz|5g\\s*wifi|hotspot|热点).{0,12}(stable|好|快|no\\s*problem|没有问题)",
+                    "连接快"
+                ],
+                [
+                    "(audio\\s*but\\s*no\\s*video|有音频.*无视频|只有声音没有画面)",
+                    "只有声音没画面"
+                ],
+                [
+                    "(cannot\\s*cast|无法投屏|不能镜像).{0,12}(google\\s*phone|安卓|google)",
+                    "投屏失败"
+                ],
+                [
+                    "(audio\\s*delay|音画延迟|不同步)",
+                    "延迟高"
+                ],
+                [
+                    "(ios|iphone|airplay).{0,12}(seamless|无缝|顺畅|方便)",
+                    "投屏稳定"
+                ],
+                [
+                    "(cannot\\s*pair\\s*iphone|almost\\s*impossible\\s*to\\s*pair\\s*apple|google\\s*phone\\s*cast)",
+                    "投屏失败"
+                ],
+                [
+                    "(wireless\\s*screen\\s*share).{0,10}(no\\s*lag|smooth)",
+                    "延迟低"
+                ],
+                [
+                    "(disconnecting\\s*from\\s*internet|断网|断连).{0,10}(one\\s*month|一个月)",
+                    "断连"
+                ],
+                [
+                    "(cannot\\s*play\\s*from\\s*apple|apple\\s*devices.*not\\s*work|无法播放apple)",
+                    "不兼容"
+                ],
+                [
+                    "(disconnects?\\s*from\\s*wifi|wifi\\s*every\\s*5-10\\s*minutes|断网)",
+                    "断连"
+                ],
+                [
+                    "(bluetooth).{0,16}(quit\\s*working|keeps\\s*disconnect|断连)",
+                    "断连"
+                ],
+                [
+                    "(pause.*sound\\s*going|有声音.*没画面)",
+                    "只有声音没画面"
+                ],
+                [
+                    "(airplay).{0,12}(crash|fails|失败)",
+                    "投屏失败"
+                ],
+                [
+                    "(airplay).{0,12}(don\\'t\\s*work|fails|not\\s*native)",
+                    "投屏失败"
+                ],
+                [
+                    "(disconnects?\\s*from\\s*wifi|wifi\\s*failing|网络强但卡顿)",
+                    "断连"
+                ],
+                [
+                    "(sound\\s*delay|audio\\s*delay|laggy\\s*freeze)",
+                    "延迟高"
+                ],
+                [
+                    "(agree\\s*button\\s*wifi|captcha\\s*wifi|portal\\s*wifi)",
+                    "断连"
+                ],
+                [
+                    "(input\\s*lag|gaming\\s*mode\\s*missing|lagging\\s*behind\\s*input)",
+                    "延迟高"
+                ],
+                [
+                    "(screen\\s*share).{0,20}(disconnect|drops?|unstable)",
+                    "断连"
+                ],
+                [
+                    "(bluetooth\\s*audio).{0,20}(lag|delay)",
+                    "延迟高"
+                ],
+                [
+                    "(bluetooth).{0,20}(not\\s*work|fails?\\s*at\\s*all)",
+                    "断连"
+                ],
+                [
+                    "(cast).{0,25}(entire\\s*screen|whole\\s*screen\\s*only)",
+                    "延迟高"
+                ],
+                [
+                    "(screen\\s*mirror|mirroring).{0,20}(blurry|out\\s*of\\s*focus)",
+                    "画质压缩"
+                ],
+                [
+                    "(bluetooth).{0,20}(audio|speaker).{0,20}(delay|lag|out\\s*of\\s*sync)",
+                    "音画不同步"
+                ],
+                [
+                    "(screen\\s*mirror|screen\\s*cast).{0,15}(fail|never\\s*work|cannot)",
+                    "投屏失败"
+                ],
+                [
+                    "(bluetooth\\s*speaker).{0,20}(no\\s*delay|without\\s*delay)",
+                    "延迟低"
+                ],
+                [
+                    "(bluetooth).{0,20}(stable|smooth).{0,10}(speaker|audio)",
+                    "投屏稳定"
+                ],
+                [
+                    "(不能|无法).{0,8}(镜像|投屏).{0,8}(手机)",
+                    "投屏失败"
+                ],
+                [
+                    "(apple\\s*products?).{0,20}(would\\s*not\\s*play|not\\s*play|nothing\\s*worked)",
+                    "不兼容"
+                ],
+                [
+                    "(bluetooth).{0,20}(lose\\s*connection|disconnect)",
+                    "断连"
+                ],
+                [
+                    "(picture).{0,12}(freezes?\\s*up|freeze\\s*a\\s*lot)",
+                    "断连"
+                ],
+                [
+                    "(won\\'t\\s*connect\\s*to\\s*wifi\\s*or\\s*phone|cannot\\s*connect\\s*phone|no\\s*apple\\s*playback)",
+                    "不兼容"
+                ],
+                [
+                    "(black\\s*screen\\s*only\\s*sound|peacock\\s*.*black\\s*screen)",
+                    "只有声音没画面"
+                ],
+                [
+                    "(no\\s*se\\s*pod[ií]a\\s*conectar\\s*el\\s*tel[eé]fono)",
+                    "不兼容"
+                ],
+                [
+                    "(蓝牙|bluetooth).{0,12}(扬声器|speaker|音箱).{0,18}(延迟|delay|different\\s*sync|out\\s*of\\s*sync)",
+                    "音画不同步"
+                ]
+            ],
+            "语音控制": [
+                [
+                    "(语音好使|识别快|唤醒灵|voice control works)",
+                    "语音识别准"
+                ],
+                [
+                    "(语音识别差|误唤醒|反应慢|voice control bad)",
+                    "识别率低"
+                ]
+            ],
+            "外观与便携": [
+                [
+                    "(轻巧便携|不占地|颜值在线|compact|portable|sleek)",
+                    "小巧"
+                ],
+                [
+                    "(笨重占地|太大太沉|bulky|heavy projector)",
+                    "太重"
+                ]
+            ],
+            "接口与扩展": [
+                [
+                    "(接口齐全|hdmi2\\\\.1|带网口|earc|ports are plenty)",
+                    "接口丰富"
+                ],
+                [
+                    "(接口少|usb不够|不带网口|old hdmi|not enough ports)",
+                    "USB口不够"
+                ],
+                [
+                    "(only\\s+hdmi\\s*arc|hdmi\\s*arc.*rca|接口(非常)?有限|缺少光纤|no\\s+optical)",
+                    "接口少"
+                ],
+                [
+                    "(bluetooth\\s*speaker|蓝牙音箱)",
+                    "接口丰富"
+                ],
+                [
+                    "(3\\.5\\s*mm|earphone\\s*jack|耳机插孔).{0,12}(broken|坏了|有问题)",
+                    "音频口底噪大"
+                ],
+                [
+                    "(infrared|红外).{0,10}(remote|遥控器)|必须.*对准.*投影仪",
+                    "接口少"
+                ],
+                [
+                    "(no\\s*bluetooth|没有蓝牙)",
+                    "不兼容"
+                ],
+                [
+                    "(power\\s*cord|电源线).{0,12}(slip|滑出来|不稳|不可靠)",
+                    "音频口底噪大"
+                ],
+                [
+                    "(only\\s*one\\s*hdmi|只有一个hdmi)",
+                    "接口少"
+                ],
+                [
+                    "(home\\s*theater|家庭影院).{0,12}(cannot|无法|适配差)",
+                    "不兼容"
+                ],
+                [
+                    "(disney\\s*\\+).{0,12}(not\\s*work|cannot|无法|copyright)",
+                    "不兼容"
+                ],
+                [
+                    "(fat32|64gb).{0,16}(max|only|recognise|detect)",
+                    "接口少"
+                ],
+                [
+                    "(remote\\s*won\\'?t\\s*work|遥控器.*很近|pointing\\s*at\\s*ir)",
+                    "不兼容"
+                ],
+                [
+                    "(remote\\s*won\\'?t\\s*work|fresh\\s*batteries.*no\\s*response|遥控器失灵)",
+                    "不兼容"
+                ],
+                [
+                    "(no\\s*bluetooth|bluetooth\\s*menu\\s*missing|没有蓝牙)",
+                    "不兼容"
+                ],
+                [
+                    "(4k\\s*input.*1080p|supports\\s*only\\s*1080p|不支持4k)",
+                    "不兼容"
+                ],
+                [
+                    "(remote).{0,20}(2ft|ir|press.*5\\s*times|won\\'t\\s*work|fresh\\s*batteries)",
+                    "不兼容"
+                ],
+                [
+                    "(one\\s*hdmi).{0,12}(doesn\\'t\\s*work|failed)",
+                    "不兼容"
+                ],
+                [
+                    "(no\\s*bluetooth\\s*output|bluetooth\\s*speaker\\s*lag)",
+                    "不兼容"
+                ],
+                [
+                    "(remote).{0,20}(unusable|stopped\\s*responding|2\\s*ft|sensor\\s*line\\s*up)",
+                    "不兼容"
+                ],
+                [
+                    "(usb).{0,20}(128gb\\s*max|up\\s*to\\s*128gb)",
+                    "不兼容"
+                ],
+                [
+                    "(2tb\\s*ssd).{0,20}(not\\s*read|not\\s*recognized)",
+                    "不兼容"
+                ],
+                [
+                    "(subtitle|subtitles).{0,20}(not\\s*supported|unsupported)",
+                    "不兼容"
+                ],
+                [
+                    "(hdmi).{0,18}(blue\\s*screen|no\\s*signal)",
+                    "不兼容"
+                ],
+                [
+                    "(ps3|playstation\\s*3).{0,20}(not\\s*work|incompatible|cannot\\s*connect)",
+                    "不兼容"
+                ],
+                [
+                    "(laptop).{0,20}(hdmi).{0,20}(cannot|can\\'t|not\\s*work)",
+                    "不兼容"
+                ],
+                [
+                    "(no\\s*3\\.5mm|without\\s*3\\.5mm|aux\\s*jack\\s*missing)",
+                    "不兼容"
+                ],
+                [
+                    "(power\\s*cable|cord).{0,15}(too\\s*short|short)",
+                    "不兼容"
+                ],
+                [
+                    "(ps3|playstation\\s*3).{0,20}(can\\'t|cannot|won\\'t).{0,10}(work|use)",
+                    "不兼容"
+                ],
+                [
+                    "(hdmi).{0,16}(no\\s*signal|blue\\s*screen)",
+                    "不兼容"
+                ],
+                [
+                    "(hdmi).{0,18}(no\\s*audio|no\\s*sound|without\\s*sound)",
+                    "不兼容"
+                ],
+                [
+                    "(power\\s*cord|cable).{0,12}(short|too\\s*short|need\\s*extension)",
+                    "不兼容"
+                ],
+                [
+                    "(hdmi\\s*and\\s*usb\\s*only|only\\s*hdmi\\s*usb)",
+                    "不兼容"
+                ],
+                [
+                    "(cable).{0,12}(faulty|turns\\s*off\\s*when\\s*moved)",
+                    "不兼容"
+                ],
+                [
+                    "(can\\'t\\s*be\\s*used\\s*sideways|no\\s*enter\\s*button\\s*on\\s*the\\s*remote)",
+                    "不兼容"
+                ],
+                [
+                    "(can\\'t\\s*be\\s*used\\s*cordlessly|power\\s*cord\\s*fit\\s*loosely)",
+                    "不兼容"
+                ],
+                [
+                    "(ps3|playstation\\s*3).{0,12}(无法|不能|不兼容|not\\s*work|not\\s*compatible)",
+                    "不兼容"
+                ],
+                [
+                    "(hdmi).{0,10}(无信号|no\\s*signal)",
+                    "不兼容"
+                ]
+            ],
+            "散热与温控": [
+                [
+                    "(散热稳|长时间不烫|cool running|thermal is good)",
+                    "散热好"
+                ],
+                [
+                    "(发烫|过热关机|像暖风机|overheat|too hot)",
+                    "机身烫"
+                ],
+                [
+                    "(random(ly)?\\s*shut\\s*off|随机关闭|突然熄火|overheat|过热)",
+                    "自动关机"
+                ],
+                [
+                    "(overheat|过热).{0,10}(shut\\s*down|关机)|中途关机",
+                    "自动关机"
+                ],
+                [
+                    "(overheat|过热|温度).{0,10}(warning|提示|shut\\s*off|关机)",
+                    "自动关机"
+                ],
+                [
+                    "(gets\\s*hot\\s*really\\s*fast|过热很快|million\\s*degrees)",
+                    "发热严重"
+                ],
+                [
+                    "(turns\\s*on\\s*by\\s*itself|自己开机)",
+                    "自动关机"
+                ],
+                [
+                    "(gets\\s*hot|calienta|overheat|bulb\\s*burning\\s*out|shuts\\s*down\\s*after\\s*few\\s*minutes)",
+                    "发热严重"
+                ],
+                [
+                    "(gets\\s*hot|very\\s*hot|overheat)",
+                    "发热大"
+                ],
+                [
+                    "(fan).{0,18}(loud|noisy|distracting)",
+                    "风扇噪音"
+                ],
+                [
+                    "(turned\\s*off).{0,20}(still\\s*runs|keep\\s*running)",
+                    "发热大"
+                ]
+            ],
+            "做工质感": [
+                [
+                    "(做工精致|手感好|镜头干净|solid build|premium feel)",
+                    "做工好"
+                ],
+                [
+                    "(塑料感重|缝隙大|进灰|廉价感|cheap plastic|dust in lens)",
+                    "塑料感强"
+                ],
+                [
+                    "(sealed|密封).{0,8}(dust\\s*free|防尘|无尘|灰尘不会进来)",
+                    "镜头干净"
+                ],
+                [
+                    "(stand|支架).{0,10}(cannot\\s*lock|无法卡入|容易折回)",
+                    "做工差"
+                ],
+                [
+                    "(single\\s*leg|一个腿|支撑腿).{0,12}(不稳|不平衡|unstable)",
+                    "做工差"
+                ],
+                [
+                    "(needs?\\s*a\\s*projector\\s*stand|需要投影仪架|书架支撑)",
+                    "做工差"
+                ],
+                [
+                    "(dust\\s*behind\\s*the\\s*lens|fingerprint\\s*inside\\s*lens|镜片污迹|进灰)",
+                    "镜头进灰"
+                ],
+                [
+                    "(used\\s*sold\\s*as\\s*new|已用过.*全新|glued\\s*shut)",
+                    "做工差"
+                ],
+                [
+                    "(open\\s*box|used\\s*item|returned\\s*item\\s*sold\\s*as\\s*new|missing\\s*cleaning\\s*tool)",
+                    "做工差"
+                ],
+                [
+                    "(dust\\s*inside\\s*lens|cannot\\s*clean\\s*interior\\s*lenses?)",
+                    "镜头进灰"
+                ]
+            ],
+            "性价比": [
+                [
+                    "(值回票价|真香|划算|great value|worth it)",
+                    "性价比高"
+                ],
+                [
+                    "(不值这个价|割韭菜|太贵|overpriced|not worth)",
+                    "不值"
+                ],
+                [
+                    "(for\\s+the\\s+price.*(best|impressive)|以这个价位.*(最好|很值)|性价比很高|值得一买)",
+                    "性价比高"
+                ],
+                [
+                    "(for\\s*this\\s*price|以这个价位|price\\s*point).{0,10}(good|great|不错|值得)",
+                    "性价比高"
+                ],
+                [
+                    "(worth\\s*no\\s*more\\s*than\\s*\\£?\\s*40|不值|太贵)",
+                    "不值"
+                ],
+                [
+                    "(value\\s*for\\s*money|great\\s*for\\s*the\\s*price|worth\\s*it)",
+                    "性价比高"
+                ],
+                [
+                    "(overpriced|worth\\s*no\\s*more\\s*than|cheaper\\s*one\\s*was\\s*better)",
+                    "不值"
+                ],
+                [
+                    "(worth\\s*every\\s*penny|great\\s*value|high-end\\s*features\\s*at\\s*affordable|物有所值)",
+                    "性价比高"
+                ],
+                [
+                    "(misleading\\s*advert|overpriced|not\\s*as\\s*promised|clear\\s*limitations)",
+                    "不值"
+                ],
+                [
+                    "(great|excellent|amazing).{0,12}(value|for\\s*the\\s*price)",
+                    "值"
+                ],
+                [
+                    "(worth\\s*it|worth\\s*every\\s*penny)",
+                    "值"
+                ],
+                [
+                    "(not\\s*the\\s*best|isn\\'t\\s*perfect).{0,25}(for\\s*the\\s*price|at\\s*this\\s*price)",
+                    "值"
+                ],
+                [
+                    "(for\\s*the\\s*price).{0,18}(good|decent|acceptable|okay)",
+                    "值"
+                ],
+                [
+                    "(budget).{0,12}(projector).{0,14}(great|excellent|solid)",
+                    "值"
+                ],
+                [
+                    "(for\\s*the\\s*price|at\\s*this\\s*price).{0,16}(great|very\\s*good|no\\s*complaint|worth)",
+                    "值"
+                ],
+                [
+                    "(budget\\s*friendly|affordable).{0,16}(projector)",
+                    "值"
+                ],
+                [
+                    "(但|但是|不过).{0,12}(这个价位|这个价格|价位来说).{0,10}(还可以|可以接受|不错|能接受)",
+                    "值"
+                ],
+                [
+                    "(以这个价位|这个价格|价位来说).{0,10}(还可以|可以接受|不错|能接受)",
+                    "值"
+                ],
+                [
+                    "^(非常好|很好|很棒|不错|满意|太好了|完美|推荐|值得买|值得推荐)$",
+                    "值"
+                ],
+                [
+                    "^(excellent|great|awesome|love\\s*it|highly\\s*recommend)$",
+                    "值"
+                ],
+                [
+                    "^(5\\s*stars?|10/10|highly\\s*recommended|great\\s*projector|excellent\\s*projector)$",
+                    "值"
+                ],
+                [
+                    "(quality\\s*is\\s*great|quality\\s*is\\s*amazing|good\\s*quality|easy\\s*to\\s*set\\s*up).{0,20}(recommend|recommended|impressed)",
+                    "值"
+                ],
+                [
+                    "(surpassed\\s*(them\\s*)?all|far\\s*superior|blown\\s*away)",
+                    "值"
+                ],
+                [
+                    "(五星|5星).{0,6}(好评|推荐)",
+                    "值"
+                ],
+                [
+                    "(超出|超过).{0,6}(预期)",
+                    "值"
+                ],
+                [
+                    "(产品|投影仪).{0,8}(非常出色|质量惊人|令人印象深刻)",
+                    "值"
+                ],
+                [
+                    "(great\\s*image\\s*and\\s*sound|awesome\\s*and\\s*valuable|top\\s*notch|worth\\s*buying)",
+                    "值"
+                ],
+                [
+                    "(very\\s*good\\s*quality|good\\s*quality).{0,12}(for\\s*the\\s*price|price)",
+                    "值"
+                ],
+                [
+                    "(easy\\s*to\\s*set\\s*up|setup\\s*was\\s*very\\s*easy|simple\\s*to\\s*use)",
+                    "值"
+                ],
+                [
+                    "(bueno|bonito|buena\\s*calidad|muy\\s*bueno|me\\s*encanta|goede\\s*product)",
+                    "值"
+                ],
+                [
+                    "^(太棒了|太喜欢了|点赞|好产品|好照片|非常佩服|优秀的投影仪|很棒的投影仪|大老板)$",
+                    "值"
+                ],
+                [
+                    "^(good\\s*projector|great\\s*projector|is\\s*ok|bad|zero\\s*stars?)$",
+                    "值"
+                ],
+                [
+                    "(my\\s*daughter\\s*loves\\s*it|family\\s*time|very\\s*efficient).*",
+                    "值"
+                ],
+                [
+                    "(un\\s*proyector\\s*muy\\s*bueno|goede\\s*producf|bueno\\s*bonito).*",
+                    "值"
+                ],
+                [
+                    "^(点赞|太棒了|太喜欢了|好产品|产品一流|百分之百推荐)$",
+                    "值"
+                ],
+                [
+                    "(daughter\\s*loves\\s*it|highly\\s*recommend|very\\s*practical|great\\s*value)",
+                    "值"
+                ]
+            ],
+            "品控与寿命": [
+                [
+                    "(稳定耐用|一直没坏|reliable|holds up well)",
+                    "质量好"
+                ],
+                [
+                    "(黑屏不开机|坏点|故障频发|dead on arrival|won't turn on)",
+                    "死机"
+                ],
+                [
+                    "(image\\s*distort|画面变形|屏幕变黑|black\\s*screen|黑屏).{0,15}(after|两周|两个月)",
+                    "故障多"
+                ],
+                [
+                    "(dark\\s*spot|dark\\s*splotches|black\\s*specks?|进灰|斑点).{0,12}(inside|内部|middle)",
+                    "故障多"
+                ],
+                [
+                    "(turns\\s*on\\s*by\\s*itself|自己开机|半夜自动开机)",
+                    "故障多"
+                ],
+                [
+                    "(broke\\s*after\\s*one\\s*use|stopped\\s*working\\s*less\\s*than\\s*a\\s*year|doesn\\'t\\s*last\\s*a\\s*month)",
+                    "故障多"
+                ],
+                [
+                    "(within\\s*a\\s*week|two\\s*days|less\\s*than\\s*a\\s*month|12\\s*months).{0,20}(dead\\s*spot|white\\s*spots|black\\s*dots|burned\\s*out)",
+                    "故障多"
+                ],
+                [
+                    "(dust).{0,20}(inside\\s*lens|build\\s*up|corners)",
+                    "进灰"
+                ],
+                [
+                    "(white\\s*spots?|dark\\s*spots?).{0,20}(screen|image)",
+                    "暗斑"
+                ],
+                [
+                    "(turns?\\s*on).{0,20}(blank\\s*screen)",
+                    "黑屏"
+                ],
+                [
+                    "(unable\\s*to\\s*start|won\\'t\\s*start|cannot\\s*start)",
+                    "不开机"
+                ],
+                [
+                    "(white\\s*spots?|white\\s*pixels?).{0,20}(dark\\s*screen|dark\\s*scene)",
+                    "暗斑"
+                ],
+                [
+                    "(burn\\s*marks?).{0,16}(heat|hot)",
+                    "烧屏"
+                ],
+                [
+                    "(arrived\\s*used|not\\s*new|missing\\s*packaging|scratches?)",
+                    "翻新机"
+                ],
+                [
+                    "(lens).{0,15}(smudged|foggy|dirty\\s*on\\s*arrival)",
+                    "翻新机"
+                ],
+                [
+                    "(dead\\s*pixels?|pixel\\s*failure).{0,15}(one\\s*month|few\\s*weeks|within)",
+                    "坏点"
+                ],
+                [
+                    "(屏幕|画面).{0,6}(线条|条纹)",
+                    "坏点"
+                ],
+                [
+                    "(dust).{0,20}(inside|accumulated).{0,10}(lens|projector)",
+                    "进灰"
+                ],
+                [
+                    "(fingerprint).{0,10}(inside\\s*the\\s*lens)",
+                    "进灰"
+                ],
+                [
+                    "(remote).{0,14}(stopped\\s*working|not\\s*work)",
+                    "遥控器故障"
+                ],
+                [
+                    "(dusty\\s*lens|dust\\s*inside\\s*lens|manchas\\s*en\\s*los\\s*bordes|llena\\s*de\\s*polvo)",
+                    "进灰"
+                ],
+                [
+                    "(remote\\s*stopped\\s*working|stopped\\s*responding\\s*to\\s*the\\s*remote)",
+                    "遥控器故障"
+                ],
+                [
+                    "(cord\\s*fit\\s*loosely|power\\s*supply\\s*on\\s*and\\s*off)",
+                    "不开机"
+                ],
+                [
+                    "(pixels?\\s*died|pixel\\s*broken|像素.*坏)",
+                    "坏点"
+                ]
+            ],
+            "售后体验": [
+                [
+                    "(客服响应快|退款快|换货快|support is helpful)",
+                    "售后好"
+                ],
+                [
+                    "(售后推诿|维修慢|不退款|bad support|slow repair)",
+                    "售后差"
+                ],
+                [
+                    "(return(ed)?|退货).{0,20}(no\\s*refund|不退款|没退款)",
+                    "不退款"
+                ],
+                [
+                    "(customer\\s*service|客服).{0,15}(slow|24\\s*hours?|回复慢)",
+                    "售后差"
+                ],
+                [
+                    "(replacement).{0,16}(cancel|取消)|等待退款|still\\s*waiting\\s*refund",
+                    "售后差"
+                ],
+                [
+                    "(support\\s*has\\s*not\\s*responded|customer\\s*support\\s*not\\s*responded)",
+                    "售后差"
+                ],
+                [
+                    "(need\\s*someone\\s*to\\s*reach\\s*out|return\\s*shipping\\s*required|waste\\s*of\\s*time\\s*and\\s*money)",
+                    "售后差"
+                ],
+                [
+                    "(support|customer\\s*service).{0,20}(ignored|no\\s*reply|never\\s*replied)",
+                    "售后差"
+                ],
+                [
+                    "(return\\s*window).{0,20}(closed).{0,20}(no\\s*help|ignored)",
+                    "售后差"
+                ],
+                [
+                    "(return|refund|replacement).{0,35}(fixed|resolved|works\\s*now|happy\\s*now)",
+                    "售后好"
+                ],
+                [
+                    "(support|customer\\s*service).{0,20}(no\\s*reply|never\\s*reply|ignored)",
+                    "售后差"
+                ],
+                [
+                    "(没有|无).{0,6}(任何)?(支持|售后|客服)",
+                    "售后差"
+                ],
+                [
+                    "(灯泡).{0,8}(无法更换|不能更换)",
+                    "售后差"
+                ],
+                [
+                    "(misleading\\s*reviews?|minus\\s*stars?)",
+                    "售后差"
+                ],
+                [
+                    "(going\\s*to\\s*be\\s*a\\s*return|will\\s*return|had\\s*to\\s*return)",
+                    "售后差"
+                ],
+                [
+                    "(tried\\s*to\\s*buy\\s*one\\s*from\\s*me|business\\s*practice|zero\\s*stars|no\\s*stars)",
+                    "售后差"
+                ],
+                [
+                    "(going\\s*to\\s*be\\s*a\\s*return|return\\s*window|had\\s*to\\s*return)",
+                    "售后差"
+                ],
+                [
+                    "(收到|拿到).{0,10}(故障|问题).{0,16}(替换|换新|replacement).{0,16}(满意|正常|resolved|satisfied)",
+                    "售后好"
+                ],
+                [
+                    "(客服|售后|support|customer\\s*service).{0,14}(不回复|没回复|无回复|no\\s*response|ignored|很差|差)",
+                    "售后差"
+                ]
+            ],
+            "居家观影": [
+                [
+                    "(movie night|home cinema|watch movies?|streaming|netflix|prime video|disney\\+|追剧|看电影|家庭影院|刷剧|观影)",
+                    "看电影"
+                ]
+            ],
+            "卧室投屏": [
+                [
+                    "(bedroom|watch in bed|ceiling|night viewing|卧室|躺床|天花板|睡前看|夜间观影)",
+                    "卧室"
+                ],
+                [
+                    "(bedroom\\s*projector|卧室投影仪|放在卧室)",
+                    "卧室"
+                ],
+                [
+                    "(ceiling\\s*mount|装在天花板)",
+                    "打到天花板"
+                ],
+                [
+                    "(bedroom|ceiling\\s*movie\\s*in\\s*bedroom)",
+                    "卧室投屏"
+                ],
+                [
+                    "(bedroom).{0,16}(movie|use|night)",
+                    "卧室投屏"
+                ],
+                [
+                    "(ceiling).{0,18}(watch|movie|bed)",
+                    "卧室投屏"
+                ],
+                [
+                    "(cozy|vibe).{0,18}(movie\\s*night|every\\s*night)",
+                    "卧室投屏"
+                ]
+            ],
+            "客厅影院": [
+                [
+                    "(living room|tv replacement|ambient light|daytime viewing|客厅|代替电视|大屏观影|白天看)",
+                    "客厅"
+                ]
+            ],
+            "游戏娱乐": [
+                [
+                    "(gaming|console|playstation|xbox|switch|steam\\s*deck|play\\s*game|打游戏|玩游戏|游戏模式|主机游戏)",
+                    "游戏"
+                ],
+                [
+                    "(fps|racing game|action game|open world|联机游戏|动作游戏|赛车游戏)",
+                    "主机游戏"
+                ],
+                [
+                    "(gaming|console|playstation|ps5|xbox|switch|steam\\s*deck|打游戏|玩游戏|主机游戏|游戏模式)",
+                    "游戏"
+                ]
+            ],
+            "体育赛事": [
+                [
+                    "(sports?|football|soccer|nba|match(es)?|premier league|champions league|f1|ufc|tennis|看比赛|球赛|赛事直播|体育直播|欧洲杯|美洲杯)",
+                    "体育"
+                ],
+                [
+                    "(sports?|football|soccer|nba|match(es)?|world cup|看球|球赛|赛事直播|体育直播|世界杯|欧洲杯|美洲杯)",
+                    "体育"
+                ],
+                [
+                    "(super\\s*bowl|足球观赛派对|watch\\s*party|看球派对)",
+                    "看球"
+                ]
+            ],
+            "移动/户外": [
+                [
+                    "(outdoor(s)?|camp(ing)?|travel|trip|road\\s*trip|rv|vanlife|backyard|露营|户外|旅行|外出|车中泊|露天电影|庭院|院子|阳台)",
+                    "户外"
+                ],
+                [
+                    "(portable|便携式|随身带|轻便外出)",
+                    "便携"
+                ],
+                [
+                    "(outdoor(s)?|camp(ing)?|travel|trip|road\\s*trip|rv|vanlife|露营|户外|旅行|外出|车中泊|露天电影)",
+                    "户外"
+                ],
+                [
+                    "(gazebo|户外.*凉亭|离网看电影|off\\s*grid)",
+                    "户外"
+                ],
+                [
+                    "(rv|motorhome|房车|hot\\s*tub|热水浴缸|gazebo|凉亭)",
+                    "户外"
+                ],
+                [
+                    "(garage|车库|backyard|后院|rv|房车|camp(ing)?|户外电影)",
+                    "户外"
+                ],
+                [
+                    "(patio|露台|park|公园|outdoor\\s*movie|户外电影|camping|露营|rv|房车)",
+                    "户外"
+                ],
+                [
+                    "(super\\s*bowl|超级碗|yard\\s*party|院子派对|military\\s*move|搬家)",
+                    "户外"
+                ],
+                [
+                    "(rv|房车|backyard|后院|workshop|车间|military\\s*move|搬家)",
+                    "户外"
+                ],
+                [
+                    "(caravan|campervan|pool\\s*party|front\\s*porch|workshop\\s*remote\\s*area|户外电影)",
+                    "户外"
+                ],
+                [
+                    "(outdoor\\s*movie\\s*night|movie\\s*night\\s*outdoor|travel\\s*with\\s*it)",
+                    "露营"
+                ],
+                [
+                    "(backyard\\s*movie\\s*night|outdoor\\s*movie\\s*night|camping|rv)",
+                    "露营"
+                ],
+                [
+                    "(backyard|garage|halloween\\s*party|hayride|outdoor\\s*movie)",
+                    "露营"
+                ]
+            ],
+            "居家健身": [
+                [
+                    "(fitness|workout|home\\s*workout|exercise|training|pilates|cardio|zumba|dance\\s*workout|follow\\s*along|keep\\s*fit|健身|跟练|瑜伽|跳操|减脂|燃脂|居家训练|运动课程)",
+                    "健身"
+                ],
+                [
+                    "(fitness|workout|home\\s*workout|exercise|pilates|yoga|cardio|zumba|follow\\s*along|健身|瑜伽|跟练|跳操|减脂|燃脂)",
+                    "健身"
+                ]
+            ],
+            "儿童/网课": [
+                [
+                    "(kids?|children|online class|study|homework|儿童|孩子上课|网课|学习机|上网课)",
+                    "网课"
+                ]
+            ],
+            "商务办公": [
+                [
+                    "(office|meeting room|presentation|ppt|boardroom|conference|办公|会议|演示|开会)",
+                    "办公"
+                ]
+            ],
+            "教学培训": [
+                [
+                    "(classroom|training session|teaching|workshop|教学|培训|教室|讲课)",
+                    "教学"
+                ]
+            ],
+            "送礼用途": [
+                [
+                    "(gift for|housewarming|wedding gift|birthday gift|送礼|礼物|送人|乔迁礼物|结婚礼物)",
+                    "送礼"
+                ],
+                [
+                    "(birthday\\s*gift|生日礼物|送礼)",
+                    "礼物"
+                ]
+            ],
+            "角色身份": [
+                [
+                    "(living alone|single|独居|单身)",
+                    "独居"
+                ],
+                [
+                    "(couple|husband|wife|情侣|夫妻)",
+                    "情侣/夫妻"
+                ],
+                [
+                    "(student|dorm|学生|宿舍)",
+                    "学生党"
+                ],
+                [
+                    "(parents|elderly|爸妈|老人|长辈)",
+                    "长辈/老人"
+                ],
+                [
+                    "(company|office purchase|procurement|企业|公司|采购)",
+                    "公司采购"
+                ],
+                [
+                    "(college\\s*student|student\\s*review)",
+                    "学生"
+                ]
+            ],
+            "技术水平": [
+                [
+                    "(not tech savvy|zero setup|不懂参数|不会操作|零基础|傻瓜式|开机即用|看着晕|晕头转向|搞不定|说明书看不懂|不知道怎么调)",
+                    "小白"
+                ],
+                [
+                    "(calibration|color\\s*gamut|chip\\s*size|色域|芯片尺寸|dmd|DMD|ansi\\s*lumens?|ANSI\\s*流明|流明度校准|调校|gamma|Rec\\.709|DCI-P3|参数党|(?<![不没])懂参数|专业测评|数码爱好者|极客|画质调校)",
+                    "发烧友"
+                ]
+            ],
+            "连接稳定性": [
+                [
+                    "(wifi|wi-fi).{0,20}(cannot|can not|wont|won't|fails?)\\s*connect",
+                    "断连"
+                ],
+                [
+                    "(reconnect|reset).{0,20}(wifi|internet).{0,15}(again|over and over)",
+                    "断连"
+                ],
+                [
+                    "bluetooth.{0,20}(fails|re-pair|pair again)",
+                    "断连"
+                ],
+                [
+                    "(wifi).{0,22}(cutting\\s*in\\s*and\\s*out|disconnect|cannot\\s*list|won\\'t\\s*list)",
+                    "断连"
+                ],
+                [
+                    "(factory\\s*reset).{0,22}(reconnect|wifi|internet)",
+                    "断连"
+                ],
+                [
+                    "(freeze|unresponsive).{0,24}(while\\s*casting|after\\s*casting)",
+                    "断连"
+                ],
+                [
+                    "(wireless|wifi).{0,20}(freeze|stuck|lag).{0,20}(high\\s*quality|hd\\s*video)",
+                    "断连"
+                ],
+                [
+                    "(cannot\\s*keep|can\\'t\\s*keep).{0,12}(connection|wifi)",
+                    "断连"
+                ],
+                [
+                    "(最近|近来).{0,8}(开始).{0,8}(断线|断连)",
+                    "断连"
+                ],
+                [
+                    "(won\\'t\\s*connect\\s*to\\s*wifi\\s*or\\s*phone|reset\\s*the\\s*internet\\s*connection\\s*over\\s*and\\s*over)",
+                    "断连"
+                ]
+            ]
+        },
+        "en_keyword_to_label_map": {
+            "lumens": "亮度满意",
+            "ansi": "亮度满意",
+            "ansi lumens": "亮度满意",
+            "bright enough": "亮度满意",
+            "daylight visibility": "白天清晰",
+            "washed out": "亮度不足",
+            "too dim": "太暗",
+            "blurry": "模糊",
+            "out of focus": "跑焦",
+            "sharp": "清晰",
+            "native 1080p": "真1080P",
+            "4k upscaling": "4K清晰",
+            "color accuracy": "色彩准确",
+            "vibrant": "色彩很艳",
+            "rainbow effect": "彩虹眼",
+            "speckle": "散斑严重",
+            "keystone": "梯形不准",
+            "auto focus": "自动对焦快",
+            "autofocus": "自动对焦快",
+            "screen fit": "自动对齐幕布",
+            "obstacle avoidance": "智能避障准",
+            "fan noise": "风扇声吵",
+            "fan hum": "嗡嗡响",
+            "humming": "嗡嗡响",
+            "quiet": "安静",
+            "speakers": "自带音响够用",
+            "bass": "低音好",
+            "built-in audio": "自带音响够用",
+            "overheating": "发热严重",
+            "thermal shutdown": "自动关机",
+            "remote control": "遥控器难用",
+            "dead pixels": "坏点",
+            "dust inside lens": "镜头进灰",
+            "fire stick": "支持HDMI2.1",
+            "roku": "支持HDMI2.1",
+            "hdmi 2.1": "支持HDMI2.1",
+            "netflix": "资源丰富",
+            "youtube": "资源丰富",
+            "casting": "投屏稳定",
+            "airplay": "支持苹果投屏",
+            "miracast": "投屏稳定",
+            "lag": "延迟高",
+            "input lag": "延迟高",
+            "wifi connection": "连接快",
+            "ceiling mount": "固定安装",
+            "tripod": "便携",
+            "bedroom": "卧室",
+            "living room": "客厅",
+            "camping": "露营",
+            "outdoor movie": "户外",
+            "gaming": "游戏",
+            "value for money": "性价比高",
+            "cheaply made": "做工差",
+            "premium feel": "质感好",
+            "defective": "故障多"
+        }
+    },
+    "标签体系": {
+        "画质类": {
+            "亮度": {
+                "正面": [
+                    "亮度满意",
+                    "开灯也清晰",
+                    "白天清晰",
+                    "亮度够",
+                    "不拉窗帘也能看",
+                    "够亮",
+                    "非常亮",
+                    "亮度不错",
+                    "投白天也行",
+                    "不影响观看",
+                    "抗光性好"
+                ],
+                "负面": [
+                    "亮度不足",
+                    "白天看不清",
+                    "必须拉窗帘",
+                    "太暗",
+                    "环境光不可用",
+                    "太暗了",
+                    "亮度拉胯",
+                    "白天完全不行",
+                    "必须全黑环境",
+                    "一点都不亮",
+                    "见光死"
+                ],
+                "权重": 1.2
+            },
+            "色彩": {
+                "正面": [
+                    "色彩好",
+                    "色彩鲜艳",
+                    "色彩准确",
+                    "颜色真实",
+                    "不偏色",
+                    "对比自然",
+                    "颜色很好看",
+                    "很讨喜",
+                    "观感舒服",
+                    "色彩挺准",
+                    "颜色正",
+                    "色域广"
+                ],
+                "负面": [
+                    "色彩差",
+                    "偏色",
+                    "发白",
+                    "发灰",
+                    "颜色暗淡",
+                    "色彩失真",
+                    "颜色怪",
+                    "不自然",
+                    "颜色太淡",
+                    "颜色太浓",
+                    "一片灰",
+                    "红脸",
+                    "泛绿"
+                ],
+                "权重": 1.0
+            },
+            "清晰度/分辨率": {
+                "正面": [
+                    "清晰",
+                    "高清",
+                    "细腻",
+                    "真1080P",
+                    "4K清晰",
+                    "细节不错",
+                    "很清楚",
+                    "文字清晰",
+                    "边缘锐利",
+                    "肉眼可见清晰",
+                    "毛发可见"
+                ],
+                "负面": [
+                    "模糊",
+                    "颗粒感",
+                    "抖4K",
+                    "不清楚",
+                    "发虚",
+                    "糊",
+                    "看不清",
+                    "边缘糊",
+                    "发虚严重",
+                    "像雾一样",
+                    "大果冻",
+                    "网格感"
+                ],
+                "权重": 1.1
+            },
+            "画面均匀度": {
+                "正面": [
+                    "四周清晰",
+                    "整体均匀",
+                    "边缘不糊",
+                    "对焦均匀"
+                ],
+                "负面": [
+                    "四周发暗",
+                    "四角模糊",
+                    "中间清四周糊",
+                    "暗角严重",
+                    "跑焦",
+                    "热失焦"
+                ],
+                "权重": 1.1
+            },
+            "对比度/黑位": {
+                "正面": [
+                    "对比度高",
+                    "黑色纯正",
+                    "暗部细节清晰",
+                    "层次感好",
+                    "黑的下得去",
+                    "画面有深度",
+                    "立体感强"
+                ],
+                "负面": [
+                    "黑色发灰",
+                    "暗部细节看不清",
+                    "对比低",
+                    "画面发灰",
+                    "灰蒙蒙",
+                    "一层雾",
+                    "没有层次",
+                    "黑不下去",
+                    "像白天",
+                    "死黑一片"
+                ],
+                "权重": 1.0
+            },
+            "运动表现/MEMC": {
+                "正面": [
+                    "运动流畅",
+                    "看球不晕",
+                    "没有拖影",
+                    "动作顺滑",
+                    "MEMC好用"
+                ],
+                "负面": [
+                    "拖影严重",
+                    "看球眼晕",
+                    "掉帧",
+                    "画面卡顿",
+                    "残影",
+                    "打斗看不清"
+                ],
+                "权重": 1.0
+            },
+            "彩虹眼/散斑": {
+                "负面": [
+                    "彩虹眼",
+                    "看到红绿蓝条纹",
+                    "DLP彩虹效应",
+                    "眼睛不舒服",
+                    "闪彩",
+                    "散斑严重",
+                    "画面有噪点",
+                    "看久头晕",
+                    "刺眼"
+                ],
+                "权重": 0.9
+            }
+        },
+        "听觉类": {
+            "噪音": {
+                "正面": [
+                    "静音",
+                    "风扇声音小",
+                    "安静",
+                    "几乎听不到声音",
+                    "很安静",
+                    "可以忽略",
+                    "温控好且安静"
+                ],
+                "负面": [
+                    "噪音大",
+                    "风扇声吵",
+                    "电流声",
+                    "嗡嗡响",
+                    "吵死了",
+                    "风扇声很大",
+                    "像吹风机",
+                    "一直嗡嗡",
+                    "滋滋声",
+                    "高频噪音"
+                ],
+                "权重": 0.9
+            },
+            "音质": {
+                "正面": [
+                    "音质好",
+                    "音量大",
+                    "低音好",
+                    "自带音响够用",
+                    "还能听",
+                    "够用了",
+                    "不外接音箱也行",
+                    "立体声",
+                    "哈曼卡顿加持"
+                ],
+                "负面": [
+                    "音质差",
+                    "音量小",
+                    "破音",
+                    "无低音",
+                    "拉胯",
+                    "刺耳",
+                    "听不下去",
+                    "像手机外放",
+                    "声音单薄",
+                    "闷不透气"
+                ],
+                "权重": 0.7
+            }
+        },
+        "智能功能类": {
+            "对焦/校正": {
+                "正面": [
+                    "自动梯形校正准",
+                    "自动对焦快",
+                    "对焦准",
+                    "校正快",
+                    "自动校正好",
+                    "不用调",
+                    "很省心",
+                    "无感对焦"
+                ],
+                "负面": [
+                    "对焦慢",
+                    "反复跑焦",
+                    "对焦不准",
+                    "梯形不准",
+                    "反复调焦",
+                    "一直调不好",
+                    "对不上",
+                    "很麻烦",
+                    "校正失败",
+                    "经常要手调"
+                ],
+                "权重": 1.1
+            },
+            "避障与入幕": {
+                "正面": [
+                    "智能避障准",
+                    "自动对齐幕布",
+                    "入幕精准",
+                    "识别开关灵敏"
+                ],
+                "负面": [
+                    "避不开障碍物",
+                    "入幕失败",
+                    "幕布对不齐",
+                    "画面越界",
+                    "识别太蠢"
+                ],
+                "权重": 1.0
+            },
+            "系统与生态": {
+                "正面": [
+                    "流畅",
+                    "不卡",
+                    "开机快",
+                    "无广告",
+                    "UI好看",
+                    "资源丰富",
+                    "内存大",
+                    "操作简单"
+                ],
+                "负面": [
+                    "系统卡顿",
+                    "开机慢",
+                    "死机",
+                    "开机广告",
+                    "广告多",
+                    "套娃收费",
+                    "不买会员没法看",
+                    "资源少",
+                    "不能装第三方App",
+                    "内存太小"
+                ],
+                "权重": 1.1
+            },
+            "投屏体验": {
+                "正面": [
+                    "投屏稳定",
+                    "连接快",
+                    "延迟低",
+                    "兼容好",
+                    "秒连",
+                    "很方便",
+                    "稳定",
+                    "支持苹果投屏"
+                ],
+                "负面": [
+                    "连不上",
+                    "延迟高",
+                    "断连",
+                    "不兼容",
+                    "投屏失败",
+                    "经常掉",
+                    "画质压缩",
+                    "只有声音没画面"
+                ],
+                "权重": 1.2
+            },
+            "语音控制": {
+                "正面": [
+                    "语音识别准",
+                    "好用",
+                    "反应快",
+                    "操控方便",
+                    "远场语音好用"
+                ],
+                "负面": [
+                    "识别率低",
+                    "不好用",
+                    "反应慢",
+                    "经常误触",
+                    "半夜自己说话",
+                    "像智障"
+                ],
+                "权重": 0.8
+            }
+        },
+        "硬件设计类": {
+            "外观与便携": {
+                "正面": [
+                    "小巧",
+                    "轻便",
+                    "便携",
+                    "随便放",
+                    "不占地方",
+                    "颜值高",
+                    "设计感强",
+                    "像艺术品",
+                    "带提手方便"
+                ],
+                "负面": [
+                    "太重",
+                    "太大",
+                    "塞不进包",
+                    "不方便携带",
+                    "笨重",
+                    "外观丑",
+                    "像砖头"
+                ],
+                "权重": 0.8
+            },
+            "接口与扩展": {
+                "正面": [
+                    "接口丰富",
+                    "支持HDMI2.1",
+                    "带网口",
+                    "支持eARC",
+                    "接主机方便"
+                ],
+                "负面": [
+                    "USB口不够",
+                    "HDMI版本旧",
+                    "无网口",
+                    "接口少",
+                    "不兼容",
+                    "接口位置反人类",
+                    "音频口底噪大"
+                ],
+                "权重": 0.9
+            },
+            "散热与温控": {
+                "正面": [
+                    "散热好",
+                    "不怎么发热",
+                    "温控不错",
+                    "开一天也不烫"
+                ],
+                "负面": [
+                    "机身烫",
+                    "出风口烫",
+                    "自动关机",
+                    "发热严重",
+                    "像暖风机",
+                    "热得离谱",
+                    "一会就热",
+                    "烫手"
+                ],
+                "权重": 0.9
+            },
+            "做工质感": {
+                "正面": [
+                    "做工好",
+                    "质感好",
+                    "无瑕疵",
+                    "镜头干净",
+                    "金属质感",
+                    "用料扎实"
+                ],
+                "负面": [
+                    "塑料感强",
+                    "缝隙大",
+                    "镜头进灰",
+                    "廉价感",
+                    "做工差",
+                    "塑料味重",
+                    "做工糙",
+                    "缝隙明显",
+                    "遥控器难用"
+                ],
+                "权重": 0.8
+            }
+        },
+        "售后/价格类": {
+            "性价比": {
+                "正面": [
+                    "性价比高",
+                    "值",
+                    "划算",
+                    "超值",
+                    "很香",
+                    "平替首选",
+                    "物美价廉"
+                ],
+                "负面": [
+                    "不值",
+                    "降价快",
+                    "太贵",
+                    "智商税",
+                    "后悔买了",
+                    "溢价高",
+                    "割韭菜"
+                ],
+                "权重": 1.3
+            },
+            "品控与寿命": {
+                "正面": [
+                    "质量好",
+                    "很耐用",
+                    "用了几年没坏",
+                    "品控不错",
+                    "稳定性好"
+                ],
+                "负面": [
+                    "死机",
+                    "亮点",
+                    "坏点",
+                    "无法开机",
+                    "故障多",
+                    "经常坏",
+                    "烧WiFi模块",
+                    "黑屏",
+                    "镜头烧毁",
+                    "光机进灰"
+                ],
+                "权重": 1.1
+            },
+            "售后体验": {
+                "正面": [
+                    "售后好",
+                    "退款快",
+                    "客服好",
+                    "服务贴心",
+                    "保修痛快",
+                    "换货快"
+                ],
+                "负面": [
+                    "售后差",
+                    "维修慢",
+                    "推诿责任",
+                    "不退款",
+                    "没人管",
+                    "踢皮球",
+                    "联系不上",
+                    "运费要自己出",
+                    "维修费天价"
+                ],
+                "权重": 1.0
+            }
+        }
+    },
+    "需求场景标签": {
+        "居家观影": {
+            "关键词": [
+                "看电视",
+                "追剧",
+                "看综艺",
+                "看电影",
+                "家庭影院",
+                "movie",
+                "streaming"
+            ],
+            "核心关注": [
+                "画质",
+                "色彩",
+                "清晰度"
+            ],
+            "优先级": "最高"
+        },
+        "卧室投屏": {
+            "关键词": [
+                "卧室",
+                "关灯使用",
+                "躺床看",
+                "夜间观影",
+                "打到天花板",
+                "bedroom"
+            ],
+            "核心关注": [
+                "噪音",
+                "自动对焦",
+                "体积"
+            ],
+            "优先级": "最高"
+        },
+        "客厅影院": {
+            "关键词": [
+                "客厅",
+                "对抗光",
+                "大屏观影",
+                "代替电视",
+                "living room"
+            ],
+            "核心关注": [
+                "亮度",
+                "抗光性",
+                "外观设计"
+            ],
+            "优先级": "最高"
+        },
+        "游戏娱乐": {
+            "关键词": [
+                "Switch",
+                "PS5",
+                "Xbox",
+                "游戏",
+                "主机游戏",
+                "gaming"
+            ],
+            "核心关注": [
+                "输入延迟",
+                "高刷新率",
+                "HDMI接口"
+            ],
+            "优先级": "最高"
+        },
+        "体育赛事": {
+            "关键词": [
+                "看球",
+                "世界杯",
+                "奥运会",
+                "电竞比赛",
+                "体育"
+            ],
+            "核心关注": [
+                "运动补偿",
+                "刷新率",
+                "画面流畅度"
+            ],
+            "优先级": "高"
+        },
+        "移动/户外": {
+            "关键词": [
+                "露营",
+                "旅行",
+                "户外",
+                "便携",
+                "外出",
+                "车中泊",
+                "outdoor"
+            ],
+            "核心关注": [
+                "内置电池",
+                "便携性",
+                "续航"
+            ],
+            "优先级": "最高"
+        },
+        "居家健身": {
+            "关键词": [
+                "健身",
+                "跟练",
+                "瑜伽",
+                "刘畊宏",
+                "跳操"
+            ],
+            "核心关注": [
+                "投屏稳定性",
+                "亮度",
+                "画面大小"
+            ],
+            "优先级": "中"
+        },
+        "儿童/网课": {
+            "关键词": [
+                "儿童",
+                "网课",
+                "护眼",
+                "学习",
+                "孩子使用",
+                "online class"
+            ],
+            "核心关注": [
+                "漫反射护眼",
+                "自动熄屏",
+                "梯形校正易用性"
+            ],
+            "优先级": "最高"
+        },
+        "商务办公": {
+            "关键词": [
+                "PPT演示",
+                "办公",
+                "会议",
+                "图表",
+                "开会",
+                "presentation"
+            ],
+            "核心关注": [
+                "亮度",
+                "对比度",
+                "文字锐利度",
+                "接口兼容性（VGA/HDMI）"
+            ],
+            "优先级": "最高"
+        },
+        "教学培训": {
+            "关键词": [
+                "教学",
+                "培训",
+                "教室",
+                "长时间运行",
+                "classroom"
+            ],
+            "核心关注": [
+                "散热稳定性",
+                "防尘",
+                "灯泡寿命"
+            ],
+            "优先级": "最高"
+        },
+        "送礼用途": {
+            "关键词": [
+                "送礼",
+                "礼物",
+                "礼品",
+                "送人",
+                "乔迁",
+                "结婚礼物",
+                "gift"
+            ],
+            "核心关注": [
+                "包装",
+                "品牌知名度",
+                "外观质感"
+            ],
+            "优先级": "最高"
+        }
+    },
+    "用户画像标签": {
+        "角色身份": {
+            "独居": [
+                "独居",
+                "单身",
+                "一个人住"
+            ],
+            "情侣/夫妻": [
+                "情侣",
+                "夫妻",
+                "二人世界"
+            ],
+            "学生": [
+                "学生",
+                "学生党"
+            ],
+            "宝妈奶爸": [
+                "宝妈",
+                "奶爸",
+                "带娃"
+            ],
+            "长辈/老人": [
+                "老人",
+                "长辈",
+                "给父母买",
+                "买给爸妈",
+                "爸妈用"
+            ],
+            "企业/公司采购": [
+                "企业",
+                "公司",
+                "采购",
+                "批量采购",
+                "商用",
+                "会议室",
+                "办公室",
+                "培训"
+            ],
+            "家庭育儿": [
+                "给孩子用",
+                "孩子看",
+                "小孩用",
+                "适合孩子"
+            ]
+        },
+        "技术水平": {
+            "小白": [
+                "不懂参数",
+                "看着晕",
+                "不会操作",
+                "零基础",
+                "描述感受为主、说不清参数"
+            ],
+            "发烧友": [
+                "懂参数",
+                "色域",
+                "芯片尺寸",
+                "DMD",
+                "专业测评",
+                "数码爱好者",
+                "极客"
+            ]
+        }
+    },
+    "meta": {
+        "version": "1.1-hotfix",
+        "original_version": "1.0",
+        "patch_date": "2026-04-22",
+        "changes": "紧急修复: 正则错误、字段重命名、近义词清理"
+    }
+}

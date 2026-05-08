@@ -1,0 +1,7 @@
+[2026-04-23 11:04:42] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\投影仪\config.json
+[2026-04-23 11:04:42] [INFO] 客诉数据：1172 行
+[2026-04-23 11:04:42] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-23 11:04:42] [INFO] 分类器构建成功
+[2026-04-23 11:04:47] [INFO] 分类统计 - 精确匹配：3514，模糊匹配：2086，默认：132
+[2026-04-23 11:04:48] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/投影仪/5ASIN投影仪UK-Reviews-2026042_分类结果（1）.xlsx
+[2026-04-23 11:04:48] [INFO] 处理完成

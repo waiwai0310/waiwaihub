@@ -1,0 +1,279 @@
+[2026-03-20 16:26:50] [INFO] 程序启动，配置文件：D:\waiw\complaint_classifier\config.json
+[2026-03-20 16:26:50] [ERROR] 文件不存在：找不到客诉表: D:\waiw\complaint_classifier\data/2025.1-10月客诉汇总表.xlsx
+[2026-03-20 16:26:50] [ERROR] Traceback (most recent call last):
+  File "D:\waiw\complaint_classifier\main.py", line 94, in run
+    df_complaint, df_category = self._load_data()
+                                ^^^^^^^^^^^^^^^^^
+  File "D:\waiw\complaint_classifier\main.py", line 146, in _load_data
+    df_complaint = loader.load_complaint_data(complaint_file)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\waiw\complaint_classifier\data_loader.py", line 112, in load_complaint_data
+    raise FileNotFoundError(f"找不到客诉表: {file_path}")
+FileNotFoundError: 找不到客诉表: D:\waiw\complaint_classifier\data/2025.1-10月客诉汇总表.xlsx
+
+[2026-03-20 16:29:50] [INFO] 程序启动，配置文件：D:\waiw\complaint_classifier\config.json
+[2026-03-20 16:29:53] [INFO] 客诉数据：16224 行
+[2026-03-20 16:29:53] [INFO] 分类规则：103 条
+[2026-03-20 16:29:53] [INFO] 分类器构建成功
+[2026-03-20 16:29:55] [INFO] 分类统计 - 固定映射：2954，模糊匹配：2075，Excel规则：250，默认：10945
+[2026-03-20 16:30:00] [INFO] 结果已保存：D:\waiw\complaint_classifier\output/客诉分类结果.xlsx
+[2026-03-20 16:30:00] [INFO] 处理完成
+[2026-03-20 17:09:02] [INFO] 程序启动，配置文件：D:\waiw\complaint_classifier\config.json
+[2026-03-20 17:09:05] [INFO] 客诉数据：16224 行
+[2026-03-20 17:09:05] [INFO] 分类规则：103 条
+[2026-03-20 17:09:05] [INFO] 分类器构建成功
+[2026-03-20 17:09:07] [INFO] 分类统计 - 固定映射：6912，模糊匹配：4631，Excel规则：41，默认：4640
+[2026-03-20 17:09:13] [INFO] 结果已保存：D:\waiw\complaint_classifier\output/客诉分类结果（1）.xlsx
+[2026-03-20 17:09:13] [INFO] 处理完成
+[2026-03-20 17:23:33] [INFO] 程序启动，配置文件：D:\waiw\complaint_classifier\config.json
+[2026-03-20 17:23:37] [INFO] 客诉数据：16224 行
+[2026-03-20 17:23:37] [INFO] 分类规则：103 条
+[2026-03-20 17:23:37] [INFO] 分类器构建成功
+[2026-03-20 17:23:39] [INFO] 分类统计 - 固定映射：10140，模糊匹配：2771，Excel规则：28，默认：3285
+[2026-03-20 17:23:45] [INFO] 结果已保存：D:\waiw\complaint_classifier\output/客诉分类结果（2）.xlsx
+[2026-03-20 17:23:45] [INFO] 处理完成
+[2026-03-20 17:47:14] [INFO] 程序启动，配置文件：D:\waiw\complaint_classifier\config.json
+[2026-03-20 17:47:17] [INFO] 客诉数据：16224 行
+[2026-03-20 17:47:17] [INFO] 分类规则：103 条
+[2026-03-20 17:47:17] [INFO] 分类器构建成功
+[2026-03-20 17:47:19] [INFO] 分类统计 - 固定映射：10140，模糊匹配：2708，Excel规则：91，默认：3285
+[2026-03-20 17:47:25] [INFO] 结果已保存：D:\waiw\complaint_classifier\output/客诉分类结果（3）.xlsx
+[2026-03-20 17:47:25] [INFO] 处理完成
+[2026-04-09 21:33:00] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 21:33:01] [INFO] 客诉数据：470 行
+[2026-04-09 21:33:01] [INFO] 分类规则：103 条
+[2026-04-09 21:33:01] [ERROR] 数据验证失败：客诉表缺少列: '评论内容/标题'
+[2026-04-09 21:33:01] [ERROR] Traceback (most recent call last):
+  File "C:\Users\87710\Desktop\complaint_classifier\main.py", line 98, in run
+    self._validate_data(df_complaint, df_category)
+  File "C:\Users\87710\Desktop\complaint_classifier\main.py", line 168, in _validate_data
+    raise ValueError(error_msg)
+ValueError: 客诉表缺少列: '评论内容/标题'
+
+[2026-04-09 21:33:35] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 21:33:36] [INFO] 客诉数据：470 行
+[2026-04-09 21:33:36] [INFO] 分类规则：103 条
+[2026-04-09 21:33:36] [ERROR] 数据验证失败：客诉表缺少列: '评论内容/标题'
+[2026-04-09 21:33:36] [ERROR] Traceback (most recent call last):
+  File "C:\Users\87710\Desktop\complaint_classifier\main.py", line 98, in run
+    self._validate_data(df_complaint, df_category)
+  File "C:\Users\87710\Desktop\complaint_classifier\main.py", line 168, in _validate_data
+    raise ValueError(error_msg)
+ValueError: 客诉表缺少列: '评论内容/标题'
+
+[2026-04-09 21:34:32] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 21:34:33] [INFO] 客诉数据：470 行
+[2026-04-09 21:34:33] [INFO] 分类规则：103 条
+[2026-04-09 21:34:33] [ERROR] 数据验证失败：客诉表缺少列: '评论内容/标题'
+[2026-04-09 21:34:33] [ERROR] Traceback (most recent call last):
+  File "C:\Users\87710\Desktop\complaint_classifier\main.py", line 98, in run
+    self._validate_data(df_complaint, df_category)
+  File "C:\Users\87710\Desktop\complaint_classifier\main.py", line 168, in _validate_data
+    raise ValueError(error_msg)
+ValueError: 客诉表缺少列: '评论内容/标题'
+
+[2026-04-09 21:35:01] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 21:35:01] [INFO] 客诉数据：470 行
+[2026-04-09 21:35:01] [INFO] 分类规则：103 条
+[2026-04-09 21:35:01] [ERROR] 数据验证失败：客诉表缺少列: '评论内容/标题'
+[2026-04-09 21:35:01] [ERROR] Traceback (most recent call last):
+  File "C:\Users\87710\Desktop\complaint_classifier\main.py", line 98, in run
+    self._validate_data(df_complaint, df_category)
+  File "C:\Users\87710\Desktop\complaint_classifier\main.py", line 168, in _validate_data
+    raise ValueError(error_msg)
+ValueError: 客诉表缺少列: '评论内容/标题'
+
+[2026-04-09 21:36:18] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 21:36:19] [INFO] 客诉数据：470 行
+[2026-04-09 21:36:19] [INFO] 分类规则：103 条
+[2026-04-09 21:36:19] [ERROR] 数据验证失败：分类表缺少列: '表头'
+[2026-04-09 21:36:19] [ERROR] Traceback (most recent call last):
+  File "C:\Users\87710\Desktop\complaint_classifier\main.py", line 98, in run
+    self._validate_data(df_complaint, df_category)
+  File "C:\Users\87710\Desktop\complaint_classifier\main.py", line 168, in _validate_data
+    raise ValueError(error_msg)
+ValueError: 分类表缺少列: '表头'
+
+[2026-04-09 21:36:44] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 21:36:45] [INFO] 客诉数据：470 行
+[2026-04-09 21:36:45] [INFO] 分类规则：103 条
+[2026-04-09 21:36:45] [INFO] 分类器构建成功
+[2026-04-09 21:36:45] [INFO] 分类统计 - 精确匹配：169，模糊匹配：352，默认：336
+[2026-04-09 21:36:45] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_分类结果.xlsx
+[2026-04-09 21:36:45] [INFO] 处理完成
+[2026-04-09 21:39:36] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 21:39:36] [INFO] 客诉数据：470 行
+[2026-04-09 21:39:36] [INFO] 分类规则：103 条
+[2026-04-09 21:39:36] [INFO] 分类器构建成功
+[2026-04-09 21:39:36] [INFO] 分类统计 - 精确匹配：169，模糊匹配：352，默认：336
+[2026-04-09 21:39:36] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_分类结果（1）.xlsx
+[2026-04-09 21:39:36] [INFO] 处理完成
+[2026-04-09 21:42:24] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 21:42:25] [INFO] 客诉数据：470 行
+[2026-04-09 21:42:25] [INFO] 分类规则：103 条
+[2026-04-09 21:42:25] [INFO] 分类器构建成功
+[2026-04-09 21:42:25] [INFO] 分类统计 - 精确匹配：169，模糊匹配：352，默认：336
+[2026-04-09 21:42:25] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_分类结果（2）.xlsx
+[2026-04-09 21:42:25] [INFO] 处理完成
+[2026-04-09 22:28:36] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 22:28:36] [INFO] 客诉数据：470 行
+[2026-04-09 22:28:36] [INFO] 分类规则：103 条
+[2026-04-09 22:28:36] [INFO] 分类器构建成功
+[2026-04-09 22:28:36] [INFO] 分类统计 - 精确匹配：0，模糊匹配：395，默认：330
+[2026-04-09 22:28:36] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_分类结果（3）.xlsx
+[2026-04-09 22:28:36] [INFO] 处理完成
+[2026-04-09 22:39:16] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 22:39:17] [INFO] 客诉数据：470 行
+[2026-04-09 22:39:17] [INFO] 分类规则：103 条
+[2026-04-09 22:39:17] [INFO] 分类器构建成功
+[2026-04-09 22:39:17] [INFO] 分类统计 - 精确匹配：0，模糊匹配：746，默认：188
+[2026-04-09 22:39:17] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_分类结果（4）.xlsx
+[2026-04-09 22:39:17] [INFO] 处理完成
+[2026-04-09 22:40:07] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 22:40:07] [INFO] 客诉数据：470 行
+[2026-04-09 22:40:07] [INFO] 分类规则：103 条
+[2026-04-09 22:40:07] [INFO] 分类器构建成功
+[2026-04-09 22:40:07] [INFO] 分类统计 - 精确匹配：0，模糊匹配：864，默认：155
+[2026-04-09 22:40:07] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_分类结果（5）.xlsx
+[2026-04-09 22:40:07] [INFO] 处理完成
+[2026-04-09 22:41:00] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 22:41:00] [INFO] 客诉数据：470 行
+[2026-04-09 22:41:00] [INFO] 分类规则：103 条
+[2026-04-09 22:41:00] [INFO] 分类器构建成功
+[2026-04-09 22:41:00] [INFO] 分类统计 - 精确匹配：0，模糊匹配：864，默认：155
+[2026-04-09 22:41:00] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_分类结果（6）.xlsx
+[2026-04-09 22:41:00] [INFO] 处理完成
+[2026-04-09 22:45:27] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 22:45:27] [INFO] 客诉数据：470 行
+[2026-04-09 22:45:27] [INFO] 分类规则：103 条
+[2026-04-09 22:45:27] [INFO] 分类器构建成功
+[2026-04-09 22:45:28] [INFO] 分类统计 - 精确匹配：0，模糊匹配：864，默认：155
+[2026-04-09 22:45:28] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_分类结果（7）.xlsx
+[2026-04-09 22:45:28] [INFO] 处理完成
+[2026-04-09 22:47:01] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 22:47:01] [INFO] 客诉数据：470 行
+[2026-04-09 22:47:01] [INFO] 分类规则：103 条
+[2026-04-09 22:47:01] [INFO] 分类器构建成功
+[2026-04-09 22:47:01] [INFO] 分类统计 - 精确匹配：0，模糊匹配：864，默认：155
+[2026-04-09 22:47:01] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_111分类结果（11111）_分类结果（1）.xlsx
+[2026-04-09 22:47:01] [INFO] 处理完成
+[2026-04-09 22:57:43] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 22:57:43] [INFO] 客诉数据：470 行
+[2026-04-09 22:57:43] [INFO] 分类规则：103 条
+[2026-04-09 22:57:43] [INFO] 分类器构建成功
+[2026-04-09 22:57:43] [INFO] 是否差评按星级列计算：星级，阈值<= 3.0
+[2026-04-09 22:57:43] [INFO] 分类统计 - 精确匹配：0，模糊匹配：877，默认：154
+[2026-04-09 22:57:43] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_111分类结果（11111）_分类结果（3）.xlsx
+[2026-04-09 22:57:43] [INFO] 处理完成
+[2026-04-09 23:01:12] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 23:01:12] [INFO] 客诉数据：470 行
+[2026-04-09 23:01:12] [INFO] 分类规则：103 条
+[2026-04-09 23:01:12] [INFO] 分类器构建成功
+[2026-04-09 23:01:13] [INFO] 是否差评按星级列计算：星级，阈值<= 3.0
+[2026-04-09 23:01:13] [INFO] 分类统计 - 精确匹配：0，模糊匹配：921，默认：154
+[2026-04-09 23:01:13] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_111分类结果（11111）_分类结果（4）.xlsx
+[2026-04-09 23:01:13] [INFO] 处理完成
+[2026-04-09 23:07:04] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 23:07:05] [INFO] 客诉数据：470 行
+[2026-04-09 23:07:05] [INFO] 分类规则：103 条
+[2026-04-09 23:07:05] [INFO] 分类器构建成功
+[2026-04-09 23:07:05] [INFO] 是否差评按星级列计算：星级，阈值<= 3.0
+[2026-04-09 23:07:05] [INFO] 分类统计 - 精确匹配：0，模糊匹配：1022，默认：136
+[2026-04-09 23:07:05] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_111分类结果（11111）_分类结果（5）.xlsx
+[2026-04-09 23:07:05] [INFO] 处理完成
+[2026-04-09 23:13:59] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 23:13:59] [INFO] 客诉数据：470 行
+[2026-04-09 23:13:59] [INFO] 分类规则：103 条
+[2026-04-09 23:13:59] [INFO] 分类器构建成功
+[2026-04-09 23:14:00] [INFO] 是否差评按星级列计算：星级，阈值<= 3.0
+[2026-04-09 23:14:00] [INFO] 分类统计 - 精确匹配：0，模糊匹配：1065，默认：125
+[2026-04-09 23:14:00] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_111分类结果（11111）_分类结果（8）.xlsx
+[2026-04-09 23:14:00] [INFO] 处理完成
+[2026-04-09 23:23:47] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 23:23:47] [INFO] 客诉数据：470 行
+[2026-04-09 23:23:47] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-09 23:23:47] [INFO] 分类器构建成功
+[2026-04-09 23:23:48] [INFO] 是否差评按星级列计算：星级，阈值<= 3.0
+[2026-04-09 23:23:48] [INFO] 分类统计 - 精确匹配：0，模糊匹配：1083，默认：123
+[2026-04-09 23:23:48] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_111分类结果（11111）_分类结果（9）.xlsx
+[2026-04-09 23:23:48] [INFO] 处理完成
+[2026-04-09 23:08:19] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 23:08:19] [INFO] 客诉数据：470 行
+[2026-04-09 23:08:19] [INFO] 分类规则：103 条
+[2026-04-09 23:08:19] [INFO] 分类器构建成功
+[2026-04-09 23:08:20] [INFO] 是否差评按星级列计算：星级，阈值<= 3.0
+[2026-04-09 23:08:20] [INFO] 分类统计 - 精确匹配：0，模糊匹配：1030，默认：134
+[2026-04-09 23:08:20] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_111分类结果（11111）_分类结果（6）.xlsx
+[2026-04-09 23:08:20] [INFO] 处理完成
+[2026-04-09 22:50:17] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-09 22:50:17] [INFO] 客诉数据：470 行
+[2026-04-09 22:50:17] [INFO] 分类规则：103 条
+[2026-04-09 22:50:17] [INFO] 分类器构建成功
+[2026-04-09 22:50:17] [INFO] 是否差评按星级列计算：星级，阈值<= 3.0
+[2026-04-09 22:50:17] [INFO] 分类统计 - 精确匹配：0，模糊匹配：864，默认：155
+[2026-04-09 22:50:17] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_111分类结果（11111）_分类结果（2）.xlsx
+[2026-04-09 22:50:17] [INFO] 处理完成
+[2026-04-10 10:01:05] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-10 10:01:05] [INFO] 客诉数据：470 行
+[2026-04-10 10:01:05] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-10 10:01:05] [INFO] 分类器构建成功
+[2026-04-10 10:01:05] [INFO] 是否差评按星级列计算：星级，阈值<= 3.0
+[2026-04-10 10:01:05] [INFO] 分类统计 - 精确匹配：0，模糊匹配：1126，默认：128
+[2026-04-10 10:01:05] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_111分类结果（11111）_分类结果（10）.xlsx
+[2026-04-10 10:01:05] [INFO] 处理完成
+[2026-04-10 10:11:23] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-10 10:11:23] [INFO] 客诉数据：470 行
+[2026-04-10 10:11:23] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-10 10:11:23] [INFO] 分类器构建成功
+[2026-04-10 10:11:24] [INFO] 是否差评按星级列计算：星级，阈值<= 3.0
+[2026-04-10 10:11:24] [INFO] 分类统计 - 精确匹配：0，模糊匹配：1129，默认：128
+[2026-04-10 10:11:24] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_111分类结果（11111）_分类结果（11）.xlsx
+[2026-04-10 10:11:24] [INFO] 处理完成
+[2026-04-10 10:18:06] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-10 10:18:06] [INFO] 客诉数据：470 行
+[2026-04-10 10:18:06] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-10 10:18:06] [INFO] 分类器构建成功
+[2026-04-10 10:18:06] [INFO] 是否差评按星级列计算：星级，阈值<= 3.0
+[2026-04-10 10:18:06] [INFO] 分类统计 - 精确匹配：0，模糊匹配：1098，默认：132
+[2026-04-10 10:18:07] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_111分类结果（11111）_分类结果（12）.xlsx
+[2026-04-10 10:18:07] [INFO] 处理完成
+[2026-04-10 10:32:21] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-10 10:32:21] [INFO] 客诉数据：470 行
+[2026-04-10 10:32:21] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-10 10:32:21] [INFO] 分类器构建成功
+[2026-04-10 10:32:21] [INFO] 是否差评按星级列计算：星级，阈值<= 3.0
+[2026-04-10 10:32:21] [INFO] 分类统计 - 精确匹配：0，模糊匹配：1100，默认：132
+[2026-04-10 10:32:21] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_111分类结果（11111）_分类结果（13）.xlsx
+[2026-04-10 10:32:21] [INFO] 处理完成
+[2026-04-10 10:41:46] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-10 10:41:47] [INFO] 客诉数据：470 行
+[2026-04-10 10:41:47] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-10 10:41:47] [INFO] 分类器构建成功
+[2026-04-10 10:41:47] [INFO] 是否差评按星级列计算：星级，阈值<= 3.0
+[2026-04-10 10:41:47] [INFO] 分类统计 - 精确匹配：0，模糊匹配：1100，默认：132
+[2026-04-10 10:41:47] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_111分类结果（11111）_分类结果（14）.xlsx
+[2026-04-10 10:41:47] [INFO] 处理完成
+[2026-04-10 10:57:34] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-10 10:57:34] [INFO] 客诉数据：470 行
+[2026-04-10 10:57:34] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-10 10:57:34] [INFO] 分类器构建成功
+[2026-04-10 10:57:35] [INFO] 是否差评按星级列计算：星级，阈值<= 3.0
+[2026-04-10 10:57:35] [INFO] 分类统计 - 精确匹配：0，模糊匹配：1074，默认：132
+[2026-04-10 10:57:35] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_111分类结果（11111）_分类结果（15）.xlsx
+[2026-04-10 10:57:35] [INFO] 处理完成
+[2026-04-10 11:02:21] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-10 11:02:21] [INFO] 客诉数据：470 行
+[2026-04-10 11:02:21] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-10 11:02:21] [INFO] 分类器构建成功
+[2026-04-10 11:02:21] [INFO] 是否差评按星级列计算：星级，阈值<= 3.0
+[2026-04-10 11:02:21] [INFO] 分类统计 - 精确匹配：0，模糊匹配：1077，默认：132
+[2026-04-10 11:02:21] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_111分类结果（11111）_分类结果（16）.xlsx
+[2026-04-10 11:02:21] [INFO] 处理完成
+[2026-04-10 11:16:39] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config.json
+[2026-04-10 11:16:39] [INFO] 客诉数据：470 行
+[2026-04-10 11:16:39] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-10 11:16:39] [INFO] 分类器构建成功
+[2026-04-10 11:16:39] [INFO] 是否差评按星级列计算：星级，阈值<= 3.0
+[2026-04-10 11:16:39] [INFO] 分类统计 - 精确匹配：0，模糊匹配：1074，默认：133
+[2026-04-10 11:16:40] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/沙发床用户评价分析-20260409_111分类结果（11111）_分类结果（1）.xlsx
+[2026-04-10 11:16:40] [INFO] 处理完成

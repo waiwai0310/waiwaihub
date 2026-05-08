@@ -1,0 +1,1068 @@
+{
+    "meta": {
+        "version": "2.0",
+        "category": "投影仪",
+        "market": "UK",
+        "last_updated": "2026-04-22",
+        "changelog": "添加否定词处理、程度词增强、正则规则层、统一权重系统"
+    },
+    "file_settings": {
+        "complaint_file": "data/投影仪4ASIN/投影仪4ASIN-UK-Reviews-2026042.xlsx",
+        "complaint_sheet": "总表",
+        "output_base_filename": "output/投影仪4ASIN-UK-Reviews-2026042.xlsx",
+        "log_file": "output/error_log.txt"
+    },
+    "column_settings": {
+        "source_text_columns": [
+            "标题(翻译)",
+            "内容(翻译)",
+            "标题"
+        ],
+        "common_output_columns": [
+            "是否差评",
+            "亮度",
+            "色彩",
+            "清晰度/分辨率",
+            "画面均匀度",
+            "对比度/黑位",
+            "HDR与色准",
+            "运动表现/MEMC",
+            "彩虹眼/散斑",
+            "光源技术",
+            "投射比",
+            "噪音",
+            "音质",
+            "对焦/校正",
+            "避障与入幕",
+            "系统与生态",
+            "投屏体验",
+            "语音控制",
+            "外观与便携",
+            "接口与扩展",
+            "散热与温控",
+            "做工质感",
+            "性价比",
+            "品控与寿命",
+            "售后体验",
+            "居家观影",
+            "卧室投屏",
+            "客厅影院",
+            "游戏娱乐",
+            "体育赛事",
+            "移动/户外",
+            "深夜观影",
+            "车载观影",
+            "居家健身",
+            "儿童/网课",
+            "商务办公",
+            "教学培训",
+            "送礼用途",
+            "角色身份",
+            "计数水平",
+            "预算充足",
+            "性价比优先",
+            "追求极致"
+        ],
+        "custom_output_columns": [],
+        "category_sheet_columns": {
+            "header_column": "表头",
+            "keyword_column": "关键词",
+            "value_column": "标签值",
+            "match_type_column": "匹配类型"
+        },
+        "rating_columns": [
+            "用户星级",
+            "标准化星级"
+        ],
+        "date_normalize": {
+            "source_column": "评论时间",
+            "output_column": "标准化日期",
+            "output_format": "%Y-%m-%d"
+        }
+    },
+    "rules": {
+        "prefix_pattern": "^(事件:|退货:|事故:|返回:|回国:|回报:|问题描述:|客户反馈:|投诉:|投诉内容:|具体问题:|详细描述:)*",
+        "bad_review_max_star": 3,
+        "negative_patterns": [
+            "(差评|投诉|不满意|失望|后悔|生气|愤怒|糟糕|太差|垃圾|崩溃|受不了)"
+        ]
+    },
+    "semantic_engine": {
+        "negation_handler": {
+            "enabled": true,
+            "negation_words": [
+                "不",
+                "没",
+                "没有",
+                "无",
+                "别",
+                "不要",
+                "未",
+                "非"
+            ],
+            "scope_window": 3,
+            "polarity_reversal_map": {
+                "模糊": "清晰",
+                "清晰": "模糊",
+                "噪音大": "安静",
+                "安静": "噪音大",
+                "亮度不足": "亮度满意",
+                "亮度满意": "亮度不足",
+                "色彩差": "色彩好",
+                "色彩好": "色彩差"
+            },
+            "special_cases": {
+                "不够": {
+                    "pattern": "不够(.{1,4})",
+                    "transform": "$1不足"
+                },
+                "不太": {
+                    "pattern": "不太(.{1,4})",
+                    "transform": "$1一般",
+                    "weight_multiplier": 0.7
+                }
+            }
+        },
+        "intensity_modifier": {
+            "enabled": true,
+            "modifiers": {
+                "极强": {
+                    "keywords": [
+                        "超级",
+                        "极其",
+                        "极度",
+                        "巨",
+                        "超"
+                    ],
+                    "weight_multiplier": 2.0,
+                    "confidence_boost": 0.2
+                },
+                "强": {
+                    "keywords": [
+                        "非常",
+                        "特别",
+                        "十分",
+                        "相当",
+                        "太"
+                    ],
+                    "weight_multiplier": 1.5,
+                    "confidence_boost": 0.15
+                },
+                "中": {
+                    "keywords": [
+                        "比较",
+                        "还算",
+                        "挺",
+                        "蛮",
+                        "较"
+                    ],
+                    "weight_multiplier": 1.2,
+                    "confidence_boost": 0.05
+                },
+                "弱": {
+                    "keywords": [
+                        "有点",
+                        "稍微",
+                        "略微",
+                        "稍",
+                        "略"
+                    ],
+                    "weight_multiplier": 0.8,
+                    "confidence_reduce": 0.1
+                }
+            },
+            "scope_window": 2,
+            "examples": {
+                "非常清晰": {
+                    "base": "清晰",
+                    "modifier": "强",
+                    "final_weight": 1.5
+                },
+                "有点模糊": {
+                    "base": "模糊",
+                    "modifier": "弱",
+                    "final_weight": 0.8
+                }
+            }
+        },
+        "context_analyzer": {
+            "enabled": true,
+            "window_size": 5,
+            "sentiment_indicators": {
+                "positive": [
+                    "好",
+                    "赞",
+                    "棒",
+                    "满意",
+                    "喜欢",
+                    "推荐",
+                    "值得"
+                ],
+                "negative": [
+                    "差",
+                    "烂",
+                    "糟",
+                    "失望",
+                    "后悔",
+                    "不行",
+                    "垃圾"
+                ]
+            },
+            "conflict_resolution": {
+                "policy": "negative_priority",
+                "confidence_threshold": 0.7
+            }
+        }
+    },
+    "matching_strategy": {
+        "priority_order": [
+            "regex_rules",
+            "exact_rules",
+            "keyword_rules",
+            "fuzzy_rules"
+        ],
+        "multi_match_policy": "highest_confidence",
+        "confidence_threshold": 0.6,
+        "max_matches_per_category": 3
+    },
+    "weight_system": {
+        "base_weights": {
+            "regex_match": 1.0,
+            "exact_match": 0.95,
+            "keyword_match": 0.8,
+            "fuzzy_match": 0.6,
+            "en_translation_match": 0.85
+        },
+        "category_importance": {
+            "清晰度/分辨率": 1.3,
+            "亮度": 1.2,
+            "色彩": 1.2,
+            "对比度/黑位": 1.15,
+            "HDR与色准": 1.1,
+            "运动表现/MEMC": 1.1,
+            "品控与寿命": 1.15,
+            "性价比": 1.1,
+            "噪音": 1.0,
+            "音质": 0.95,
+            "外观与便携": 0.9,
+            "做工质感": 0.9,
+            "售后体验": 1.0
+        },
+        "sentiment_weights": {
+            "positive": 1.0,
+            "negative": 1.3,
+            "neutral": 0.8
+        },
+        "combination_rules": {
+            "multiple_positive": "max",
+            "multiple_negative": "sum_capped_2x",
+            "conflict": "negative_priority_with_threshold"
+        }
+    },
+    "confidence_scoring": {
+        "enabled": true,
+        "factors": {
+            "match_type_weight": 0.3,
+            "keyword_frequency": 0.2,
+            "context_relevance": 0.3,
+            "semantic_engine_boost": 0.2
+        },
+        "min_confidence": 0.5,
+        "output_confidence": true,
+        "confidence_levels": {
+            "high": ">=0.8",
+            "medium": "0.6-0.79",
+            "low": "<0.6"
+        }
+    },
+    "regex_rules": {
+        "亮度": [
+            {
+                "pattern": "(\\d+)\\s*(流明|lumens|ANSI)",
+                "action": "extract_and_classify",
+                "thresholds": {
+                    ">=3000": {
+                        "label": "亮度满意",
+                        "confidence": 0.9
+                    },
+                    "2000-2999": {
+                        "label": "亮度够",
+                        "confidence": 0.85
+                    },
+                    "1500-1999": {
+                        "label": "亮度一般",
+                        "confidence": 0.8
+                    },
+                    "<1500": {
+                        "label": "亮度不足",
+                        "confidence": 0.85
+                    }
+                },
+                "weight": 1.0
+            },
+            {
+                "pattern": "(白天|日光|开灯|不拉窗帘).{0,8}(清晰|能看|可以|也行|没问题)",
+                "label": "白天清晰",
+                "confidence": 0.9,
+                "weight": 1.1
+            },
+            {
+                "pattern": "(白天|日光|开灯).{0,8}(不行|看不清|不清楚|太暗)",
+                "label": "白天看不清",
+                "confidence": 0.9,
+                "weight": 1.2
+            }
+        ],
+        "清晰度/分辨率": [
+            {
+                "pattern": "(真|原生|物理|native)\\s*(4K|1080P|2K)",
+                "action": "extract_resolution",
+                "label_map": {
+                    "真4K": {
+                        "label": "真4K",
+                        "confidence": 0.95
+                    },
+                    "原生4K": {
+                        "label": "真4K",
+                        "confidence": 0.95
+                    },
+                    "4K": {
+                        "label": "4K清晰",
+                        "confidence": 0.75
+                    },
+                    "真1080P": {
+                        "label": "真1080P",
+                        "confidence": 0.9
+                    },
+                    "1080P": {
+                        "label": "高清",
+                        "confidence": 0.8
+                    }
+                },
+                "weight": 1.0
+            },
+            {
+                "pattern": "抖?4K",
+                "label": "抖4K",
+                "confidence": 0.85,
+                "weight": 0.9
+            }
+        ],
+        "光源技术": [
+            {
+                "pattern": "(三色激光|三色光源|RGB激光)",
+                "label": "三色激光",
+                "confidence": 0.95,
+                "weight": 1.0
+            },
+            {
+                "pattern": "(\\d+)(小时|hrs|hours|h).*?(寿命|使用)",
+                "action": "extract_lifespan",
+                "thresholds": {
+                    ">=30000": {
+                        "label": "长寿命",
+                        "confidence": 0.9
+                    },
+                    "20000-29999": {
+                        "label": "寿命中等",
+                        "confidence": 0.85
+                    },
+                    "<20000": {
+                        "label": "寿命偏短",
+                        "confidence": 0.8
+                    }
+                }
+            }
+        ],
+        "投射比": [
+            {
+                "pattern": "(\\d+\\.\\d+)\\s*[::]\\s*1",
+                "action": "extract_throw_ratio",
+                "thresholds": {
+                    "<0.3": {
+                        "label": "超短焦",
+                        "confidence": 0.95
+                    },
+                    "0.3-0.8": {
+                        "label": "短焦",
+                        "confidence": 0.9
+                    },
+                    ">0.8": {
+                        "label": "长焦",
+                        "confidence": 0.85
+                    }
+                }
+            }
+        ]
+    },
+    "exact_rules": {
+        "亮度": {
+            "亮度满意": {
+                "label": "亮度满意",
+                "sentiment": "positive",
+                "weight": 1.0
+            },
+            "开灯也清晰": {
+                "label": "开灯也清晰",
+                "sentiment": "positive",
+                "weight": 1.1
+            },
+            "白天清晰": {
+                "label": "白天清晰",
+                "sentiment": "positive",
+                "weight": 1.1
+            },
+            "亮度够": {
+                "label": "亮度够",
+                "sentiment": "positive",
+                "weight": 0.9
+            },
+            "不拉窗帘也能看": {
+                "label": "不拉窗帘也能看",
+                "sentiment": "positive",
+                "weight": 1.0
+            },
+            "够亮": {
+                "label": "够亮",
+                "sentiment": "positive",
+                "weight": 0.9
+            },
+            "非常亮": {
+                "label": "非常亮",
+                "sentiment": "positive",
+                "weight": 1.1
+            },
+            "抗光性好": {
+                "label": "抗光性好",
+                "sentiment": "positive",
+                "weight": 1.1
+            },
+            "亮度不足": {
+                "label": "亮度不足",
+                "sentiment": "negative",
+                "weight": 1.2
+            },
+            "太亮刺眼": {
+                "label": "太亮刺眼",
+                "sentiment": "negative",
+                "weight": 1.0
+            },
+            "白天看不清": {
+                "label": "白天看不清",
+                "sentiment": "negative",
+                "weight": 1.2
+            },
+            "必须拉窗帘": {
+                "label": "必须拉窗帘",
+                "sentiment": "negative",
+                "weight": 1.1
+            },
+            "太暗": {
+                "label": "太暗",
+                "sentiment": "negative",
+                "weight": 1.2
+            },
+            "必须全黑环境": {
+                "label": "必须全黑环境",
+                "sentiment": "negative",
+                "weight": 1.3
+            },
+            "见光死": {
+                "label": "见光死",
+                "sentiment": "negative",
+                "weight": 1.4
+            }
+        },
+        "色彩": {
+            "色彩好": {
+                "label": "色彩好",
+                "sentiment": "positive",
+                "weight": 1.0
+            },
+            "色彩准确": {
+                "label": "色彩准确",
+                "sentiment": "positive",
+                "weight": 1.1
+            },
+            "颜色真实": {
+                "label": "颜色真实",
+                "sentiment": "positive",
+                "weight": 1.0
+            },
+            "不偏色": {
+                "label": "不偏色",
+                "sentiment": "positive",
+                "weight": 1.0
+            },
+            "颜色正": {
+                "label": "颜色正",
+                "sentiment": "positive",
+                "weight": 0.9
+            },
+            "色域广": {
+                "label": "色域广",
+                "sentiment": "positive",
+                "weight": 1.1
+            },
+            "色彩差": {
+                "label": "色彩差",
+                "sentiment": "negative",
+                "weight": 1.2
+            },
+            "偏色": {
+                "label": "偏色",
+                "sentiment": "negative",
+                "weight": 1.1
+            },
+            "发白": {
+                "label": "发白",
+                "sentiment": "negative",
+                "weight": 1.0
+            },
+            "发灰": {
+                "label": "发灰",
+                "sentiment": "negative",
+                "weight": 1.0
+            },
+            "色彩失真": {
+                "label": "色彩失真",
+                "sentiment": "negative",
+                "weight": 1.2
+            },
+            "红脸": {
+                "label": "红脸",
+                "sentiment": "negative",
+                "weight": 1.1
+            },
+            "泛绿": {
+                "label": "泛绿",
+                "sentiment": "negative",
+                "weight": 1.1
+            }
+        },
+        "清晰度/分辨率": {
+            "清晰": {
+                "label": "清晰",
+                "sentiment": "positive",
+                "weight": 1.0
+            },
+            "高清": {
+                "label": "高清",
+                "sentiment": "positive",
+                "weight": 1.0
+            },
+            "细腻": {
+                "label": "细腻",
+                "sentiment": "positive",
+                "weight": 1.0
+            },
+            "文字清晰": {
+                "label": "文字清晰",
+                "sentiment": "positive",
+                "weight": 1.0
+            },
+            "边缘锐利": {
+                "label": "边缘锐利",
+                "sentiment": "positive",
+                "weight": 1.1
+            },
+            "模糊": {
+                "label": "模糊",
+                "sentiment": "negative",
+                "weight": 1.2
+            },
+            "颗粒感": {
+                "label": "颗粒感",
+                "sentiment": "negative",
+                "weight": 1.0
+            },
+            "发虚": {
+                "label": "模糊",
+                "sentiment": "negative",
+                "weight": 1.1
+            },
+            "边缘模糊": {
+                "label": "边缘模糊",
+                "sentiment": "negative",
+                "weight": 1.1
+            },
+            "网格感": {
+                "label": "网格感",
+                "sentiment": "negative",
+                "weight": 1.0
+            }
+        },
+        "HDR与色准": {
+            "支持HDR10": {
+                "label": "支持HDR10",
+                "sentiment": "positive",
+                "weight": 1.1
+            },
+            "杜比视界": {
+                "label": "支持杜比视界",
+                "sentiment": "positive",
+                "weight": 1.2
+            },
+            "色准好": {
+                "label": "色准好",
+                "sentiment": "positive",
+                "weight": 1.1
+            },
+            "不支持HDR": {
+                "label": "不支持HDR",
+                "sentiment": "negative",
+                "weight": 1.0
+            }
+        },
+        "光源技术": {
+            "LED光源": {
+                "label": "LED光源",
+                "sentiment": "neutral",
+                "weight": 0.8
+            },
+            "激光光源": {
+                "label": "激光光源",
+                "sentiment": "positive",
+                "weight": 1.0
+            },
+            "三色激光": {
+                "label": "三色激光",
+                "sentiment": "positive",
+                "weight": 1.2
+            },
+            "ALPD": {
+                "label": "ALPD",
+                "sentiment": "positive",
+                "weight": 1.1
+            }
+        },
+        "投射比": {
+            "超短焦": {
+                "label": "超短焦",
+                "sentiment": "positive",
+                "weight": 1.0
+            },
+            "贴墙投": {
+                "label": "超短焦",
+                "sentiment": "positive",
+                "weight": 1.0
+            },
+            "短焦": {
+                "label": "短焦",
+                "sentiment": "neutral",
+                "weight": 0.9
+            }
+        },
+        "噪音": {
+            "静音": {
+                "label": "静音",
+                "sentiment": "positive",
+                "weight": 1.1
+            },
+            "安静": {
+                "label": "安静",
+                "sentiment": "positive",
+                "weight": 1.0
+            },
+            "风扇声音小": {
+                "label": "风扇声音小",
+                "sentiment": "positive",
+                "weight": 1.0
+            },
+            "几乎听不到": {
+                "label": "几乎听不到",
+                "sentiment": "positive",
+                "weight": 1.1
+            },
+            "噪音大": {
+                "label": "噪音大",
+                "sentiment": "negative",
+                "weight": 1.3
+            },
+            "很吵": {
+                "label": "很吵",
+                "sentiment": "negative",
+                "weight": 1.3
+            },
+            "风扇声吵": {
+                "label": "风扇声吵",
+                "sentiment": "negative",
+                "weight": 1.2
+            },
+            "嗡嗡响": {
+                "label": "嗡嗡响",
+                "sentiment": "negative",
+                "weight": 1.2
+            },
+            "像吹风机": {
+                "label": "像吹风机",
+                "sentiment": "negative",
+                "weight": 1.4
+            }
+        }
+    },
+    "keyword_rules": {
+        "亮度": {
+            "正面": [
+                "亮度不错",
+                "投白天也行",
+                "不影响观看"
+            ],
+            "负面": [
+                "环境光不可用",
+                "亮度拉胯",
+                "白天完全不行",
+                "一点都不亮"
+            ],
+            "权重": 1.2
+        },
+        "色彩": {
+            "正面": [
+                "对比自然",
+                "很讨喜",
+                "观感舒服",
+                "色彩鲜艳"
+            ],
+            "负面": [
+                "颜色暗淡",
+                "颜色怪",
+                "不自然",
+                "一片灰"
+            ],
+            "权重": 1.2
+        },
+        "清晰度/分辨率": {
+            "正面": [
+                "细节不错",
+                "很清楚",
+                "肉眼可见清晰"
+            ],
+            "负面": [
+                "不清晰",
+                "不够清晰",
+                "不清楚",
+                "看不清",
+                "像雾一样"
+            ],
+            "权重": 1.3
+        }
+    },
+    "fuzzy_rules": {
+        "enabled": false,
+        "similarity_threshold": 0.85,
+        "method": "levenshtein",
+        "typo_tolerant_keywords": {
+            "投影仪": [
+                "头影仪",
+                "投影机"
+            ],
+            "清晰度": [
+                "清洗度"
+            ],
+            "梯形校正": [
+                "梯形校对",
+                "梯型校正"
+            ]
+        }
+    },
+    "en_keyword_to_label_map": {
+        "lumens": "亮度满意",
+        "ansi": "亮度满意",
+        "bright enough": "亮度满意",
+        "daylight visibility": "白天清晰",
+        "washed out": "亮度不足",
+        "too dim": "太暗",
+        "blurry": "模糊",
+        "out of focus": "跑焦",
+        "sharp": "清晰",
+        "native 1080p": "真1080P",
+        "4k upscaling": "4K清晰",
+        "color accuracy": "色彩准确",
+        "vibrant": "色彩鲜艳",
+        "rainbow effect": "彩虹眼",
+        "speckle": "散斑严重",
+        "keystone": "梯形不准",
+        "auto focus": "自动对焦快",
+        "fan noise": "风扇声吵",
+        "quiet": "安静",
+        "speakers": "自带音响够用",
+        "bass": "低音好",
+        "overheating": "发热严重",
+        "dead pixels": "坏点",
+        "netflix": "资源丰富",
+        "casting": "投屏稳定",
+        "airplay": "支持苹果投屏",
+        "lag": "延迟高",
+        "gaming": "游戏",
+        "value for money": "性价比高",
+        "cheaply made": "做工差",
+        "premium feel": "质感好",
+        "defective": "故障多"
+    },
+    "需求场景标签": {
+        "居家观影": {
+            "关键词": [
+                "看电视",
+                "追剧",
+                "看综艺",
+                "家庭影院",
+                "看电影"
+            ],
+            "核心关注": [
+                "画质",
+                "色彩",
+                "清晰度",
+                "对比度"
+            ],
+            "优先级": "最高",
+            "权重": 1.2
+        },
+        "卧室投屏": {
+            "关键词": [
+                "卧室",
+                "关灯使用",
+                "躺床看",
+                "夜间观影",
+                "打到天花板"
+            ],
+            "核心关注": [
+                "噪音",
+                "自动对焦",
+                "体积",
+                "画面均匀度"
+            ],
+            "优先级": "最高",
+            "权重": 1.2
+        },
+        "客厅影院": {
+            "关键词": [
+                "客厅",
+                "对抗光",
+                "大屏观影",
+                "代替电视"
+            ],
+            "核心关注": [
+                "亮度",
+                "抗光性",
+                "外观设计",
+                "MEMC"
+            ],
+            "优先级": "最高",
+            "权重": 1.2
+        },
+        "游戏娱乐": {
+            "关键词": [
+                "Switch",
+                "PS5",
+                "Xbox",
+                "游戏",
+                "主机游戏",
+                "黑神话"
+            ],
+            "核心关注": [
+                "输入延迟",
+                "高刷新率",
+                "HDMI接口",
+                "MEMC"
+            ],
+            "优先级": "最高",
+            "权重": 1.2
+        },
+        "深夜观影": {
+            "关键词": [
+                "深夜",
+                "晚上看",
+                "夜间",
+                "不打扰家人",
+                "安静环境"
+            ],
+            "核心关注": [
+                "噪音",
+                "亮度可调",
+                "蓝牙耳机",
+                "操作简便"
+            ],
+            "优先级": "高",
+            "权重": 1.1
+        },
+        "车载观影": {
+            "关键词": [
+                "车中泊",
+                "车载",
+                "房车",
+                "后排娱乐",
+                "自驾"
+            ],
+            "核心关注": [
+                "12V供电",
+                "防震",
+                "便携",
+                "续航"
+            ],
+            "优先级": "中",
+            "权重": 1.0
+        },
+        "移动/户外": {
+            "关键词": [
+                "露营",
+                "旅行",
+                "户外",
+                "便携",
+                "外出"
+            ],
+            "核心关注": [
+                "内置电池",
+                "便携性",
+                "续航",
+                "Type-C供电"
+            ],
+            "优先级": "高",
+            "权重": 1.1
+        },
+        "商务办公": {
+            "关键词": [
+                "PPT演示",
+                "办公",
+                "会议",
+                "图表",
+                "开会"
+            ],
+            "核心关注": [
+                "亮度",
+                "对比度",
+                "文字锐利度",
+                "接口兼容性"
+            ],
+            "优先级": "高",
+            "权重": 1.0
+        }
+    },
+    "用户画像标签": {
+        "角色身份": {
+            "租房党": {
+                "关键词": [
+                    "租房",
+                    "出租屋",
+                    "临时使用",
+                    "搬家方便",
+                    "打工人"
+                ],
+                "权重": 1.0
+            },
+            "独居青年": {
+                "关键词": [
+                    "独居",
+                    "单身",
+                    "一个人住",
+                    "氛围感",
+                    "下班放松"
+                ],
+                "权重": 1.0
+            },
+            "学生党": {
+                "关键词": [
+                    "学生",
+                    "宿舍",
+                    "寝室",
+                    "预算有限",
+                    "平价",
+                    "校园"
+                ],
+                "权重": 1.0
+            },
+            "宝妈奶爸": {
+                "关键词": [
+                    "宝妈",
+                    "奶爸",
+                    "带娃",
+                    "孩子",
+                    "家庭育儿",
+                    "启蒙"
+                ],
+                "权重": 1.1
+            },
+            "数码极客": {
+                "关键词": [
+                    "数码爱好者",
+                    "参数党",
+                    "拆机",
+                    "测评",
+                    "配置",
+                    "极客"
+                ],
+                "权重": 1.0
+            }
+        },
+        "技术水平": {
+            "小白": {
+                "关键词": [
+                    "不懂参数",
+                    "看着晕",
+                    "不会操作",
+                    "傻瓜式",
+                    "零基础",
+                    "开机即用",
+                    "懒人"
+                ],
+                "权重": 1.0
+            },
+            "发烧友": {
+                "关键词": [
+                    "懂参数",
+                    "色域",
+                    "芯片尺寸",
+                    "DMD",
+                    "画质调校",
+                    "专业测评",
+                    "流明度校准"
+                ],
+                "权重": 1.1
+            }
+        },
+        "消费能力": {
+            "预算充足": {
+                "关键词": [
+                    "不差钱",
+                    "顶配",
+                    "旗舰",
+                    "高端",
+                    "追求品质"
+                ],
+                "权重": 1.0
+            },
+            "性价比优先": {
+                "关键词": [
+                    "预算有限",
+                    "学生党",
+                    "性价比",
+                    "够用就行",
+                    "实惠"
+                ],
+                "权重": 1.0
+            },
+            "追求极致": {
+                "关键词": [
+                    "发烧友",
+                    "完美主义",
+                    "参数党",
+                    "极致体验"
+                ],
+                "权重": 1.1
+            }
+        }
+    },
+    "quality_metrics": {
+        "target_kpi": {
+            "accuracy": 0.9,
+            "recall": 0.85,
+            "f1_score": 0.87,
+            "rule_coverage": 0.7,
+            "avg_confidence": 0.75
+        },
+        "monitoring": {
+            "weekly_report": true,
+            "manual_sample_rate": 0.1,
+            "monthly_optimization": true
+        }
+    }
+}

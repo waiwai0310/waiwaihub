@@ -1,0 +1,352 @@
+{
+  "summary": {
+    "total_issues": 47,
+    "high_severity": 3,
+    "medium_severity": 1,
+    "low_severity": 43
+  },
+  "statistics": {
+    "total_exact_categories": 43,
+    "total_keyword_categories": 0,
+    "total_exact_rules": 452,
+    "total_keyword_rules": 0,
+    "avg_rules_per_category": 10.511627906976743
+  },
+  "issues": [
+    {
+      "severity": "HIGH",
+      "category": "正则表达式错误",
+      "location": "rules.prefix_pattern",
+      "issue": "使用了 + 而非 *,可能导致匹配失败",
+      "suggestion": "将 + 改为 * 以支持零次或多次匹配"
+    },
+    {
+      "severity": "HIGH",
+      "category": "语义引擎",
+      "location": "semantic_engine",
+      "issue": "缺少否定词处理机制",
+      "suggestion": "添加negation_handler配置,处理\"不模糊\"、\"没有噪音\"等表达",
+      "impact": "可能导致误判率增加20-30%"
+    },
+    {
+      "severity": "HIGH",
+      "category": "语义引擎",
+      "location": "semantic_engine",
+      "issue": "缺少程度词增强机制",
+      "suggestion": "添加intensity_modifier配置,处理\"非常\"、\"特别\"等程度副词",
+      "impact": "无法区分\"模糊\"和\"非常模糊\"的程度差异"
+    },
+    {
+      "severity": "MEDIUM",
+      "category": "权重系统",
+      "location": "keyword_rules",
+      "issue": "所有维度权重都是1.0,未体现重要性差异",
+      "suggestion": "为核心维度(亮度、清晰度、色彩)设置更高权重(1.2-1.3)"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"小白\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"房主\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"清晰度/分辨率\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"品控与寿命\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"色彩\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"画面均匀度\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"移动/户外\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"运动表现/MEMC\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"噪音\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"亮度\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"对焦/校正\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"彩虹眼/散斑\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"儿童/网课\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"语音控制\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"商务办公\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"租房党\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"独居青年\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"性价比\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"避障与入幕\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"音质\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"体育赛事\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"情侣/夫妻\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"卧室投屏\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"客厅影院\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"居家健身\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"散热与温控\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"系统与生态\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"发烧友\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"居家观影\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"送礼用途\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"教学培训\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"做工质感\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"接口与扩展\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"投屏体验\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"学生党\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"售后体验\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"公司采购\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"外观与便携\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"游戏娱乐\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"对比度/黑位\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"宝妈奶爸\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"数码极客\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    },
+    {
+      "severity": "LOW",
+      "category": "覆盖度",
+      "location": "keyword_rules",
+      "issue": "维度\"长辈/老人\"缺少keyword_rules",
+      "suggestion": "添加关键词规则以提高召回率"
+    }
+  ],
+  "recommendations": [
+    "🔥 紧急: 立即修复所有HIGH级别问题,这些会显著影响分类准确性",
+    "⚙️  建议: 优先实现否定词处理引擎,预计可提升15-20%准确率"
+  ]
+}

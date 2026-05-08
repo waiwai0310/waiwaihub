@@ -1,0 +1,650 @@
+[2026-04-27 10:17:54] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 10:17:54] [ERROR] 文件不存在：找不到客诉表。
+已尝试：C:\Users\87710\Desktop\complaint_classifier\data\人工树-Reviews.xlsx
+配置路径：data/人工树-Reviews.xlsx
+「data\人工树」下现有 .xlsx：~$高价9ASIN人工树CA-Reviews-2026042.xlsx, 高价9ASIN人工树CA-Reviews-2026042.xlsx
+请将文件放入上述目录之一，或修改配置里的路径。
+[2026-04-27 10:17:54] [ERROR] Traceback (most recent call last):
+  File "C:\Users\87710\Desktop\complaint_classifier\main.py", line 192, in run
+    df_complaint, df_category = self._load_data()
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\87710\Desktop\complaint_classifier\main.py", line 246, in _load_data
+    df_complaint = loader.load_complaint_data(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\87710\Desktop\complaint_classifier\data_loader.py", line 328, in load_complaint_data
+    file_path = self._resolve_existing_file(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\87710\Desktop\complaint_classifier\data_loader.py", line 300, in _resolve_existing_file
+    raise FileNotFoundError(
+FileNotFoundError: 找不到客诉表。
+已尝试：C:\Users\87710\Desktop\complaint_classifier\data\人工树-Reviews.xlsx
+配置路径：data/人工树-Reviews.xlsx
+「data\人工树」下现有 .xlsx：~$高价9ASIN人工树CA-Reviews-2026042.xlsx, 高价9ASIN人工树CA-Reviews-2026042.xlsx
+请将文件放入上述目录之一，或修改配置里的路径。
+
+[2026-04-27 10:18:29] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 10:18:29] [ERROR] 文件不存在：找不到客诉表。
+已尝试：C:\Users\87710\Desktop\complaint_classifier\data\人工树-Reviews.xlsx
+配置路径：data/人工树-Reviews.xlsx
+「data\人工树」下现有 .xlsx：高价9ASIN人工树CA-Reviews-2026042.xlsx
+请将文件放入上述目录之一，或修改配置里的路径。
+[2026-04-27 10:18:29] [ERROR] Traceback (most recent call last):
+  File "C:\Users\87710\Desktop\complaint_classifier\main.py", line 192, in run
+    df_complaint, df_category = self._load_data()
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\87710\Desktop\complaint_classifier\main.py", line 246, in _load_data
+    df_complaint = loader.load_complaint_data(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\87710\Desktop\complaint_classifier\data_loader.py", line 328, in load_complaint_data
+    file_path = self._resolve_existing_file(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\87710\Desktop\complaint_classifier\data_loader.py", line 300, in _resolve_existing_file
+    raise FileNotFoundError(
+FileNotFoundError: 找不到客诉表。
+已尝试：C:\Users\87710\Desktop\complaint_classifier\data\人工树-Reviews.xlsx
+配置路径：data/人工树-Reviews.xlsx
+「data\人工树」下现有 .xlsx：高价9ASIN人工树CA-Reviews-2026042.xlsx
+请将文件放入上述目录之一，或修改配置里的路径。
+
+[2026-04-27 10:21:36] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 10:21:37] [INFO] 客诉数据：1190 行
+[2026-04-27 10:21:37] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 10:21:37] [INFO] 分类器构建成功
+[2026-04-27 10:21:38] [INFO] 分类统计 - 精确匹配：638，模糊匹配：0，默认：761
+[2026-04-27 10:21:39] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（1）.xlsx
+[2026-04-27 10:21:39] [INFO] 处理完成
+[2026-04-27 10:27:05] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 10:27:05] [INFO] 客诉数据：1190 行
+[2026-04-27 10:27:05] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 10:27:05] [INFO] 分类器构建成功
+[2026-04-27 10:27:06] [INFO] 分类统计 - 精确匹配：638，模糊匹配：0，默认：761
+[2026-04-27 10:27:08] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（2）.xlsx
+[2026-04-27 10:27:08] [INFO] 处理完成
+[2026-04-27 10:31:19] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 10:31:20] [INFO] 客诉数据：1190 行
+[2026-04-27 10:31:20] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 10:31:20] [INFO] 分类器构建成功
+[2026-04-27 10:31:21] [INFO] 分类统计 - 精确匹配：638，模糊匹配：0，默认：761
+[2026-04-27 10:31:24] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（3）.xlsx
+[2026-04-27 10:31:24] [INFO] 处理完成
+[2026-04-27 10:37:10] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 10:37:10] [INFO] 客诉数据：1190 行
+[2026-04-27 10:37:10] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 10:37:10] [INFO] 分类器构建成功
+[2026-04-27 10:37:11] [INFO] 分类统计 - 精确匹配：638，模糊匹配：0，默认：761
+[2026-04-27 10:37:13] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（4）.xlsx
+[2026-04-27 10:37:13] [INFO] 处理完成
+[2026-04-27 10:40:29] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 10:40:29] [INFO] 客诉数据：1190 行
+[2026-04-27 10:40:29] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 10:40:29] [INFO] 分类器构建成功
+[2026-04-27 10:40:30] [INFO] 分类统计 - 精确匹配：638，模糊匹配：0，默认：761
+[2026-04-27 10:40:31] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（5）.xlsx
+[2026-04-27 10:40:31] [INFO] 处理完成
+[2026-04-27 10:51:47] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 10:51:47] [INFO] 客诉数据：1190 行
+[2026-04-27 10:51:47] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 10:51:47] [INFO] 分类器构建成功
+[2026-04-27 10:51:48] [INFO] 分类统计 - 精确匹配：638，模糊匹配：1676，默认：420
+[2026-04-27 10:51:50] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（6）.xlsx
+[2026-04-27 10:51:50] [INFO] 处理完成
+[2026-04-27 10:59:32] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 10:59:32] [INFO] 客诉数据：1190 行
+[2026-04-27 10:59:32] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 10:59:32] [INFO] 分类器构建成功
+[2026-04-27 10:59:34] [INFO] 分类统计 - 精确匹配：638，模糊匹配：1003，默认：409
+[2026-04-27 10:59:36] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（7）.xlsx
+[2026-04-27 10:59:36] [INFO] 处理完成
+[2026-04-27 11:00:48] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 11:00:48] [INFO] 客诉数据：1190 行
+[2026-04-27 11:00:48] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 11:00:48] [INFO] 分类器构建成功
+[2026-04-27 11:00:50] [INFO] 分类统计 - 精确匹配：638，模糊匹配：1003，默认：409
+[2026-04-27 11:00:52] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（8）.xlsx
+[2026-04-27 11:00:52] [INFO] 处理完成
+[2026-04-27 11:01:56] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 11:01:56] [INFO] 客诉数据：1190 行
+[2026-04-27 11:01:56] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 11:01:56] [INFO] 分类器构建成功
+[2026-04-27 11:01:58] [INFO] 分类统计 - 精确匹配：638，模糊匹配：1112，默认：394
+[2026-04-27 11:02:00] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（9）.xlsx
+[2026-04-27 11:02:00] [INFO] 处理完成
+[2026-04-27 11:08:13] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 11:08:13] [INFO] 客诉数据：1190 行
+[2026-04-27 11:08:13] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 11:08:13] [INFO] 分类器构建成功
+[2026-04-27 11:08:15] [INFO] 分类统计 - 精确匹配：638，模糊匹配：1180，默认：393
+[2026-04-27 11:08:17] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（11）.xlsx
+[2026-04-27 11:08:17] [INFO] 处理完成
+[2026-04-27 11:09:08] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 11:09:08] [INFO] 客诉数据：1190 行
+[2026-04-27 11:09:08] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 11:09:08] [INFO] 分类器构建成功
+[2026-04-27 11:09:10] [INFO] 分类统计 - 精确匹配：638，模糊匹配：1180，默认：393
+[2026-04-27 11:09:12] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（12）.xlsx
+[2026-04-27 11:09:12] [INFO] 处理完成
+[2026-04-27 11:10:04] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 11:10:04] [INFO] 客诉数据：1190 行
+[2026-04-27 11:10:04] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 11:10:04] [INFO] 分类器构建成功
+[2026-04-27 11:10:07] [INFO] 分类统计 - 精确匹配：638，模糊匹配：1180，默认：393
+[2026-04-27 11:10:08] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（13）.xlsx
+[2026-04-27 11:10:08] [INFO] 处理完成
+[2026-04-27 11:11:16] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 11:11:17] [INFO] 客诉数据：1190 行
+[2026-04-27 11:11:17] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 11:11:17] [INFO] 分类器构建成功
+[2026-04-27 11:11:19] [INFO] 分类统计 - 精确匹配：638，模糊匹配：1180，默认：393
+[2026-04-27 11:11:21] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（14）.xlsx
+[2026-04-27 11:11:21] [INFO] 处理完成
+[2026-04-27 11:12:33] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 11:12:34] [INFO] 客诉数据：1190 行
+[2026-04-27 11:12:34] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 11:12:34] [INFO] 分类器构建成功
+[2026-04-27 11:12:36] [INFO] 分类统计 - 精确匹配：711，模糊匹配：1106，默认：389
+[2026-04-27 11:12:37] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（15）.xlsx
+[2026-04-27 11:12:37] [INFO] 处理完成
+[2026-04-27 11:23:33] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 11:23:34] [INFO] 客诉数据：1190 行
+[2026-04-27 11:23:34] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 11:23:34] [INFO] 分类器构建成功
+[2026-04-27 11:23:36] [INFO] 分类统计 - 精确匹配：586，模糊匹配：1296，默认：389
+[2026-04-27 11:23:37] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（18）.xlsx
+[2026-04-27 11:23:37] [INFO] 处理完成
+[2026-04-27 11:24:33] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 11:24:33] [INFO] 客诉数据：1190 行
+[2026-04-27 11:24:33] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 11:24:33] [INFO] 分类器构建成功
+[2026-04-27 11:24:35] [INFO] 分类统计 - 精确匹配：586，模糊匹配：1296，默认：389
+[2026-04-27 11:24:37] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（19）.xlsx
+[2026-04-27 11:24:37] [INFO] 处理完成
+[2026-04-27 14:51:32] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 14:51:32] [INFO] 客诉数据：1190 行
+[2026-04-27 14:51:32] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 14:51:32] [INFO] 分类器构建成功
+[2026-04-27 14:51:34] [INFO] 分类统计 - 精确匹配：604，模糊匹配：1376，默认：387
+[2026-04-27 14:51:37] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（20）.xlsx
+[2026-04-27 14:51:37] [INFO] 处理完成
+[2026-04-27 14:53:48] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 14:53:49] [INFO] 客诉数据：1190 行
+[2026-04-27 14:53:49] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 14:53:49] [INFO] 分类器构建成功
+[2026-04-27 14:53:51] [INFO] 分类统计 - 精确匹配：604，模糊匹配：1379，默认：387
+[2026-04-27 14:53:53] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（21）.xlsx
+[2026-04-27 14:53:53] [INFO] 处理完成
+[2026-04-27 14:55:41] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 14:55:41] [INFO] 客诉数据：1190 行
+[2026-04-27 14:55:41] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 14:55:41] [INFO] 分类器构建成功
+[2026-04-27 14:55:44] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1378，默认：387
+[2026-04-27 14:55:46] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（22）.xlsx
+[2026-04-27 14:55:46] [INFO] 处理完成
+[2026-04-27 14:57:56] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 14:57:57] [INFO] 客诉数据：1190 行
+[2026-04-27 14:57:57] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 14:57:57] [INFO] 分类器构建成功
+[2026-04-27 14:57:59] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1378，默认：387
+[2026-04-27 14:58:02] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（23）.xlsx
+[2026-04-27 14:58:02] [INFO] 处理完成
+[2026-04-27 15:04:26] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 15:04:26] [INFO] 客诉数据：1190 行
+[2026-04-27 15:04:26] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 15:04:26] [INFO] 分类器构建成功
+[2026-04-27 15:04:28] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1378，默认：387
+[2026-04-27 15:04:31] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（24）.xlsx
+[2026-04-27 15:04:31] [INFO] 处理完成
+[2026-04-27 15:38:39] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 15:38:39] [INFO] 客诉数据：1190 行
+[2026-04-27 15:38:39] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 15:38:39] [INFO] 分类器构建成功
+[2026-04-27 15:38:42] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1433，默认：375
+[2026-04-27 15:38:44] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（25）.xlsx
+[2026-04-27 15:38:44] [INFO] 处理完成
+[2026-04-27 15:53:23] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 15:53:23] [INFO] 客诉数据：1190 行
+[2026-04-27 15:53:23] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 15:53:23] [INFO] 分类器构建成功
+[2026-04-27 15:53:25] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1442，默认：373
+[2026-04-27 15:53:28] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（26）.xlsx
+[2026-04-27 15:53:28] [INFO] 处理完成
+[2026-04-27 15:54:57] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 15:54:57] [INFO] 客诉数据：1190 行
+[2026-04-27 15:54:57] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 15:54:57] [INFO] 分类器构建成功
+[2026-04-27 15:55:00] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1450，默认：373
+[2026-04-27 15:55:02] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（27）.xlsx
+[2026-04-27 15:55:02] [INFO] 处理完成
+[2026-04-27 15:57:29] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 15:57:30] [INFO] 客诉数据：1190 行
+[2026-04-27 15:57:30] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 15:57:30] [INFO] 分类器构建成功
+[2026-04-27 15:57:32] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1467，默认：370
+[2026-04-27 15:57:34] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（28）.xlsx
+[2026-04-27 15:57:34] [INFO] 处理完成
+[2026-04-27 15:59:49] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 15:59:49] [INFO] 客诉数据：1190 行
+[2026-04-27 15:59:49] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 15:59:49] [INFO] 分类器构建成功
+[2026-04-27 15:59:52] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1493，默认：363
+[2026-04-27 15:59:54] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（29）.xlsx
+[2026-04-27 15:59:54] [INFO] 处理完成
+[2026-04-27 16:02:30] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:02:30] [INFO] 客诉数据：1190 行
+[2026-04-27 16:02:30] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:02:30] [INFO] 分类器构建成功
+[2026-04-27 16:02:32] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1539，默认：353
+[2026-04-27 16:02:35] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（30）.xlsx
+[2026-04-27 16:02:35] [INFO] 处理完成
+[2026-04-27 16:04:41] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:04:41] [INFO] 客诉数据：1190 行
+[2026-04-27 16:04:41] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:04:41] [INFO] 分类器构建成功
+[2026-04-27 16:04:44] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1548，默认：350
+[2026-04-27 16:04:46] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（31）.xlsx
+[2026-04-27 16:04:46] [INFO] 处理完成
+[2026-04-27 16:07:12] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:07:13] [INFO] 客诉数据：1190 行
+[2026-04-27 16:07:13] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:07:13] [INFO] 分类器构建成功
+[2026-04-27 16:07:15] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1555，默认：349
+[2026-04-27 16:07:17] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（32）.xlsx
+[2026-04-27 16:07:17] [INFO] 处理完成
+[2026-04-27 16:08:22] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:08:22] [INFO] 客诉数据：1190 行
+[2026-04-27 16:08:22] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:08:22] [INFO] 分类器构建成功
+[2026-04-27 16:08:25] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1566，默认：345
+[2026-04-27 16:08:28] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（33）.xlsx
+[2026-04-27 16:08:28] [INFO] 处理完成
+[2026-04-27 16:09:51] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:09:51] [INFO] 客诉数据：1190 行
+[2026-04-27 16:09:51] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:09:51] [INFO] 分类器构建成功
+[2026-04-27 16:09:54] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1571，默认：344
+[2026-04-27 16:09:56] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（34）.xlsx
+[2026-04-27 16:09:56] [INFO] 处理完成
+[2026-04-27 16:10:52] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:10:52] [INFO] 客诉数据：1190 行
+[2026-04-27 16:10:52] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:10:52] [INFO] 分类器构建成功
+[2026-04-27 16:10:55] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1593，默认：342
+[2026-04-27 16:10:57] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（35）.xlsx
+[2026-04-27 16:10:57] [INFO] 处理完成
+[2026-04-27 16:13:18] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:13:19] [INFO] 客诉数据：1190 行
+[2026-04-27 16:13:19] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:13:19] [INFO] 分类器构建成功
+[2026-04-27 16:13:21] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1594，默认：341
+[2026-04-27 16:13:24] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（36）.xlsx
+[2026-04-27 16:13:24] [INFO] 处理完成
+[2026-04-27 16:14:26] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:14:27] [INFO] 客诉数据：1190 行
+[2026-04-27 16:14:27] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:14:27] [INFO] 分类器构建成功
+[2026-04-27 16:14:29] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1601，默认：336
+[2026-04-27 16:14:31] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（37）.xlsx
+[2026-04-27 16:14:31] [INFO] 处理完成
+[2026-04-27 16:15:39] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:15:40] [INFO] 客诉数据：1190 行
+[2026-04-27 16:15:40] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:15:40] [INFO] 分类器构建成功
+[2026-04-27 16:15:42] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1607，默认：334
+[2026-04-27 16:15:45] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（38）.xlsx
+[2026-04-27 16:15:45] [INFO] 处理完成
+[2026-04-27 16:17:25] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:17:25] [INFO] 客诉数据：1190 行
+[2026-04-27 16:17:25] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:17:25] [INFO] 分类器构建成功
+[2026-04-27 16:17:28] [INFO] 分类统计 - 精确匹配：599，模糊匹配：1614，默认：332
+[2026-04-27 16:17:30] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（39）.xlsx
+[2026-04-27 16:17:30] [INFO] 处理完成
+[2026-04-27 16:21:26] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:21:26] [INFO] 客诉数据：1190 行
+[2026-04-27 16:21:26] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:21:26] [INFO] 分类器构建成功
+[2026-04-27 16:21:31] [INFO] 分类统计 - 精确匹配：1096，模糊匹配：3045，默认：191
+[2026-04-27 16:21:33] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（40）.xlsx
+[2026-04-27 16:21:33] [INFO] 处理完成
+[2026-04-27 16:26:15] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:26:15] [INFO] 客诉数据：1190 行
+[2026-04-27 16:26:15] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:26:15] [INFO] 分类器构建成功
+[2026-04-27 16:26:20] [INFO] 分类统计 - 精确匹配：1096，模糊匹配：3045，默认：191
+[2026-04-27 16:26:22] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（41）.xlsx
+[2026-04-27 16:26:22] [INFO] 处理完成
+[2026-04-27 16:30:30] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:30:30] [INFO] 客诉数据：1190 行
+[2026-04-27 16:30:30] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:30:31] [INFO] 分类器构建成功
+[2026-04-27 16:30:36] [INFO] 分类统计 - 精确匹配：1096，模糊匹配：3045，默认：191
+[2026-04-27 16:30:38] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（42）.xlsx
+[2026-04-27 16:30:38] [INFO] 处理完成
+[2026-04-27 16:35:21] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:35:21] [INFO] 客诉数据：1190 行
+[2026-04-27 16:35:21] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:35:21] [INFO] 分类器构建成功
+[2026-04-27 16:35:27] [INFO] 分类统计 - 精确匹配：1096，模糊匹配：3045，默认：191
+[2026-04-27 16:35:30] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（43）.xlsx
+[2026-04-27 16:35:30] [INFO] 处理完成
+[2026-04-27 16:36:41] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:36:42] [INFO] 客诉数据：1190 行
+[2026-04-27 16:36:42] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:36:42] [INFO] 分类器构建成功
+[2026-04-27 16:36:46] [INFO] 分类统计 - 精确匹配：1096，模糊匹配：3045，默认：191
+[2026-04-27 16:36:49] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（44）.xlsx
+[2026-04-27 16:36:49] [INFO] 处理完成
+[2026-04-27 16:39:45] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:39:45] [INFO] 客诉数据：1190 行
+[2026-04-27 16:39:45] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:39:45] [INFO] 分类器构建成功
+[2026-04-27 16:39:50] [INFO] 分类统计 - 精确匹配：1097，模糊匹配：3045，默认：191
+[2026-04-27 16:39:53] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（45）.xlsx
+[2026-04-27 16:39:53] [INFO] 处理完成
+[2026-04-27 16:44:40] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:44:40] [INFO] 客诉数据：1190 行
+[2026-04-27 16:44:40] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:44:40] [INFO] 分类器构建成功
+[2026-04-27 16:44:45] [INFO] 分类统计 - 精确匹配：1097，模糊匹配：3078，默认：191
+[2026-04-27 16:44:47] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（46）.xlsx
+[2026-04-27 16:44:47] [INFO] 处理完成
+[2026-04-27 16:47:34] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:47:34] [INFO] 客诉数据：1190 行
+[2026-04-27 16:47:34] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:47:35] [INFO] 分类器构建成功
+[2026-04-27 16:47:39] [INFO] 分类统计 - 精确匹配：1098，模糊匹配：3078，默认：191
+[2026-04-27 16:47:42] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（47）.xlsx
+[2026-04-27 16:47:42] [INFO] 处理完成
+[2026-04-27 16:48:31] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:48:32] [INFO] 客诉数据：1190 行
+[2026-04-27 16:48:32] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:48:32] [INFO] 分类器构建成功
+[2026-04-27 16:48:37] [INFO] 分类统计 - 精确匹配：1100，模糊匹配：3077，默认：191
+[2026-04-27 16:48:39] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（48）.xlsx
+[2026-04-27 16:48:39] [INFO] 处理完成
+[2026-04-27 16:51:16] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:51:16] [INFO] 客诉数据：1190 行
+[2026-04-27 16:51:16] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:51:16] [INFO] 分类器构建成功
+[2026-04-27 16:51:21] [INFO] 分类统计 - 精确匹配：1102，模糊匹配：3077，默认：191
+[2026-04-27 16:51:23] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（49）.xlsx
+[2026-04-27 16:51:23] [INFO] 处理完成
+[2026-04-27 16:53:46] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 16:53:46] [INFO] 客诉数据：1190 行
+[2026-04-27 16:53:46] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 16:53:46] [INFO] 分类器构建成功
+[2026-04-27 16:53:52] [INFO] 分类统计 - 精确匹配：1102，模糊匹配：3077，默认：191
+[2026-04-27 16:53:55] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（50）.xlsx
+[2026-04-27 16:53:55] [INFO] 处理完成
+[2026-04-27 11:18:00] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 11:18:01] [INFO] 客诉数据：1190 行
+[2026-04-27 11:18:01] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 11:18:01] [INFO] 分类器构建成功
+[2026-04-27 11:18:03] [INFO] 分类统计 - 精确匹配：586，模糊匹配：1296，默认：389
+[2026-04-27 11:18:05] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（17）.xlsx
+[2026-04-27 11:18:05] [INFO] 处理完成
+[2026-04-27 11:13:47] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 11:13:47] [INFO] 客诉数据：1190 行
+[2026-04-27 11:13:47] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 11:13:47] [INFO] 分类器构建成功
+[2026-04-27 11:13:49] [INFO] 分类统计 - 精确匹配：586，模糊匹配：1296，默认：389
+[2026-04-27 11:13:51] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（16）.xlsx
+[2026-04-27 11:13:51] [INFO] 处理完成
+[2026-04-27 11:03:15] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 11:03:15] [INFO] 客诉数据：1190 行
+[2026-04-27 11:03:15] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 11:03:15] [INFO] 分类器构建成功
+[2026-04-27 11:03:17] [INFO] 分类统计 - 精确匹配：638，模糊匹配：1180，默认：393
+[2026-04-27 11:03:19] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（10）.xlsx
+[2026-04-27 11:03:19] [INFO] 处理完成
+[2026-04-27 17:09:55] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 17:09:55] [INFO] 客诉数据：1190 行
+[2026-04-27 17:09:55] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 17:09:55] [INFO] 分类器构建成功
+[2026-04-27 17:10:00] [INFO] 分类统计 - 精确匹配：1102，模糊匹配：3131，默认：191
+[2026-04-27 17:10:02] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（51）.xlsx
+[2026-04-27 17:10:02] [INFO] 处理完成
+[2026-04-27 17:11:20] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 17:11:20] [INFO] 客诉数据：1190 行
+[2026-04-27 17:11:20] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 17:11:20] [INFO] 分类器构建成功
+[2026-04-27 17:11:24] [INFO] 分类统计 - 精确匹配：933，模糊匹配：2706，默认：257
+[2026-04-27 17:11:27] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（52）.xlsx
+[2026-04-27 17:11:27] [INFO] 处理完成
+[2026-04-27 17:16:14] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 17:16:14] [INFO] 客诉数据：1190 行
+[2026-04-27 17:16:14] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 17:16:14] [INFO] 分类器构建成功
+[2026-04-27 17:16:19] [INFO] 分类统计 - 精确匹配：933，模糊匹配：2704，默认：257
+[2026-04-27 17:16:21] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（54）.xlsx
+[2026-04-27 17:16:21] [INFO] 处理完成
+[2026-04-27 17:17:17] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 17:17:18] [INFO] 客诉数据：1190 行
+[2026-04-27 17:17:18] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 17:17:18] [INFO] 分类器构建成功
+[2026-04-27 17:17:22] [INFO] 分类统计 - 精确匹配：933，模糊匹配：2703，默认：257
+[2026-04-27 17:17:24] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（55）.xlsx
+[2026-04-27 17:17:24] [INFO] 处理完成
+[2026-04-27 17:21:26] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 17:21:26] [INFO] 客诉数据：1190 行
+[2026-04-27 17:21:26] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 17:21:26] [INFO] 分类器构建成功
+[2026-04-27 17:21:30] [INFO] 分类统计 - 精确匹配：937，模糊匹配：2702，默认：257
+[2026-04-27 17:21:33] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（56）.xlsx
+[2026-04-27 17:21:33] [INFO] 处理完成
+[2026-04-27 17:23:30] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 17:23:30] [INFO] 客诉数据：1190 行
+[2026-04-27 17:23:30] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 17:23:30] [INFO] 分类器构建成功
+[2026-04-27 17:23:34] [INFO] 分类统计 - 精确匹配：935，模糊匹配：2697，默认：257
+[2026-04-27 17:23:37] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（57）.xlsx
+[2026-04-27 17:23:37] [INFO] 处理完成
+[2026-04-27 17:24:14] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 17:24:14] [INFO] 客诉数据：1190 行
+[2026-04-27 17:24:14] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 17:24:14] [INFO] 分类器构建成功
+[2026-04-27 17:24:19] [INFO] 分类统计 - 精确匹配：935，模糊匹配：2697，默认：257
+[2026-04-27 17:24:21] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（58）.xlsx
+[2026-04-27 17:24:21] [INFO] 处理完成
+[2026-04-27 17:24:48] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 17:24:49] [INFO] 客诉数据：1190 行
+[2026-04-27 17:24:49] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 17:24:49] [INFO] 分类器构建成功
+[2026-04-27 17:24:53] [INFO] 分类统计 - 精确匹配：935，模糊匹配：2685，默认：257
+[2026-04-27 17:24:55] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（59）.xlsx
+[2026-04-27 17:24:55] [INFO] 处理完成
+[2026-04-27 17:27:37] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 17:27:37] [INFO] 客诉数据：1190 行
+[2026-04-27 17:27:37] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 17:27:37] [INFO] 分类器构建成功
+[2026-04-27 17:27:41] [INFO] 分类统计 - 精确匹配：935，模糊匹配：2685，默认：257
+[2026-04-27 17:27:44] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（60）.xlsx
+[2026-04-27 17:27:44] [INFO] 处理完成
+[2026-04-27 17:11:52] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 17:11:52] [INFO] 客诉数据：1190 行
+[2026-04-27 17:11:52] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 17:11:52] [INFO] 分类器构建成功
+[2026-04-27 17:11:56] [INFO] 分类统计 - 精确匹配：933，模糊匹配：2706，默认：257
+[2026-04-27 17:11:59] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（53）.xlsx
+[2026-04-27 17:11:59] [INFO] 处理完成
+[2026-04-27 17:30:51] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 17:30:51] [INFO] 客诉数据：1190 行
+[2026-04-27 17:30:51] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 17:30:51] [INFO] 分类器构建成功
+[2026-04-27 17:30:55] [INFO] 分类统计 - 精确匹配：935，模糊匹配：2686，默认：257
+[2026-04-27 17:30:58] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（61）.xlsx
+[2026-04-27 17:30:58] [INFO] 处理完成
+[2026-04-27 17:47:22] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 17:47:22] [INFO] 客诉数据：1190 行
+[2026-04-27 17:47:22] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 17:47:22] [INFO] 分类器构建成功
+[2026-04-27 17:47:26] [INFO] 分类统计 - 精确匹配：935，模糊匹配：2686，默认：257
+[2026-04-27 17:47:28] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（62）.xlsx
+[2026-04-27 17:47:28] [INFO] 处理完成
+[2026-04-27 17:51:58] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 17:51:58] [INFO] 客诉数据：1190 行
+[2026-04-27 17:51:58] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 17:51:58] [INFO] 分类器构建成功
+[2026-04-27 17:52:02] [INFO] 分类统计 - 精确匹配：931，模糊匹配：2674，默认：257
+[2026-04-27 17:52:04] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（63）.xlsx
+[2026-04-27 17:52:04] [INFO] 处理完成
+[2026-04-27 17:54:10] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 17:54:10] [INFO] 客诉数据：1190 行
+[2026-04-27 17:54:10] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 17:54:10] [INFO] 分类器构建成功
+[2026-04-27 17:54:15] [INFO] 分类统计 - 精确匹配：931，模糊匹配：2666，默认：257
+[2026-04-27 17:54:18] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（64）.xlsx
+[2026-04-27 17:54:18] [INFO] 处理完成
+[2026-04-27 17:56:03] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 17:56:03] [INFO] 客诉数据：1190 行
+[2026-04-27 17:56:03] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 17:56:03] [INFO] 分类器构建成功
+[2026-04-27 17:56:08] [INFO] 分类统计 - 精确匹配：931，模糊匹配：2654，默认：257
+[2026-04-27 17:56:11] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（65）.xlsx
+[2026-04-27 17:56:11] [INFO] 处理完成
+[2026-04-27 17:59:47] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 17:59:47] [INFO] 客诉数据：1190 行
+[2026-04-27 17:59:47] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 17:59:47] [INFO] 分类器构建成功
+[2026-04-27 17:59:51] [INFO] 分类统计 - 精确匹配：931，模糊匹配：2657，默认：257
+[2026-04-27 17:59:54] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（66）.xlsx
+[2026-04-27 17:59:54] [INFO] 处理完成
+[2026-04-27 18:05:23] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 18:05:23] [INFO] 客诉数据：1190 行
+[2026-04-27 18:05:23] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 18:05:24] [INFO] 分类器构建成功
+[2026-04-27 18:05:28] [INFO] 分类统计 - 精确匹配：932，模糊匹配：2666，默认：257
+[2026-04-27 18:05:31] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（67）.xlsx
+[2026-04-27 18:05:31] [INFO] 处理完成
+[2026-04-27 20:02:36] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 20:02:36] [INFO] 客诉数据：1190 行
+[2026-04-27 20:02:36] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 20:02:36] [INFO] 分类器构建成功
+[2026-04-27 20:02:41] [INFO] 分类统计 - 精确匹配：771，模糊匹配：2672，默认：269
+[2026-04-27 20:02:44] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（68）.xlsx
+[2026-04-27 20:02:44] [INFO] 处理完成
+[2026-04-27 20:06:39] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 20:06:39] [INFO] 客诉数据：1190 行
+[2026-04-27 20:06:39] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 20:06:39] [INFO] 分类器构建成功
+[2026-04-27 20:06:43] [INFO] 分类统计 - 精确匹配：599，模糊匹配：2934，默认：274
+[2026-04-27 20:06:45] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（69）.xlsx
+[2026-04-27 20:06:45] [INFO] 处理完成
+[2026-04-27 20:08:11] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 20:08:11] [INFO] 客诉数据：1190 行
+[2026-04-27 20:08:11] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 20:08:11] [INFO] 分类器构建成功
+[2026-04-27 20:08:15] [INFO] 分类统计 - 精确匹配：599，模糊匹配：2934，默认：275
+[2026-04-27 20:08:18] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（70）.xlsx
+[2026-04-27 20:08:18] [INFO] 处理完成
+[2026-04-27 20:10:40] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 20:10:40] [INFO] 客诉数据：1190 行
+[2026-04-27 20:10:40] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 20:10:40] [INFO] 分类器构建成功
+[2026-04-27 20:10:44] [INFO] 分类统计 - 精确匹配：598，模糊匹配：2515，默认：352
+[2026-04-27 20:10:46] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（71）.xlsx
+[2026-04-27 20:10:46] [INFO] 处理完成
+[2026-04-27 20:11:03] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 20:11:03] [INFO] 客诉数据：1190 行
+[2026-04-27 20:11:03] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 20:11:03] [INFO] 分类器构建成功
+[2026-04-27 20:11:07] [INFO] 分类统计 - 精确匹配：599，模糊匹配：2515，默认：352
+[2026-04-27 20:11:09] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（72）.xlsx
+[2026-04-27 20:11:09] [INFO] 处理完成
+[2026-04-27 20:11:39] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 20:11:39] [INFO] 客诉数据：1190 行
+[2026-04-27 20:11:39] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 20:11:39] [INFO] 分类器构建成功
+[2026-04-27 20:11:43] [INFO] 分类统计 - 精确匹配：599，模糊匹配：2934，默认：275
+[2026-04-27 20:11:45] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（73）.xlsx
+[2026-04-27 20:11:45] [INFO] 处理完成
+[2026-04-27 20:14:04] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 20:14:04] [INFO] 客诉数据：1190 行
+[2026-04-27 20:14:04] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 20:14:04] [INFO] 分类器构建成功
+[2026-04-27 20:14:09] [INFO] 分类统计 - 精确匹配：599，模糊匹配：2924，默认：275
+[2026-04-27 20:14:12] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（74）.xlsx
+[2026-04-27 20:14:12] [INFO] 处理完成
+[2026-04-27 20:26:01] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 20:26:01] [INFO] 客诉数据：1190 行
+[2026-04-27 20:26:01] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 20:26:01] [INFO] 分类器构建成功
+[2026-04-27 20:26:05] [INFO] 分类统计 - 精确匹配：599，模糊匹配：2924，默认：275
+[2026-04-27 20:26:07] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（75）.xlsx
+[2026-04-27 20:26:07] [INFO] 处理完成
+[2026-04-27 20:26:37] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 20:26:37] [INFO] 客诉数据：1190 行
+[2026-04-27 20:26:37] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 20:26:37] [INFO] 分类器构建成功
+[2026-04-27 20:26:41] [INFO] 分类统计 - 精确匹配：599，模糊匹配：2924，默认：275
+[2026-04-27 20:26:43] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（76）.xlsx
+[2026-04-27 20:26:43] [INFO] 处理完成
+[2026-04-27 20:30:25] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 20:30:26] [INFO] 客诉数据：1190 行
+[2026-04-27 20:30:26] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 20:30:26] [INFO] 分类器构建成功
+[2026-04-27 20:30:30] [INFO] 分类统计 - 精确匹配：599，模糊匹配：2919，默认：276
+[2026-04-27 20:30:32] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（77）.xlsx
+[2026-04-27 20:30:32] [INFO] 处理完成
+[2026-04-27 20:35:46] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 20:35:46] [INFO] 客诉数据：1190 行
+[2026-04-27 20:35:46] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 20:35:46] [INFO] 分类器构建成功
+[2026-04-27 20:35:50] [INFO] 分类统计 - 精确匹配：599，模糊匹配：2917，默认：277
+[2026-04-27 20:35:53] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（78）.xlsx
+[2026-04-27 20:35:53] [INFO] 处理完成
+[2026-04-27 20:41:14] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 20:41:15] [INFO] 客诉数据：1190 行
+[2026-04-27 20:41:15] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 20:41:15] [INFO] 分类器构建成功
+[2026-04-27 20:41:19] [INFO] 分类统计 - 精确匹配：600，模糊匹配：2917，默认：277
+[2026-04-27 20:41:22] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（79）.xlsx
+[2026-04-27 20:41:22] [INFO] 处理完成
+[2026-04-27 20:44:18] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 20:44:18] [INFO] 客诉数据：1190 行
+[2026-04-27 20:44:18] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 20:44:18] [INFO] 分类器构建成功
+[2026-04-27 20:44:22] [INFO] 分类统计 - 精确匹配：560，模糊匹配：3011，默认：277
+[2026-04-27 20:44:25] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（80）.xlsx
+[2026-04-27 20:44:25] [INFO] 处理完成
+[2026-04-27 20:47:15] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 20:47:15] [INFO] 客诉数据：1190 行
+[2026-04-27 20:47:15] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 20:47:15] [INFO] 分类器构建成功
+[2026-04-27 20:47:19] [INFO] 分类统计 - 精确匹配：560，模糊匹配：3011，默认：277
+[2026-04-27 20:47:21] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（81）.xlsx
+[2026-04-27 20:47:21] [INFO] 处理完成
+[2026-04-27 20:48:41] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 20:48:41] [INFO] 客诉数据：1190 行
+[2026-04-27 20:48:41] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 20:48:41] [INFO] 分类器构建成功
+[2026-04-27 20:48:45] [INFO] 分类统计 - 精确匹配：558，模糊匹配：3018，默认：277
+[2026-04-27 20:48:48] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（82）.xlsx
+[2026-04-27 20:48:48] [INFO] 处理完成
+[2026-04-27 20:51:38] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 20:51:38] [INFO] 客诉数据：1190 行
+[2026-04-27 20:51:38] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 20:51:38] [INFO] 分类器构建成功
+[2026-04-27 20:51:43] [INFO] 分类统计 - 精确匹配：536，模糊匹配：3045，默认：278
+[2026-04-27 20:51:46] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（83）.xlsx
+[2026-04-27 20:51:46] [INFO] 处理完成
+[2026-04-27 21:05:04] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-04-27 21:05:04] [INFO] 客诉数据：1190 行
+[2026-04-27 21:05:04] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-04-27 21:05:04] [INFO] 分类器构建成功
+[2026-04-27 21:05:09] [INFO] 分类统计 - 精确匹配：534，模糊匹配：3047，默认：278
+[2026-04-27 21:05:11] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/高价9ASIN人工树CA-Reviews-2026042_分类结果（84）.xlsx
+[2026-04-27 21:05:11] [INFO] 处理完成
+[2026-05-06 21:33:41] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-05-06 21:33:42] [INFO] 客诉数据：1838 行
+[2026-05-06 21:33:42] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-05-06 21:33:42] [INFO] 分类器构建成功
+[2026-05-06 21:33:47] [INFO] 分类统计 - 精确匹配：608，模糊匹配：4106，默认：462
+[2026-05-06 21:33:50] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/低价14ASIN人工树-UK-Reviews-2026050_分类结果（1）.xlsx
+[2026-05-06 21:33:50] [INFO] 处理完成
+[2026-05-06 21:35:41] [INFO] 程序启动，配置文件：C:\Users\87710\Desktop\complaint_classifier\config\人工树\config.json
+[2026-05-06 21:35:42] [INFO] 客诉数据：1825 行
+[2026-05-06 21:35:42] [INFO] 分类规则表：0 条（Excel）；config.json 规则始终生效
+[2026-05-06 21:35:42] [INFO] 分类器构建成功
+[2026-05-06 21:35:47] [INFO] 分类统计 - 精确匹配：608，模糊匹配：4106，默认：449
+[2026-05-06 21:35:50] [INFO] 结果已保存：C:\Users\87710\Desktop\complaint_classifier\output/人工树/低价14ASIN人工树-UK-Reviews-2026050_分类结果（2）.xlsx
+[2026-05-06 21:35:50] [INFO] 处理完成
